@@ -1,0 +1,21 @@
+{
+    "name": "app",
+    "version": "1.0.0",
+    "scripts": {
+        "start": "node app.js"
+    },
+    "devDependencies": {
+        "gulp": "latest",
+        "gulp-util": "latest",
+        "gulp-sass": "latest",
+        "gulp-coffee": "latest",
+        "gulp-uglify": "latest",
+        "gulp-concat": "latest",
+        "gulp-connect": "latest"
+    },
+    "dependencies": {
+        "event-stream": "^4.0.1",
+        "findit": "^2.0.0",
+        "npm": "^6.11.3"
+    }
+}
