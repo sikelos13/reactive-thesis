@@ -1,5 +1,10 @@
-var path = require('path'),
-    fs = require('fs');
+const {
+    Parser
+} = require("acorn")
+
+let path = require('path'),
+    fs = require('fs'),
+    readFileSync = require('fs');
 
 function processFile(data) {
     console.log(data);
@@ -14,23 +19,17 @@ function fromDir(startPath, filter) {
         return;
     }
 
-    var files = fs.readdirSync(startPath);
+    let files = fs.readdirSync(startPath);
     for (var i = 0; i < files.length; i++) {
-        var filename = path.join(startPath, files[i]);
-        // fs.readFile(`/${files[10]}`, function (err, data) {
-        //     // if (err) {
-        //     //     throw err;
-        //     // }
+        let filename = path.join(startPath, files[i]);
+        let stat = fs.lstatSync(filename);
 
-        //     // Invoke the next step here however you like
-        //     // console.log(content); // Put all of the code here (not the best solution)
-        //     processFile(data); // Or put the next step in a function and invoke it
-        // });
-        var stat = fs.lstatSync(filename);
         if (stat.isDirectory()) {
             fromDir(filename, filter); //recurse
         } else if (filename.indexOf(filter) >= 0) {
             console.log('-- found js file: ', filename);
+            // let fileToBeUsed = fs.readdirSync(filename);
+            // const ast = Parser.parse(fileToBeUsed.toString())
             // fs.readFile(`${filename}`, function (err, data) {
             //     console.log(data)
             // })
