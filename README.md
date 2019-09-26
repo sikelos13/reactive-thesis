@@ -18,9 +18,9 @@ Type npm run-script <script_name> in order to run the script of your choice. Fir
 ## Instructions
 
 - Make an external src folder in which you will save your js/ts files.
-- Type the directory of your choice at npm start
 - npm start in your terminal.
-- [optional] you can run <ntl> in order to see the available scripts to run
+- Type the directory of your choice at npm start
+- [optional] you can run [ntl] in order to see the available scripts to run
 - from npm start find your file/files path
 - run jscodeshift [file-path] -t [codmod-path]/[subAnalyzer.js / pipeAnalyzer.js] -dp -v 2 --parser flow
 
