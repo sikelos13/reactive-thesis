@@ -5,6 +5,7 @@ let path = require('path'),
 function processFile(data) {
     console.log(data);
 }
+let filenameForAnalysisTemp = "";
 const readline = require('readline').createInterface({
     input: process.stdin,
     output: process.stdout

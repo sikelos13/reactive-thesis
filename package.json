@@ -3,8 +3,8 @@
     "version": "1.0.0",
     "scripts": {
         "start": "node src/app.js",
-        "sub-analyzer": "jscodeshift ../thesis-projects-container -t ../reactive-thesis/src/components/subAnalyzer.js -dp -v 2 --parser flow",
-        "pipe-analyzer": "jscodeshift ../thesis-projects-container -t ../reactive-thesis/src/components/pipeAnalyzer.js -dp -v 2 --parser flow"
+        // "sub-analyzer": "jscodeshift ../thesis-projects-container -t ../reactive-thesis/src/components/subAnalyzer.js -dp -v 2 --parser flow",
+        // "pipe-analyzer": "jscodeshift [OPTION]... PATH..."
     },
     "devDependencies": {
         "@babel/parser": "^7.6.0",

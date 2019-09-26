@@ -8,9 +8,8 @@ This is a simple scripting tool. Download the repository and npm install the dev
 
 ## Scripts
 
-*start
-*sub-analyze
-\*pipe-analyze
+- npm start
+- jscodeshift [file-path] -t [codmod-path]/[subAnalyzer.js / pipeAnalyzer.js] -dp -v 2 --parser flow
 
 ## How it Works
 
@@ -21,7 +20,9 @@ Type npm run-script <script_name> in order to run the script of your choice. Fir
 - Make an external src folder in which you will save your js/ts files.
 - Type the directory of your choice at npm start
 - npm start in your terminal.
-  -npm <script_name> to analyze your files.
+- [optional] you can run <ntl> in order to see the available scripts to run
+- from npm start find your file/files path
+- run jscodeshift [file-path] -t [codmod-path]/[subAnalyzer.js / pipeAnalyzer.js] -dp -v 2 --parser flow
 
 ## How I built the Scripting/Parsing Tool.
 
@@ -29,4 +30,4 @@ I worked on plain javascript ,gulp.js and node.js . For the parsing we use jscod
 
 ## License
 
-Copyright © 2018, Stefanos Athanasoulias.Released under AUEB License.
+Copyright © 2019, Stefanos Athanasoulias. Released under AUEB License.
