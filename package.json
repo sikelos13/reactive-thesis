@@ -2,9 +2,7 @@
     "name": "app",
     "version": "1.0.0",
     "scripts": {
-        "start": "node src/app.js",
-        // "sub-analyzer": "jscodeshift ../thesis-projects-container -t ../reactive-thesis/src/components/subAnalyzer.js -dp -v 2 --parser flow",
-        // "pipe-analyzer": "jscodeshift [OPTION]... PATH..."
+        "start": "babel-node --presets latest src/app.js"
     },
     "devDependencies": {
         "@babel/parser": "^7.6.0",
@@ -18,6 +16,7 @@
     },
     "dependencies": {
         "acorn": "^7.0.0",
+        "babel-preset-latest": "^6.24.1",
         "event-stream": "^4.0.1",
         "findit": "^2.0.0",
         "jscodeshift": "^0.6.4",

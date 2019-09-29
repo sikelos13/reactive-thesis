@@ -1,15 +1,28 @@
 let path = require('path'),
-    fs = require('fs'),
-    readFileSync = require('fs');
+    fs = require('fs');
 
-function processFile(data) {
-    console.log(data);
-}
-let filenameForAnalysisTemp = "";
+let exec = require('child_process').exec;
 const readline = require('readline').createInterface({
     input: process.stdin,
     output: process.stdout
 })
+
+function sh(cmd) {
+    exec(cmd, (err, stdout, stderr) => {
+        // console.log(cmd)
+
+        if (err) {
+            reject(err);
+        } else {
+            // resolve({
+            //     stdout,
+            //     stderr
+            // });
+            console.log(stdout)
+            console.log(stderr)
+        }
+    });
+}
 
 function fromDir(startPath, filter) {
     if (!fs.existsSync(startPath)) {
@@ -26,8 +39,11 @@ function fromDir(startPath, filter) {
             fromDir(filename, filter); //recurse
         } else if (filename.indexOf(filter) >= 0) {
             console.log('-- found js file: ', filename);
-            // const j = api.jscodeshift;
-            // codeModOne(filename);
+
+            sh(`jscodeshift ${filename} -t ../reactive-thesis/src/components/subAnalyzer.js -dp -v 2 --parser flow`);
+            sh(`jscodeshift ${filename} -t ../reactive-thesis/src/components/pipeAnalyzer.js -dp -v 2 --parser flow`);
+
+
             //TODO: user should import his own src 
             // Project should only read one repo at a time.
             //TODO : implement Jscodeshift to wrap parser and read the js/ts files
