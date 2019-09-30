@@ -1,6 +1,19 @@
-export default function codeModPipe(file, api) {
-    const j = api.jscodeshift;
-    const root = j(file.source);
+var myModule = {};
+
+/**
+ * Rename to findOperators
+ * Receives as input the ast of the file and
+ * returns the number of occurrences for each operator 
+ * 
+ * Object 
+ * 
+ * { 'map': 2,
+ *    'scan': 3
+ * }
+ */
+myModule.codeModPipe = function(root, j) {
+    //const j = api.jscodeshift;
+    //const root = j(file);
     const rxjsCalls = root.find(j.CallExpression, {
         callee: {
             // object: {
@@ -24,3 +37,5 @@ export default function codeModPipe(file, api) {
         quote: 'single'
     })
 };
+
+module.exports = myModule;

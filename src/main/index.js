@@ -1,28 +1,7 @@
 let path = require('path'),
     fs = require('fs');
+const jscodeshift = require('jscodeshift');
 
-let exec = require('child_process').exec;
-const readline = require('readline').createInterface({
-    input: process.stdin,
-    output: process.stdout
-})
-
-function sh(cmd) {
-    exec(cmd, (err, stdout, stderr) => {
-        // console.log(cmd)
-
-        if (err) {
-            reject(err);
-        } else {
-            // resolve({
-            //     stdout,
-            //     stderr
-            // });
-            console.log(stdout)
-            console.log(stderr)
-        }
-    });
-}
 
 function fromDir(startPath, filter) {
     if (!fs.existsSync(startPath)) {
@@ -40,8 +19,8 @@ function fromDir(startPath, filter) {
         } else if (filename.indexOf(filter) >= 0) {
             console.log('-- found js file: ', filename);
 
-            sh(`jscodeshift ${filename} -t ../reactive-thesis/src/components/subAnalyzer.js -dp -v 2 --parser flow`);
-            sh(`jscodeshift ${filename} -t ../reactive-thesis/src/components/pipeAnalyzer.js -dp -v 2 --parser flow`);
+//            sh(`jscodeshift ${filename} -t ../reactive-thesis/src/components/subAnalyzer.js -dp -v 2 --parser flow`);
+//            sh(`jscodeshift ${filename} -t ../reactive-thesis/src/components/pipeAnalyzer.js -dp -v 2 --parser flow`);
 
 
             //TODO: user should import his own src 
@@ -57,11 +36,13 @@ function fromDir(startPath, filter) {
     console.log(files);
 };
 
+fromDir('../test/resources/example.js', '.js');
+
 // fromDir('../thesis-projects-container', 'js');
-readline.question(`What's  your files directory?`, file => {
-    readline.question(`What' type of files should we search?`, type => {
-        fromDir(file, type)
-        readline.close()
-    })
-    // readline.close()
-})
+// readline.question(`What's  your files directory?`, file => {
+//     readline.question(`What' type of files should we search?`, type => {
+//         fromDir(file, type)
+//         readline.close()
+//     })
+//     // readline.close()
+// })
