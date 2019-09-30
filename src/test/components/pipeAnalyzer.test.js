@@ -15,8 +15,8 @@ describe.each(testCaseFiles)(
         });
 
         test('promise length and location in chain#', () => {
-            var result = pipeAnalyzer.codeModPipe(ast, j);
-            
+            var opsUsageStats = pipeAnalyzer.codeModPipe(ast, j);
+            expect(opsUsageStats['scan']).toBe(2);
 
             // for (let [indexOfChain, chain] of promiseChains.entries()) {
             //     let snapshotObject = { chainLength: chain.length(), location: { start: chain.startLocation(), end:chain.endLocation()}, source: j(chain.codeshiftChainNode).toSource()};
