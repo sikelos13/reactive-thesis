@@ -11,7 +11,7 @@ const fileUtils = require('..//main/utils/fileutils');
 program
     .option('-o, --operators <name>', 'count rxjs operator')
     .option('-a, --ast', 'output file ast tree')
-    .option('-p, --pizza-type <type>', 'flavour of pizza');
+    .option('-d, --debug <type>', 'debug rxjs library');
 program.parse(process.argv);
 
 if (program.operators) {
