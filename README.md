@@ -8,20 +8,19 @@ This is a simple scripting tool. Download the repository and npm install the dev
 
 ## Scripts
 
-- npm start
-- jscodeshift [file-path] -t [codmod-path]/[subAnalyzer.js / pipeAnalyzer.js] -dp -v 2 --parser flow
+- node src/main/index.js"
 
 ## How it Works
 
-Type npm run-script <script_name> in order to run the script of your choice. First we run the npm start script and we type as input our directory of choice. Then we run the two custom-made codemods to analyze the files in order to find how many times pipe and subscriber used inside the code.
+Type node src/main/index.js <option> in order to run the script of your choice.
+Three available options:
+1.--operators <identifier_name> or -o <identifier_name> . This script will count how many times the identifier was used. 2. --ast or -a . Will output the ast tree of the file
 
 ## Instructions
 
-- Make an external src folder in which you will save your js/ts files.
-- [optional] you can run [ntl] in order to see the available scripts to run
-- npm start in your terminal.
-- Type the directory of your choice when prompt asks for it
-- Enter the type of files to parse.
+-Clone the repository.
+-Npm install inside the folder.
+-Run your preferable sript.
 
 ## How I built the Scripting/Parsing Tool.
 

@@ -37,3 +37,5 @@ myModule.consoleAst = function (root, j, operatorName) {
         quote: 'single'
     })
 };
+
+module.exports = myModule;

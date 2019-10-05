@@ -34,12 +34,11 @@ function main(startPath, filter, operatorName, option) {
         if (stat.isDirectory()) {
             fromDir(filename, filter); //recurse
         } else if (filename.indexOf(filter) >= 0) {
-            console.log('Searching for: ', operatorName);
             console.log('Found js file: ', filename);
             ast = parser(fileUtils.readFileSync(filename).trim());
             if (option == "operators") {
+                console.log('Searching for: ', operatorName);
                 codeModeOperators.findOperators(ast, j, operatorName);
-                console.log(codeModeOperators.findOperators(ast, j, operatorName))
             } else if (option == "ast") {
                 codeModeAst.consoleAst(ast, j, operatorName);
             }

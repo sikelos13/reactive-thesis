@@ -3,7 +3,9 @@ const jscodeshift = require('jscodeshift');
 class JSCodeshiftWrapper {
 
     static parse(code) {
-        return jscodeshift(code, { loc: true });
+        return jscodeshift(code, {
+            flow: true
+        });
     }
 }
 
