@@ -11,36 +11,27 @@ var myModule = {};
  *    'scan': 3
  * }
  */
-myModule.findOperators = function (root, j, operatorName) {
-    //const j = api.jscodeshift;
-    // const root = j(file);
-    // console.log(root)
+myModule.findOperators = function (root, j, identifierName) {
+
     const rxjsCalls = root.find(j.Identifier)
-    // console.log(rxjsCalls)
-    //     callee: {
-    //         type: "CallExpression",
-    //         object: {
-    //             type: "Identifier",
-    //             name: operatorName
-    //         },
-    //         // property: {
-    //         //     name: operatorName,
-    //         // },
-    //     }
-    // });
-    let operatorCalled = 0;
+
+    let identifierCalled = 0;
     rxjsCalls.forEach(p => {
-        if (p.node.name == operatorName) {
-            operatorCalled++;
+        if (p.node.name == identifierName) {
+            identifierCalled++;
         }
     });
-    console.log(`${operatorName} called: ` + operatorCalled + " times.");
+    if (identifierCalled > 0) {
+        console.log(`${identifierName} called: ` + identifierCalled + " times.");
+    } else {
+        console.log("File doesn't not include " + identifierName)
+    }
 
     // return root.toSource({
     //     useTabs: true,
     //     quote: 'single'
     // })
-    return operatorCalled
+    return identifierCalled
 };
 
 module.exports = myModule;

@@ -20,30 +20,27 @@ if (program.operators) {
     main('src/test/resources', '.js', program.ast, "ast");
 }
 
-function main(startPath, filter, operatorName, option) {
-    if (!fs.existsSync(startPath)) {
-        console.log("no dir ", startPath);
+function main(path, filter, operatorName, option) {
+    if (!fs.existsSync(path)) {
+        console.log("no dir ", path);
         return;
     }
+    //Fetch js,jsx,ts,tsx files
+    files = fileUtils.getJSFilesSync(path)
+    files.forEach(file => {
+        //Read files one by one and trim them
+        console.log('Found js file: ', file);
 
-    let files = fs.readdirSync(startPath);
-    for (var i = 0; i < files.length; i++) {
-        let filename = path.join(startPath, files[i]);
-        let stat = fs.lstatSync(filename);
+        ast = parser(fileUtils.readFileSync(file).trim());
+        //Run script based on users arguments
 
-        if (stat.isDirectory()) {
-            fromDir(filename, filter); //recurse
-        } else if (filename.indexOf(filter) >= 0) {
-            console.log('Found js file: ', filename);
-            ast = parser(fileUtils.readFileSync(filename).trim());
-            if (option == "operators") {
-                console.log('Searching for: ', operatorName);
-                codeModeOperators.findOperators(ast, j, operatorName);
-            } else if (option == "ast") {
-                codeModeAst.consoleAst(ast, j, operatorName);
-            }
-        };
-    };
+        if (option == "operators") {
+            console.log('Searching for: ', operatorName);
+            codeModeOperators.findOperators(ast, j, operatorName);
+        } else if (option == "ast") {
+            codeModeAst.consoleAst(ast, j, operatorName);
+        }
+    })
 };
 
 
@@ -60,7 +57,6 @@ function main(startPath, filter, operatorName, option) {
 //TODO: user should import his own src 
 // Project should only read one repo at a time.
 //TODO : implement Jscodeshift to wrap parser and read the js/ts files
-//TODO:  break  app.js into two functions ...{analyze.js file and main file in which we will iterate the directory with js/ts}
 //TODO: Implement
 //TODO :  Flow parser
 //TODO: yeoman for structure

@@ -16,8 +16,13 @@ describe.each(testCaseFiles)(
 
         describe('Check console output of operators # ', () => {
             it('should console the # of operator that was inserted', () => {
-                let opsUsageStats = codeMod.findOperators(ast, j, "scan");
-                expect(opsUsageStats).toBeGreaterThanOrEqual(4);
+                let idUsageStats = codeMod.findOperators(ast, j, "scan");
+                expect(idUsageStats).toBeGreaterThanOrEqual(4);
+            })
+
+            it('should console that file has not the identifier that was given', () => {
+                let idUsageStats = codeMod.findOperators(ast, j, "pluck");
+                expect(idUsageStats).toBe(0);
             })
 
             // for (let [indexOfChain, chain] of promiseChains.entries()) {

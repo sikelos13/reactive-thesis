@@ -32,6 +32,7 @@ myModule.consoleAst = function (root, j, operatorName) {
     //     console.log(p);
     //     console.log("Subscribe called: " + tempCallsSecond + " times.");
     // });
+    
     return root.toSource({
         useTabs: true,
         quote: 'single'
