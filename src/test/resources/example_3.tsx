@@ -1,5 +1,5 @@
 import { fromEvent } from "rxjs";
-import { scan } from "rxjs/operators";
+import { scan, map } from "rxjs/operators";
 
 fromEvent(document, "click")
   .pipe(scan(count => count + 1, 0))

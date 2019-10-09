@@ -53,7 +53,7 @@ function main(path, operatorName, option) {
         } else if (option == "ast") {
             codeModeAst.consoleAst(ast, j, operatorName);
         } else if (option == "operatorsInUse") {
-            codeModeRxjsCalls.operatorsUse(ast, j);
+            codeModeRxjsCalls.operatorsUse(ast, j, file);
         }
     })
 };

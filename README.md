@@ -18,8 +18,10 @@ Type node src/main/index.js <option> in order to run the script of your choice.
 Three available options:
 
 ```
---operators <identifier_name> or -o <identifier_name> . This script will count how many times the identifier was used.
---ast or -a . Will output the ast tree of the file
+'-f, || --findOperator <name>', 'count rxjs operator'
+'-o, || --operatorsInUse <source>', 'find all operators of rxjs library that are used in the file'
+
+source must start from the root directory of the machine. i.e  in Mac OS is Users/{username}/directory of your directory with the files that need to be parsed.
 ```
 
 ## Instructions
