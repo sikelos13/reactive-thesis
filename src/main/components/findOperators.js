@@ -26,11 +26,7 @@ myModule.findOperators = function (root, j, identifierName) {
     } else {
         console.log("File doesn't not include " + identifierName)
     }
-
-    // return root.toSource({
-    //     useTabs: true,
-    //     quote: 'single'
-    // })
+    
     return identifierCalled
 };
 
