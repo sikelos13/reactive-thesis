@@ -80,13 +80,13 @@ myModule.operatorsUse = function (root, j, dir, filename) {
 
     let json2csvCallback = function (err, csv) {
         if (err) throw err;
-        fs.writeFile(`./operatorsInUse-${dateOfCsv}-${filename}.csv`, csv, function (err) {
+        fs.writeFile(`./csv_results/operatorsInUse-${dateOfCsv}-${filename}.csv`, csv, function (err) {
             if (err) {
                 console.log('Some error occured - file either not saved or corrupted file saved.');
             } else {
                 console.log('It\'s saved!');
             }
-        });
+        })
     };
     return importedCalled
 };
