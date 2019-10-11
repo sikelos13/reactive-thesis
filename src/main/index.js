@@ -45,15 +45,15 @@ function main(path, operatorName, option) {
         console.log('Found js file: ', file);
 
         ast = parser(fileUtils.readFileSync(file).trim());
+        let filename = file.replace(/^.*[\\\/]/, '')
         //Run script based on users arguments
-
         if (option == "findOperator") {
             console.log('Searching for: ', operatorName);
             codeModeOperators.findOperators(ast, j, operatorName);
         } else if (option == "ast") {
             codeModeAst.consoleAst(ast, j, operatorName);
         } else if (option == "operatorsInUse") {
-            codeModeRxjsCalls.operatorsUse(ast, j, file);
+            codeModeRxjsCalls.operatorsUse(ast, j, file, filename);
         }
     })
 };

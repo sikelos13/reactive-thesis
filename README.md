@@ -18,7 +18,7 @@ Type node src/main/index.js <option> in order to run the script of your choice.
 Three available options:
 
 ```
-'-f, || --findOperator <name>', 'count rxjs operator'
+'-f, || --findOperator <name>', 'find the use of a specific rxjs operator'
 '-o, || --operatorsInUse <source>', 'find all operators of rxjs library that are used in the file'
 
 source must start from the root directory of the machine. i.e  in Mac OS is Users/{username}/directory of your directory with the files that need to be parsed.

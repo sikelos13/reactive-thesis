@@ -3,21 +3,22 @@ var myModule = {};
 const readFile = require('fs').readFile;
 const writeFile = require('fs').writeFile;
 const converter = require('json-2-csv');
-
-//Initials for CSV file
+let csvDate = new Date();
+let dateOfCsv = csvDate.toLocaleDateString('en-GB').replace(/\//g, "-");
 
 /**
- * Rename to findOperators
- * Receives as input the ast of the file and
- * returns the number of occurrences for each operator 
+ * Rename to operatorsUse
+ * Receives as input the src of the files to be scanned
+ * returns the object with the operator, its usage and the file we had found it. 
  * 
  * Object 
  * 
- * { 'map': 2,
- *    'scan': 3
+ * { operator: operator,
+ *    count: <number>
+ *    file: <path of file>
  * }
  */
-myModule.operatorsUse = function (root, j, dir) {
+myModule.operatorsUse = function (root, j, dir, filename) {
     const rxjsCalls = root.find(j.Identifier)
     let importedCalled = [];
     let showOperatorsUsed = [];
@@ -39,7 +40,13 @@ myModule.operatorsUse = function (root, j, dir) {
             }
         }
     })
-    //iterate the imported identifiers 
+    //Initialize array with columns titles
+    showOperatorsUsed.push({
+        operatorName: "Operator",
+        operatorCalled: "Times Used",
+        file: "Found in file:"
+    })
+    //iterate the imported identifiers  and scan files for operators
     fs.readFile(dir, (err, data) => {
         if (err) throw err;
         importedOperators.forEach(operator => {
@@ -53,14 +60,9 @@ myModule.operatorsUse = function (root, j, dir) {
                 })
             }
         })
+
+        //Push the array of objects for csv export 
         operatorObject.rows = showOperatorsUsed
-        // writeFile(`./${dir[dir.length -8]}-test-data.csv`, showOperatorsUsed, (err) => {
-        //     if (err) {
-        //         console.log(err); // Do something to handle the error or just throw it
-        //         throw new Error(err);
-        //     }
-        //     console.log('Success!');
-        // });
 
         converter.json2csv(operatorObject.rows, json2csvCallback, {
             prependHeader: false // removes the generated header of "value1,value2,value3,value4" (in case you don't want it)
@@ -72,21 +74,13 @@ myModule.operatorsUse = function (root, j, dir) {
 
     if (importedCalled.length > 0) {
         console.log(`File has imported : ` + importedCalled.length + "  rxjs items.");
-
     } else {
         console.log("File doesn't not include  rxjs calls")
     }
-    //Export to csv
-    // showOperatorsUsed.forEach(operatorObject => {
-    //     data.push({
-    //         'file': operatorObject.fille,
-    //         'name': operatorObject.operatorName,
-    //         'usage': operatorObject.operatorCalled
-    //     })
 
     let json2csvCallback = function (err, csv) {
         if (err) throw err;
-        fs.writeFile('./name.csv', csv, function (err) {
+        fs.writeFile(`./operatorsInUse-${dateOfCsv}-${filename}.csv`, csv, function (err) {
             if (err) {
                 console.log('Some error occured - file either not saved or corrupted file saved.');
             } else {
@@ -98,5 +92,3 @@ myModule.operatorsUse = function (root, j, dir) {
 };
 
 module.exports = myModule;
-
-// json2csv - i test.json - f name, version > test.csv
