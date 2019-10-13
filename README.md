@@ -1,6 +1,6 @@
 ## Reactive programming for web applications
 
-This is internal script made for the thesis project based on reactive programming.
+This is internal script made for the thesis project based on reactive programming. Its purpose is to iterate and analyze all .js/.ts/.tsx/.jsx files in order to find and export a variety of results based on rxjs library.
 
 ## Getting Started
 
@@ -9,7 +9,9 @@ This is a simple scripting tool. Download the repository and npm install the dev
 ## Scripts
 
 ```
-$ node src/main/index.js"
+Run
+
+$ node src/main/index.js <option> "
 ```
 
 ## How it Works
@@ -19,9 +21,9 @@ Three available options:
 
 ```
 '-f, || --findOperator <name>', 'find the use of a specific rxjs operator'
-'-o, || --operatorsInUse <source>', 'find all operators of rxjs library that are used in the file'
+'-o, || --operatorsInUse <directory>', 'find all operators of rxjs library that are used in the file'
 
-source must start from the root directory of the machine. i.e  in Mac OS is Users/{username}/directory of your directory with the files that need to be parsed.
+Folder directory must start from the root directory of the machine. i.e  in Mac OS is Users/{username}/directory of your directory with the files that need to be parsed.
 ```
 
 ## Instructions
@@ -29,12 +31,12 @@ source must start from the root directory of the machine. i.e  in Mac OS is User
 ```
 Clone the repository.
 Npm install inside the folder.
-Run your preferable script.
+Run your script with preferable option.
 ```
 
 ## How We built the Scripting/Parsing Tool.
 
-We worked on plain javascript ,gulp.js and node.js . For the parsing we use jscodeshift in order to develope the codemods of our choice. We use babel presets and babel cli in order to execute terminal commands within our js files
+We worked on plain javascript ,gulp.js and node.js . For the parsing we use jscodeshift in order to develope the codemods of our choice. We use babel presets and babel cli in order to execute terminal commands within our js files. Also commnader.js used for better cli usage.
 
 ## License
 
