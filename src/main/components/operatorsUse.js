@@ -23,9 +23,7 @@ myModule.operatorsUse = function (root, j, dir, filename) {
     let importedCalled = [];
     let showOperatorsUsed = [];
     let count = 0;
-    let operatorObject = {
-
-    }
+    let operatorObject = {}
     let importedOperators = [];
     let source = "";
     //Find how many identifiers we import from the rxjs library
@@ -50,7 +48,6 @@ myModule.operatorsUse = function (root, j, dir, filename) {
     fs.readFile(dir, (err, data) => {
         if (err) throw err;
         importedOperators.forEach(operator => {
-            console.log(operator)
             count = data.toString().split(operator).length - 1
             if (data.includes(operator)) {
                 showOperatorsUsed.push({
@@ -60,6 +57,8 @@ myModule.operatorsUse = function (root, j, dir, filename) {
                 })
             }
         })
+        console.log("Operators found in " + dir + " ");
+        console.log(showOperatorsUsed);
 
         //Push the array of objects for csv export 
         operatorObject.rows = showOperatorsUsed
@@ -67,8 +66,6 @@ myModule.operatorsUse = function (root, j, dir, filename) {
         converter.json2csv(operatorObject.rows, json2csvCallback, {
             prependHeader: false // removes the generated header of "value1,value2,value3,value4" (in case you don't want it)
         });
-        console.log("Operators found in " + dir + " ")
-        console.log(showOperatorsUsed)
 
     });
 
@@ -82,13 +79,13 @@ myModule.operatorsUse = function (root, j, dir, filename) {
         if (err) throw err;
         fs.writeFile(`./csv_results/operatorsInUse-${dateOfCsv}-${filename}.csv`, csv, function (err) {
             if (err) {
-                console.log('Some error occured - file either not saved or corrupted file saved.');
+                console.log('Some error occurred - file either not saved or corrupted file saved.');
             } else {
-                console.log('It\'s saved!');
+                console.log(`operatorsInUse-${dateOfCsv}-${filename}.csv Saved!`);
             }
         })
     };
-    return importedCalled
+    return showOperatorsUsed
 };
 
 module.exports = myModule;
