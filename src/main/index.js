@@ -12,7 +12,9 @@ const fileUtils = require('..//main/utils/fileutils');
 const {
     readdirSync
 } = require('fs')
-
+let csvRows = {
+    rows: []
+}
 program
     .option('-f, --findOperator <name>', 'count rxjs operator')
     // .option('-a, --ast', 'output file ast tree')
@@ -29,6 +31,8 @@ if (program.findOperator) {
         program.help();
         return;
     }
+    console.log(parser)
+
     let source = program.operatorsInUse
     main(source, "", "operatorsInUse");
 }
@@ -40,7 +44,7 @@ function main(path, operatorName, option) {
     }
     //Fetch js,jsx,ts,tsx files
     files = fileUtils.getJSFilesSync(path)
-    files.forEach(file => {
+    files.map(file => {
         //Read files one by one and trim them
         console.log('Found js file: ', file);
 
@@ -53,7 +57,7 @@ function main(path, operatorName, option) {
         } else if (option == "ast") {
             codeModeAst.consoleAst(ast, j, operatorName);
         } else if (option == "operatorsInUse") {
-            codeModeRxjsCalls.operatorsUse(ast, j, file, filename);
+            codeModeRxjsCalls.operatorsUse(ast, j, file, filename, files, files.indexOf(file), csvRows)
         }
     })
 };

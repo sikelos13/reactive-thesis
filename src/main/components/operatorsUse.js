@@ -3,6 +3,7 @@ var myModule = {};
 const readFile = require('fs').readFile;
 const writeFile = require('fs').writeFile;
 const converter = require('json-2-csv');
+const alasql = require('alasql');
 let csvDate = new Date();
 let dateOfCsv = csvDate.toLocaleDateString('en-GB').replace(/\//g, "-");
 
@@ -18,7 +19,7 @@ let dateOfCsv = csvDate.toLocaleDateString('en-GB').replace(/\//g, "-");
  *    file: <path of file>
  * }
  */
-myModule.operatorsUse = function (root, j, dir, filename) {
+myModule.operatorsUse = function (root, j, dir, filename, filesArray, index, csvRows) {
     const rxjsCalls = root.find(j.Identifier)
     let importedCalled = [];
     let showOperatorsUsed = [];
@@ -38,12 +39,16 @@ myModule.operatorsUse = function (root, j, dir, filename) {
             }
         }
     })
-    //Initialize array with columns titles
-    showOperatorsUsed.push({
-        operatorName: "Operator",
-        operatorCalled: "Times Used",
-        file: "Found in file:"
-    })
+    //Push the head titles only on first file
+    if (index == 0) {
+        //Initialize array with columns titles
+        showOperatorsUsed.push({
+            operatorName: "Operator",
+            operatorCalled: "Times Used",
+            file: "Found in file:"
+        })
+    }
+
     //iterate the imported identifiers  and scan files for operators
     fs.readFile(dir, (err, data) => {
         if (err) throw err;
@@ -58,15 +63,22 @@ myModule.operatorsUse = function (root, j, dir, filename) {
             }
         })
         console.log("Operators found in " + dir + " ");
-        console.log(showOperatorsUsed);
 
         //Push the array of objects for csv export 
-        operatorObject.rows = showOperatorsUsed
+        Array.prototype.push.apply(csvRows.rows, showOperatorsUsed);
 
-        converter.json2csv(operatorObject.rows, json2csvCallback, {
-            prependHeader: false // removes the generated header of "value1,value2,value3,value4" (in case you don't want it)
-        });
+        //When we come down to the last file to scan we aggregate all the results in order to export them into a csv file
+        if (index == (filesArray.length - 1)) {
+            converter.json2csv(csvRows.rows, json2csvCallback, {
+                prependHeader: false // removes the generated header of "value1,value2,value3,value4" (in case you don't want it)
+            });
 
+            //iterate into csvRows in order to console log specific results.
+            let tempConsoleArray = csvRows.rows
+            let res = alasql('SELECT operatorName, SUM(operatorCalled) AS operatorCalled FROM ? GROUP BY operatorName', [tempConsoleArray]);
+            res.shift();
+            console.log(res);
+        }
     });
 
     if (importedCalled.length > 0) {
@@ -74,18 +86,18 @@ myModule.operatorsUse = function (root, j, dir, filename) {
     } else {
         console.log("File doesn't not include  rxjs calls")
     }
-
+    //Json to csv function
     let json2csvCallback = function (err, csv) {
         if (err) throw err;
-        fs.writeFile(`./csv_results/operatorsInUse-${dateOfCsv}-${filename}.csv`, csv, function (err) {
+        fs.writeFile(`./csv_results/operatorsInUse-${dateOfCsv}.csv`, csv, function (err) {
             if (err) {
                 console.log('Some error occurred - file either not saved or corrupted file saved.');
             } else {
-                console.log(`operatorsInUse-${dateOfCsv}-${filename}.csv Saved!`);
+                console.log(`operatorsInUse-${dateOfCsv}.csv Saved!`);
             }
         })
     };
-    return showOperatorsUsed
+
 };
 
 module.exports = myModule;

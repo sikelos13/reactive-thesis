@@ -32,6 +32,7 @@ Folder directory must start from the root directory of the machine. i.e  in Mac 
 Clone the repository.
 Npm install inside the folder.
 Run your script with preferable option.
+Make 'csv_results'  folder in root directory.
 ```
 
 ## How We built the Scripting/Parsing Tool.
