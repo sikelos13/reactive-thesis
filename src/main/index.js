@@ -2,6 +2,7 @@ let path = require('path'),
     fs = require('fs');
 const parser = require('../main/components/JSCodeshiftWrapper').parser;
 const j = require('../main/components/JSCodeshiftWrapper').j
+
 //Import codemods
 const codeModeAst = require('./components/consoleAst');
 const codeModeOperators = require('./components/findOperators');
@@ -31,7 +32,6 @@ if (program.findOperator) {
         program.help();
         return;
     }
-    console.log(parser)
 
     let source = program.operatorsInUse
     main(source, "", "operatorsInUse");

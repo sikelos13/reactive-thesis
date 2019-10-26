@@ -4,7 +4,7 @@ class JSCodeshiftWrapper {
 
     static parse(code) {
         return jscodeshift(code, {
-            flow: true
+            parser: require("recast/parsers/flow")
         });
     }
 }

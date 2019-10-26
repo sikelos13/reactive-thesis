@@ -10,6 +10,7 @@
   "email": "s.athanasoulias@gmail.com",
   "dependencies": {
     "alasql": "^0.5.1",
+    "babylon": "^7.0.0-beta.47",
     "commnader": "0.0.1-security",
     "csvjson": "^5.1.0",
     "fsevents": "^2.1.1",
@@ -33,5 +34,8 @@
       "node_modules",
       "src"
     ]
+  },
+  "devDependencies": {
+    "@babel/preset-flow": "^7.0.0"
   }
 }
