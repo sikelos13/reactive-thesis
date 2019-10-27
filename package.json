@@ -1,26 +1,41 @@
 {
-    "name": "app",
-    "version": "1.0.0",
-    "scripts": {
-        "start": "node src/app.js",
-        // "sub-analyzer": "jscodeshift ../thesis-projects-container -t ../reactive-thesis/src/components/subAnalyzer.js -dp -v 2 --parser flow",
-        // "pipe-analyzer": "jscodeshift [OPTION]... PATH..."
-    },
-    "devDependencies": {
-        "@babel/parser": "^7.6.0",
-        "gulp": "latest",
-        "gulp-coffee": "latest",
-        "gulp-concat": "latest",
-        "gulp-connect": "latest",
-        "gulp-sass": "latest",
-        "gulp-uglify": "latest",
-        "gulp-util": "latest"
-    },
-    "dependencies": {
-        "acorn": "^7.0.0",
-        "event-stream": "^4.0.1",
-        "findit": "^2.0.0",
-        "jscodeshift": "^0.6.4",
-        "npm": "^6.11.3"
-    }
+  "name": "sikelos13",
+  "version": "1.0.0",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/main/index.js",
+    "test": "jest --coverage"
+  },
+  "url": "https://github.com/sikelos13/reactive-thesis/issues",
+  "email": "s.athanasoulias@gmail.com",
+  "dependencies": {
+    "alasql": "^0.5.1",
+    "babylon": "^7.0.0-beta.47",
+    "commnader": "0.0.1-security",
+    "csvjson": "^5.1.0",
+    "fsevents": "^2.1.1",
+    "glob": "7.1.3",
+    "jest": "^24.0.0",
+    "jscodeshift": "^0.6.2",
+    "json-2-csv": "^3.5.6",
+    "json2csv": "^4.5.4",
+    "npm": "^6.12.0",
+    "requirejs": "^2.3.6",
+    "tern": "^0.22.3",
+    "walk": "^2.3.14"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sikelos13/reactive-thesis/"
+  },
+  "jest": {
+    "verbose": true,
+    "moduleDirectories": [
+      "node_modules",
+      "src"
+    ]
+  },
+  "devDependencies": {
+    "@babel/preset-flow": "^7.0.0"
+  }
 }
