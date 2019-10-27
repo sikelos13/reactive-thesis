@@ -18,15 +18,12 @@ let csvRows = {
 }
 program
     .option('-f, --findOperator <name>', 'count rxjs operator')
-    // .option('-a, --ast', 'output file ast tree')
     .option('-o, --operatorsInUse <source>', 'find all operators of rxjs library that are used in the file');
 program.parse(process.argv);
 console.log(program.operatorsInUse)
 
 if (program.findOperator) {
     main('src/test/resources', program.findOperator, "findOperator");
-} else if (program.ast) {
-    main('src/test/resources', program.ast, "ast");
 } else if (program.operatorsInUse) {
     if (program.operatorsInUse.length < 2) {
         program.help();
@@ -42,6 +39,7 @@ function main(path, operatorName, option) {
         console.log("Wrong directory ", path);
         return;
     }
+
     //Fetch js,jsx,ts,tsx files
     files = fileUtils.getJSFilesSync(path)
     files.map(file => {
@@ -61,7 +59,6 @@ function main(path, operatorName, option) {
     })
 };
 
-
 // fromDir('../thesis-projects-container', 'js');
 // readline.question(`What's  your files directory?`, file => {
 //     readline.question(`What' type of files should we search?`, type => {
@@ -70,11 +67,3 @@ function main(path, operatorName, option) {
 //     })
 //     // readline.close()
 // })
-
-// sh(`jscodeshift ${filename} -t ../reactive-thesis/src/components/subAnalyzer.js -dp -v 2 --parser flow`);
-//TODO: user should import his own src 
-// Project should only read one repo at a time.
-//TODO : implement Jscodeshift to wrap parser and read the js/ts files
-//TODO: Implement
-//TODO :  Flow parser
-//TODO: yeoman for structure
