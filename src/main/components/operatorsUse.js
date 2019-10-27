@@ -5,7 +5,10 @@ const writeFile = require('fs').writeFile;
 const converter = require('json-2-csv');
 const alasql = require('alasql');
 let csvDate = new Date();
-let dateOfCsv = csvDate.toLocaleDateString('en-GB').replace(/\//g, "-");
+let dateOfCsv = csvDate.toLocaleDateString('en-GB', {
+    hour: "2-digit",
+    minute: "2-digit",
+}).replace(/\/|,|\s|:/g, "-");
 
 /**
  * Rename to operatorsUse
@@ -24,7 +27,6 @@ myModule.operatorsUse = function (root, j, dir, filename, filesArray, index, csv
     let importedCalled = [];
     let showOperatorsUsed = [];
     let count = 0;
-    let operatorObject = {}
     let importedOperators = [];
     let source = "";
     //Find how many identifiers we import from the rxjs library
