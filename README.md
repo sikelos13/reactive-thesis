@@ -9,9 +9,13 @@ This is a simple scripting tool. Download the repository and npm install the dev
 ## Scripts
 
 ```
-Run
+Run:
 
-$ node src/main/index.js <option> "
+$ node src/main/index.js <option>
+
+Test with: 
+
+$ npm test
 ```
 
 ## How it Works
@@ -22,11 +26,10 @@ Three available options:
 ```
 '-f, || --findOperator <name>', 'find the use of a specific rxjs operator'
 '-o, || --operatorsInUse <directory>', 'find all operators of rxjs library that are used in the file and export them in csv file
-
-Disclaimer:
-* Folder directory must start from the root directory of the machine. i.e  in Mac OS is Users/{username}/directory of your directory with the files that need to be parsed.
-* In order for *--operatorsInUse* option to work out , you have to pre-create an **csv_results** folder inside the root directory of the repository.
 ```
+*Disclaimer:*
+* Folder directory must start from the root directory of the machine. i.e  in Mac OS is Users/{username}/directory of your directory with the files that need to be parsed.
+* In order for _--operatorsInUse_ option to work out , you have to pre-create an **csv_results** folder inside the root directory of the repository.
 
 ## Instructions
 
