@@ -50,36 +50,40 @@ myModule.operatorsUse = function (root, j, dir, filename, filesArray, index, csv
     }
 
     //iterate the imported identifiers  and scan files for operators
-    fs.readFile(dir, (err, data) => {
-        if (err) throw err;
-        importedOperators.forEach(operator => {
-            count = data.toString().split(operator).length - 1
-            if (data.includes(operator)) {
-                showOperatorsUsed.push({
-                    operatorName: operator,
-                    operatorCalled: count,
-                    file: dir
-                })
+    try {
+        fs.readFile(dir, (err, data) => {
+            if (err) throw err;
+            importedOperators.forEach(operator => {
+                count = data.toString().split(operator).length - 1
+                if (data.includes(operator)) {
+                    showOperatorsUsed.push({
+                        operatorName: operator,
+                        operatorCalled: count,
+                        file: dir
+                    })
+                }
+            })
+            // console.log("Operators found in " + dir + " ");
+
+            //Push the array of objects for csv export 
+            Array.prototype.push.apply(csvRows.rows, showOperatorsUsed);
+
+            //When we come down to the last file to scan we aggregate all the results in order to export them into a csv file
+            if (index == (filesArray.length - 1)) {
+                converter.json2csv(csvRows.rows, json2csvCallback, {
+                    prependHeader: false // removes the generated header of "value1,value2,value3,value4" (in case you don't want it)
+                });
+
+                //iterate into csvRows in order to console log specific results.
+                let tempConsoleArray = csvRows.rows
+                let res = alasql('SELECT operatorName, SUM(operatorCalled) AS operatorCalled FROM ? GROUP BY operatorName', [tempConsoleArray]);
+                res.shift();
+                console.log(res);
             }
-        })
-        console.log("Operators found in " + dir + " ");
-
-        //Push the array of objects for csv export 
-        Array.prototype.push.apply(csvRows.rows, showOperatorsUsed);
-
-        //When we come down to the last file to scan we aggregate all the results in order to export them into a csv file
-        if (index == (filesArray.length - 1)) {
-            converter.json2csv(csvRows.rows, json2csvCallback, {
-                prependHeader: false // removes the generated header of "value1,value2,value3,value4" (in case you don't want it)
-            });
-
-            //iterate into csvRows in order to console log specific results.
-            let tempConsoleArray = csvRows.rows
-            let res = alasql('SELECT operatorName, SUM(operatorCalled) AS operatorCalled FROM ? GROUP BY operatorName', [tempConsoleArray]);
-            res.shift();
-            console.log(res);
-        }
-    });
+        });
+    } catch (err) {
+        console.log(err)
+    }
 
     if (importedCalled.length > 0) {
         console.log(`File has imported : ` + importedCalled.length + "  rxjs items.");

@@ -1,10 +1,11 @@
 const jscodeshift = require('jscodeshift');
+const flowParser = require('flow-parser');
 
 class JSCodeshiftWrapper {
 
     static parse(code) {
         return jscodeshift(code, {
-            parser: require("recast/parsers/flow")
+            parser: flowParser
         });
     }
 }

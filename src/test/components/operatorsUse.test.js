@@ -1,6 +1,6 @@
 const codeMod = require('../../main/components/operatorsUse');
-const parser = require('../../main/components/JSCodeshiftWrapper').parser;
-const j = require('../../main/components/JSCodeshiftWrapper').j;
+const parser = require('../../main/utils/JSCodeshiftWrapper').parser;
+const j = require('../../main/utils/JSCodeshiftWrapper').j;
 const fileUtils = require('../../main/utils/fileutils');
 const testCaseFiles = ['./src/test/resources/example.js', './src/test/resources/example_2.js']
 let path = require('path'),

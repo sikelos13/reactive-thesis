@@ -21,9 +21,11 @@ Three available options:
 
 ```
 '-f, || --findOperator <name>', 'find the use of a specific rxjs operator'
-'-o, || --operatorsInUse <directory>', 'find all operators of rxjs library that are used in the file'
+'-o, || --operatorsInUse <directory>', 'find all operators of rxjs library that are used in the file and export them in csv file
 
-Folder directory must start from the root directory of the machine. i.e  in Mac OS is Users/{username}/directory of your directory with the files that need to be parsed.
+Disclaimer:
+* Folder directory must start from the root directory of the machine. i.e  in Mac OS is Users/{username}/directory of your directory with the files that need to be parsed.
+* In order for *--operatorsInUse* option to work out , you have to pre-create an **csv_results** folder inside the root directory of the repository.
 ```
 
 ## Instructions

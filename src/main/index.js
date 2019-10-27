@@ -1,7 +1,7 @@
 let path = require('path'),
     fs = require('fs');
-const parser = require('../main/components/JSCodeshiftWrapper').parser;
-const j = require('../main/components/JSCodeshiftWrapper').j
+const parser = require('./utils/JSCodeshiftWrapper').parser;
+const j = require('./utils/JSCodeshiftWrapper').j
 
 //Import codemods
 const codeModeAst = require('./components/consoleAst');
@@ -47,7 +47,6 @@ function main(path, operatorName, option) {
     files.map(file => {
         //Read files one by one and trim them
         console.log('Found js file: ', file);
-
         ast = parser(fileUtils.readFileSync(file).trim());
         let filename = file.replace(/^.*[\\\/]/, '')
         //Run script based on users arguments
