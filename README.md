@@ -13,7 +13,7 @@ Run:
 
 $ node src/main/index.js <option>
 
-Test with: 
+Test with:
 
 $ npm test
 ```
@@ -27,9 +27,11 @@ Three available options:
 '-f, || --findOperator <name>', 'find the use of a specific rxjs operator'
 '-o, || --operatorsInUse <directory>', 'find all operators of rxjs library that are used in the file and export them in csv file
 ```
-*Disclaimer:*
-* Folder directory must start from the root directory of the machine. i.e  in Mac OS is Users/{username}/directory of your directory with the files that need to be parsed.
-* In order for _--operatorsInUse_ option to work out , you have to pre-create an **csv_results** folder inside the root directory of the repository.
+
+_Disclaimer:_
+
+- Folder directory must start from the root directory of the machine. i.e in Mac OS is Users/{username}/directory of your directory with the files that need to be parsed.
+- In order for _--operatorsInUse_ option to work out , you have to pre-create an **csv_results** folder inside the root directory of the repository.
 
 ## Instructions
 
@@ -42,7 +44,7 @@ Make 'csv_results'  folder in root directory.
 
 ## How We built the Scripting/Parsing Tool.
 
-We worked on plain javascript ,gulp.js and node.js . For the parsing we use jscodeshift in order to develope the codemods of our choice. We use babel presets and babel cli in order to execute terminal commands within our js files. Also commnader.js used for better cli usage.
+We worked on plain javascript ,gulp.js and node.js .For handling terminal option we use commander.js and for the parsing we use jscodeshift in which we wrap codemods with flow parser. We use babel presets and babel cli in order to execute terminal commands within our js files. Also commander.js used for better cli usage.
 
 ## License
 
