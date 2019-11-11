@@ -1,14 +1,11 @@
+let csvModule = require('../utils/jsonToCsv');
 let fs = require('fs');
 var myModule = {};
 const readFile = require('fs').readFile;
 const writeFile = require('fs').writeFile;
 const converter = require('json-2-csv');
 const alasql = require('alasql');
-let csvDate = new Date();
-let dateOfCsv = csvDate.toLocaleDateString('en-GB', {
-    hour: "2-digit",
-    minute: "2-digit",
-}).replace(/\/|,|\s|:/g, "-");
+
 
 /**
  * Rename to operatorsUse
@@ -72,7 +69,7 @@ myModule.operatorsUse = function (root, j, dir, filename, filesArray, index, csv
 
             //When we come down to the last file to scan we aggregate all the results in order to export them into a csv file
             if (index == (filesArray.length - 1)) {
-                converter.json2csv(csvRows.rows, json2csvCallback, {
+                converter.json2csv(csvRows.rows, csvModule.json2csvCallback, {
                     prependHeader: false // removes the generated header of "value1,value2,value3,value4" (in case you don't want it)
                 });
 
@@ -92,17 +89,6 @@ myModule.operatorsUse = function (root, j, dir, filename, filesArray, index, csv
     } else {
         console.log("File doesn't not include  rxjs calls")
     }
-    //Json to csv function
-    let json2csvCallback = function (err, csv) {
-        if (err) throw err;
-        fs.writeFile(`./csv_results/operatorsInUse-${dateOfCsv}.csv`, csv, function (err) {
-            if (err) {
-                console.log('Some error occurred - file either not saved or corrupted file saved.');
-            } else {
-                console.log(`operatorsInUse-${dateOfCsv}.csv Saved!`);
-            }
-        })
-    };
 
 };
 

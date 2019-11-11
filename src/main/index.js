@@ -7,7 +7,7 @@ const j = require('./utils/JSCodeshiftWrapper').j
 const codeModeAst = require('./components/consoleAst');
 const codeModeOperators = require('./components/findOperators');
 const codeModeRxjsCalls = require('./components/operatorsUse');
-
+const codeModeRxjsSubject = require('./components/subjectInUse')
 const program = require('commander');
 const fileUtils = require('..//main/utils/fileutils');
 const {
@@ -18,9 +18,9 @@ let csvRows = {
 }
 program
     .option('-f, --findOperator <name>', 'count rxjs operator')
-    .option('-o, --operatorsInUse <source>', 'find all operators of rxjs library that are used in the file');
+    .option('-o, --operatorsInUse <source>', 'find all operators of rxjs library that are used in the file')
+    .option('-s, --subjectInUse <source>', 'find the usage of subject property of rxjs library');
 program.parse(process.argv);
-console.log(program.operatorsInUse)
 
 if (program.findOperator) {
     main('src/test/resources', program.findOperator, "findOperator");
@@ -29,9 +29,15 @@ if (program.findOperator) {
         program.help();
         return;
     }
-
     let source = program.operatorsInUse
     main(source, "", "operatorsInUse");
+} else if (program.subjectInUse) {
+    if (program.subjectInUse.length < 2) {
+        program.help();
+        return;
+    }
+    let source = program.subjectInUse
+    main(source, "", "subjectInUse");
 }
 
 function main(path, operatorName, option) {
@@ -55,15 +61,8 @@ function main(path, operatorName, option) {
             codeModeAst.consoleAst(ast, j, operatorName);
         } else if (option == "operatorsInUse") {
             codeModeRxjsCalls.operatorsUse(ast, j, file, filename, files, files.indexOf(file), csvRows)
+        } else if (option == "subjectInUse") {
+            codeModeRxjsSubject.subjectInUse(ast, j, file, filename, files, files.indexOf(file), csvRows)
         }
     })
 };
-
-// fromDir('../thesis-projects-container', 'js');
-// readline.question(`What's  your files directory?`, file => {
-//     readline.question(`What' type of files should we search?`, type => {
-//         fromDir(file, type)
-//         readline.close()
-//     })
-//     // readline.close()
-// })
