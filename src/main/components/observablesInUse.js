@@ -10,20 +10,20 @@ function containsWord(str, word) {
     return str.match(new RegExp("\\b" + word + "\\b")) != null;
 }
 
-myModule.subjectInUse = function (root, j, dir, filename, filesArray, index, csvRows) {
+myModule.observablesInUse = function (root, j, dir, filename, filesArray, index, csvRows) {
     const rxjsCalls = root.find(j.Identifier)
     let importedCalled = [];
-    let showSubjectUsed = [];
+    let showObservableUsed = [];
     let count = 0;
     let source = "";
-    let matchesSubjects = []
+    let matchesObservable = []
 
     //Find how many identifiers we import from the rxjs library
     rxjsCalls.forEach(p => {
         if (p.parentPath.parentPath.node.type == "ImportDeclaration") {
             source = p.parentPath.parentPath.node.source.value
             if ((source.includes("rxjs")) && (!importedCalled.includes(p.node.name))) {
-                if (p.node.name == "Subject") {
+                if (p.node.name == "Observable") {
                     importedCalled.push(p.node.name)
                 }
             }
@@ -35,9 +35,9 @@ myModule.subjectInUse = function (root, j, dir, filename, filesArray, index, csv
     //Push the head titles only on first file
     if (index == 0) {
         //Initialize array with columns titles
-        showSubjectUsed.push({
-            subject: "Subject variable",
-            subjectCalled: "Times Used",
+        showObservableUsed.push({
+            observableVar: "Observable variable",
+            observableCalled: "Times Used",
             file: "Found in file:"
         })
     }
@@ -46,31 +46,34 @@ myModule.subjectInUse = function (root, j, dir, filename, filesArray, index, csv
     try {
         fs.readFile(dir, (err, data) => {
             if (err) throw err;
-            // console.log(data.toString())
             let tempData = data.toString().replace("\r\n", "    ");
             let arr = tempData.split(/\r?\n/) //white spaces must match length of string
-            let forEachCounter = 0;
             arr.forEach(line => {
-                if (containsWord(line, "Subject")) {
-                    if (forEachCounter > 0) {
+                if (containsWord(line, "Observable") && containsWord(line, "new")) {
                         let indexOfConst = line.indexOf("const");
                         let indexOfEqual = line.indexOf("=")
                         let tempVariable = line.slice((indexOfConst + 5), indexOfEqual).trim();
                         console.log(tempVariable)
 
-                        matchesSubjects.push(tempVariable);
-                    }
-                    forEachCounter = +1;
+                        matchesObservable.push(tempVariable);
+                } else if (containsWord(line, "Observable") && !containsWord(line, "import") && !containsWord(line, "//")) {
+                    console.log(line)
+                    showObservableUsed.push({
+                        observableVar: "Observable Constructor",
+                        observableCalled: count++,
+                        file: dir
+                    })
                 }
+            
             });
 
-            matchesSubjects.forEach(subject => {
+            matchesObservable.forEach(observable => {
 
-                count = data.toString().split(subject).length - 1
-                if (data.includes(subject)) {
-                    showSubjectUsed.push({
-                        subject: subject,
-                        subjectCalled: count - 1,
+                count = data.toString().split(observable).length - 1
+                if (data.includes(observable)) {
+                    showObservableUsed.push({
+                        observableVar: observable,
+                        observableCalled: count - 1,
                         file: dir
                     })
                 }
@@ -78,7 +81,7 @@ myModule.subjectInUse = function (root, j, dir, filename, filesArray, index, csv
             // console.log("Operators found in " + dir + " ");
 
             //Push the array of objects for csv export 
-            Array.prototype.push.apply(csvRows.rows, showSubjectUsed);
+            Array.prototype.push.apply(csvRows.rows, showObservableUsed);
 
             //When we come down to the last file to scan we aggregate all the results in order to export them into a csv file
             if (index == (filesArray.length - 1)) {
@@ -88,7 +91,7 @@ myModule.subjectInUse = function (root, j, dir, filename, filesArray, index, csv
 
                 //iterate into csvRows in order to console log specific results.
                 let tempConsoleArray = csvRows.rows
-                let res = alasql('SELECT subject, SUM(subjectCalled) AS subjectCalled FROM ? GROUP BY subject', [tempConsoleArray]);
+                let res = alasql('SELECT observableVar, SUM(observableCalled) AS observableCalled FROM ? GROUP BY observableVar', [tempConsoleArray]);
                 res.shift();
                 console.log(res);
             }

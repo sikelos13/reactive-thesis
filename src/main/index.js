@@ -7,7 +7,8 @@ const j = require('./utils/JSCodeshiftWrapper').j
 const codeModeAst = require('./components/consoleAst');
 const codeModeOperators = require('./components/findOperators');
 const codeModeRxjsCalls = require('./components/operatorsUse');
-const codeModeRxjsSubject = require('./components/subjectInUse')
+const codeModeRxjsSubject = require('./components/subjectInUse');
+const codeModeRxjsObservables = require('./components/observablesInUse');
 const program = require('commander');
 const fileUtils = require('..//main/utils/fileutils');
 const {
@@ -19,7 +20,8 @@ let csvRows = {
 program
     .option('-f, --findOperator <name>', 'count rxjs operator')
     .option('-o, --operatorsInUse <source>', 'find all operators of rxjs library that are used in the file')
-    .option('-s, --subjectInUse <source>', 'find the usage of subject property of rxjs library');
+    .option('-s, --subjectInUse <source>', 'find the usage of subject property of rxjs library')
+    .option('-v, --observablesInUse <source>', 'find the usage of observable constructors  of rxjs library');
 program.parse(process.argv);
 
 if (program.findOperator) {
@@ -38,6 +40,13 @@ if (program.findOperator) {
     }
     let source = program.subjectInUse
     main(source, "", "subjectInUse");
+}else if (program.observablesInUse) {
+    if (program.observablesInUse.length < 2) {
+        program.help();
+        return;
+    }
+    let source = program.observablesInUse
+    main(source, "", "observablesInUse");
 }
 
 function main(path, operatorName, option) {
@@ -63,6 +72,8 @@ function main(path, operatorName, option) {
             codeModeRxjsCalls.operatorsUse(ast, j, file, filename, files, files.indexOf(file), csvRows)
         } else if (option == "subjectInUse") {
             codeModeRxjsSubject.subjectInUse(ast, j, file, filename, files, files.indexOf(file), csvRows)
+        } else if (option == "observablesInUse") {
+            codeModeRxjsObservables.observablesInUse(ast, j, file, filename, files, files.indexOf(file), csvRows)
         }
     })
 };
