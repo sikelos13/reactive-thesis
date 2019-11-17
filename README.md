@@ -26,7 +26,9 @@ Three available options:
 ```
 '-f, || --findOperator <name>', 'find the use of a specific rxjs operator'
 '-o, || --operatorsInUse <directory>', 'find all operators of rxjs library that are used in the file and export them in csv file'
-'-s, || --subjectInUse <directory>', 'find all subject constructors and its alias of rxjs library that are used in the file and export them in csv file'
+'-s, || --subjectInUse <directory>', 'find all subject constructors and its variables of rxjs library that are used in the file and export them into csv file'
+'-v, || --observablesInUse <directory>', 'find all observable constructors and its variables of rxjs library that are used in the file and export them into csv file'
+
 ```
 
 _Disclaimer:_
