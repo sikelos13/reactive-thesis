@@ -59,7 +59,7 @@ function main(path, operatorName, option) {
     files = fileUtils.getJSFilesSync(path)
     files.map(file => {
         //Read files one by one and trim them
-        console.log('Found js file: ', file);
+        console.log('Found file: ', file);
         ast = parser(fileUtils.readFileSync(file).trim());
         let filename = file.replace(/^.*[\\\/]/, '')
         //Run script based on users arguments
