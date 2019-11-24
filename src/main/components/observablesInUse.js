@@ -23,8 +23,8 @@ myModule.observablesInUse = function (root, j, dir, filename, filesArray, index,
     //Find how many identifiers we import from the rxjs library
     rxjsImportDeclarations.forEach(p => {
         if (p.parentPath.parentPath.node.type == "ImportDeclaration" && (p.parentPath.parentPath.node.source.value == "rxjs/Observables" || p.parentPath.parentPath.node.source.value == "rxjs")) {
-            console.log(p.parentPath.value.imported.name)
-            if(p.parentPath.value.imported.name !== p.parentPath.value.local.name) {
+            // console.log(p)
+            if ((p.parentPath.value.imported.name !== p.parentPath.value.local.name) && (p.parentPath.value.local.name == "Observable")) {
                 importedCalledWithAlias.push(p.parentPath.value.imported.name);
             }
         }
@@ -43,37 +43,52 @@ myModule.observablesInUse = function (root, j, dir, filename, filesArray, index,
     }
     //iterate the imported identifiers  and scan files for operators
     try {
-        uniqueAlias.forEach(alias => {
+        if (uniqueAlias.length < 1) {
             rxjsImportDeclarations.forEach(nodeObservable => {
                 // console.log(nodeObservable.parentPath.value.type)
-                if(alias == nodeObservable.value.name && nodeObservable.parentPath.parentPath.node.type !== "ImportDeclaration" ) {
-                    count++;
-                }else if (nodeObservable.value.name == "Observable" && nodeObservable.parentPath.parentPath.node.type !== "ImportDeclaration" && nodeObservable.parentPath.value.type == "NewExpression") {
+                if (nodeObservable.value.name == "Observable" && nodeObservable.parentPath.parentPath.node.type !== "ImportDeclaration" && nodeObservable.parentPath.value.type == "NewExpression") {
                     newCount++;
                 }
             })
-            showObservableUsed.push({
-                observableVar: alias,
-                observableCalled: count,
-                file: dir
+
+        } else {
+            uniqueAlias.forEach(alias => {
+                rxjsImportDeclarations.forEach(nodeObservable => {
+                    // console.log(nodeObservable.parentPath.value.type)
+                    if (alias == nodeObservable.value.name && nodeObservable.parentPath.parentPath.node.type !== "ImportDeclaration") {
+                        count++;
+                    }
+                    if (nodeObservable.value.name == "Observable" && nodeObservable.parentPath.parentPath.node.type !== "ImportDeclaration" && nodeObservable.parentPath.value.type == "NewExpression") {
+                        newCount++;
+                    }
+                })
+               
+                if (count > 0) {
+                    showObservableUsed.push({
+                        observableVar: alias,
+                        observableCalled: count,
+                        file: dir
+                    })
+                    count = 0;
+                }
             })
+        }
+
+        if (newCount > 0) {
             showObservableUsed.push({
                 observableVar: "Observable_without_variable",
                 observableCalled: newCount,
                 file: dir
             })
-            count = 0;
-
-            newCount =0;
-        })
-        
+            newCount = 0;
+        }
 
         //Push the array of objects for csv export 
         Array.prototype.push.apply(csvRows.rows, showObservableUsed);
 
         //When we come down to the last file to scan we aggregate all the results in order to export them into a csv file
         if (index == (filesArray.length - 1)) {
-            
+
             converter.json2csv(csvRows.rows, csvModule.json2csvCallback, {
                 prependHeader: false // removes the generated header of "value1,value2,value3,value4" (in case you don't want it)
             });
@@ -84,16 +99,16 @@ myModule.observablesInUse = function (root, j, dir, filename, filesArray, index,
             res.shift();
             console.log(res);
         }
-        
+
     } catch (err) {
         console.log(err)
     }
 
-    if (importedCalled.length > 0) {
-        console.log(`File has imported : ` + importedCalled.length + "  observable constructor.");
-    } else {
-        console.log("File doesn't not include  rxjs observables constructors")
-    }
+    // if (importedCalled.length > 0) {
+    //     console.log(`File has imported : ` + importedCalled.length + "  observable constructor.");
+    // } else {
+    //     console.log("File doesn't not include  rxjs observables constructors")
+    // }
 
 };
 
