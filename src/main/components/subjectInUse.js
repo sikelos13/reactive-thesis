@@ -37,7 +37,7 @@ myModule.subjectInUse = function (root, j, dir, filename, filesArray, index, csv
     if (index == 0) {
         //Initialize array with columns titles
         showSubjectUsed.push({
-            subjectVar: "Subject variable",
+            subjectVar: "Subject variable/alias used",
             subjectCalled: "Times Used",
             file: "Found in file:"
         })
@@ -72,17 +72,33 @@ myModule.subjectInUse = function (root, j, dir, filename, filesArray, index, csv
             uniqueAlias.forEach(alias => {
                 rxjsImportDeclarations.forEach(nodeObservable => {
                     // console.log(nodeObservable.parentPath.value.type)
-                    if (alias == nodeObservable.value.name && nodeObservable.parentPath.parentPath.node.type !== "ImportDeclaration") {
+                    // if (alias == nodeObservable.value.name && nodeObservable.parentPath.parentPath.node.type !== "ImportDeclaration") {
+                    //     count++;
+                    // }
+                    if (nodeObservable.value.name == alias && nodeObservable.parentPath.parentPath.node.type !== "ImportDeclaration" && nodeObservable.parentPath.value.type == "NewExpression") {
                         count++;
-                    }
-                    if (nodeObservable.value.name == "Subject" && nodeObservable.parentPath.parentPath.node.type !== "ImportDeclaration" && nodeObservable.parentPath.value.type == "NewExpression") {
-                        newCount++;
+                        console.log(nodeObservable.value.name )
+                    } 
+                    if (nodeObservable.parentPath.parentPath.node.type !== "ImportDeclaration" && nodeObservable.parentPath.parentPath.value.type == "AssignmentExpression") {
+                        // console.log(nodeObservable.parentPath.parentPath.value);
+    
+                        if(nodeObservable.parentPath.parentPath.value.right.type == "NewExpression" && nodeObservable.parentPath.parentPath.value.right.callee.name== alias && nodeObservable.parentPath.parentPath.value.right.callee.type== "Identifier") {
+                            // console.log(nodeObservable.parentPath.parentPath.value);
+    
+                            if (nodeObservable.parentPath.parentPath.value.left.type == "MemberExpression") {
+                                if (nodeObservable.parentPath.parentPath.value.left.property.type == "Identifier") {
+                                // console.log(nodeObservable.parentPath.parentPath.value.left.property.name);
+                                importedVariable.push(nodeObservable.parentPath.parentPath.value.left.property.name);
+                                //continue implementing the idea of varaibles
+                                }
+                            }
+                        }
                     }
                 })
                
                 if (count > 0) {
                     showSubjectUsed.push({
-                        subjectVar: alias,
+                        subjectVar: 'Alias: '+alias,
                         subjectCalled: count,
                         file: dir
                     })
@@ -101,7 +117,7 @@ myModule.subjectInUse = function (root, j, dir, filename, filesArray, index, csv
                 }
             })
             showSubjectUsed.push({
-                subjectVar: variable,
+                subjectVar: 'Variable: '+variable,
                 subjectCalled: variableCount,
                 file: dir
             })
