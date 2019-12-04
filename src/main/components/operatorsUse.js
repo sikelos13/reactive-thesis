@@ -1,11 +1,9 @@
 let csvModule = require('../utils/jsonToCsv');
-let fs = require('fs');
 var myModule = {};
 const readFile = require('fs').readFile;
 const writeFile = require('fs').writeFile;
 const converter = require('json-2-csv');
 const alasql = require('alasql');
-
 
 /**
  * Rename to operatorsUse
@@ -21,66 +19,73 @@ const alasql = require('alasql');
  */
 myModule.operatorsUse = function (root, j, dir, filename, filesArray, index, csvRows) {
     const rxjsImportDeclarations = root.find(j.Identifier);
-    let importedCalled = [];
+    let importedCalledWithAlias = [];
     let showOperatorsUsed = [];
     let count = 0;
+    let newCount = 0;
     let uniqueOperators = [];
+    let uniqueAlias = [];
     let importSpecifier = [];
+
     //Find how many identifiers we import from the rxjs library
     rxjsImportDeclarations.forEach(p => {
         if (p.parentPath.parentPath.node.type == "ImportDeclaration" && p.parentPath.parentPath.node.source.value == "rxjs/operators") {
-            // console.log(p.parentPath.parentPath.node)
-                // console.log()
-            // console.log(importSpecifier)
-            // importSpecifier.forEach(importedOperator => {
-                // console.log(p.parentPath.parentPath.node.specifiers)
+            if (p.parentPath.value.imported.name !== p.parentPath.value.local.name) {
+                importedCalledWithAlias.push(p.parentPath.value.imported.name);
+            }else {
                 p.parentPath.parentPath.node.specifiers.forEach(operatorImport => {
-                    // console.log(operatorImport.imported.name)
                     importSpecifier.push(operatorImport.imported.name);
                 })
- 
-             uniqueOperators = [...new Set(importSpecifier)];
+            }
         }
     })
+    uniqueOperators = [...new Set(importSpecifier)];
+    uniqueAlias = [...new Set(importedCalledWithAlias)];
     //Push the head titles only on first file
     if (index == 0) {
         //Initialize array with columns titles
         showOperatorsUsed.push({
-            operatorName: "Operator",
+            operatorName: "Operator variable/alias used",
             operatorCalled: "Times Used",
             file: "Found in file:"
         })
     }
     //iterate the imported identifiers  and scan files for operators
     try {
+        if (uniqueAlias.length < 1) {
         uniqueOperators.forEach(operator => {
             rxjsImportDeclarations.forEach(nodeOperator => {
                 // console.log(nodeOperator.value.name)
                 if(operator == nodeOperator.value.name && nodeOperator.parentPath.parentPath.node.type !== "ImportDeclaration" ) {
-                    count++;
+                    newCount++;
                 }
             })
             showOperatorsUsed.push({
                 operatorName: operator,
-                operatorCalled: count,
+                operatorCalled: newCount,
                 file: dir
             })
-            count = 0;
+            newCount = 0;
         })
-      
-        // fs.readFile(dir, (err, data) => {
-        //     if (err) throw err;
-        //     importedOperators.forEach(operator => {
-        //         count = data.toString().split(operator).length - 1
-        //         if (data.includes(operator)) {
-        //             showOperatorsUsed.push({
-        //                 operatorName: operator,
-        //                 operatorCalled: count,
-        //                 file: dir
-        //             })
-        //         }
-        //     })
-        //     // console.log("Operators found in " + dir + " ");
+    }  else {
+        uniqueAlias.forEach(alias => {
+            rxjsImportDeclarations.forEach(nodeObservable => {
+        
+                if (nodeObservable.value.name == alias && nodeObservable.parentPath.parentPath.node.type !== "ImportDeclaration" ) {
+                    count++;
+                } 
+            })
+           
+            if (count > 0) {
+                showOperatorsUsed.push({
+                    operatorName: 'Alias: '+alias,
+                    operatorCalled: count,
+                    file: dir
+                })
+                count = 0;
+            }
+        })
+    }
 
         //     //Push the array of objects for csv export 
             Array.prototype.push.apply(csvRows.rows, showOperatorsUsed);
@@ -95,17 +100,11 @@ myModule.operatorsUse = function (root, j, dir, filename, filesArray, index, csv
                 let tempConsoleArray = csvRows.rows
                 let res = alasql('SELECT operatorName, SUM(operatorCalled) AS operatorCalled FROM ? GROUP BY operatorName', [tempConsoleArray]);
                 res.shift();
-                console.log(res);
+                // console.log(res);
             }
     } catch (err) {
         console.log(err)
     }
-
-    // if (importedCalled.length > 0) {
-    //     console.log(`File has imported : ` + importedCalled.length + "  rxjs items.");
-    // } else {
-    //     console.log("File doesn't not include  rxjs calls")
-    // }
 
 };
 

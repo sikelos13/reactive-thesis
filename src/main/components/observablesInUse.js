@@ -6,19 +6,16 @@ const writeFile = require('fs').writeFile;
 const converter = require('json-2-csv');
 const alasql = require('alasql');
 
-function containsWord(str, word) {
-    return str.match(new RegExp("\\b" + word + "\\b")) != null;
-}
-
 myModule.observablesInUse = function (root, j, dir, filename, filesArray, index, csvRows) {
     const rxjsImportDeclarations = root.find(j.Identifier)
-    let importedCalled = [];
+    let importedVariable = [];
     let importedCalledWithAlias = [];
     let showObservableUsed = [];
     let count = 0;
     let newCount = 0;
+    let variableCount = 0;
     let uniqueAlias = []
-    let tempObservableCalled = 0;
+    let uniqueVariables = [];
 
     //Find how many identifiers we import from the rxjs library
     rxjsImportDeclarations.forEach(p => {
@@ -36,8 +33,8 @@ myModule.observablesInUse = function (root, j, dir, filename, filesArray, index,
     if (index == 0) {
         //Initialize array with columns titles
         showObservableUsed.push({
-            observableVar: "Observable variable",
-            observableCalled: "Times Used",
+            subjectVar: "Observable variable/alias used",
+            subjectCalled: "Times Used",
             file: "Found in file:"
         })
     }
@@ -46,8 +43,24 @@ myModule.observablesInUse = function (root, j, dir, filename, filesArray, index,
         if (uniqueAlias.length < 1) {
             rxjsImportDeclarations.forEach(nodeObservable => {
                 // console.log(nodeObservable.parentPath.value.type)
+
                 if (nodeObservable.value.name == "Observable" && nodeObservable.parentPath.parentPath.node.type !== "ImportDeclaration" && nodeObservable.parentPath.value.type == "NewExpression") {
                     newCount++;
+                } 
+                 if (nodeObservable.parentPath.parentPath.node.type !== "ImportDeclaration" && nodeObservable.parentPath.parentPath.value.type == "AssignmentExpression") {
+                    // console.log(nodeObservable.parentPath.parentPath.value);
+
+                    if(nodeObservable.parentPath.parentPath.value.right.type == "NewExpression" && nodeObservable.parentPath.parentPath.value.right.callee.name== "Observable" && nodeObservable.parentPath.parentPath.value.right.callee.type== "Identifier") {
+                        // console.log(nodeObservable.parentPath.parentPath.value);
+
+                        if (nodeObservable.parentPath.parentPath.value.left.type == "MemberExpression") {
+                            if (nodeObservable.parentPath.parentPath.value.left.property.type == "Identifier") {
+                            // console.log(nodeObservable.parentPath.parentPath.value.left.property.name);
+                            importedVariable.push(nodeObservable.parentPath.parentPath.value.left.property.name);
+                            //continue implementing the idea of varaibles
+                            }
+                        }
+                    }
                 }
             })
 
@@ -55,18 +68,34 @@ myModule.observablesInUse = function (root, j, dir, filename, filesArray, index,
             uniqueAlias.forEach(alias => {
                 rxjsImportDeclarations.forEach(nodeObservable => {
                     // console.log(nodeObservable.parentPath.value.type)
-                    if (alias == nodeObservable.value.name && nodeObservable.parentPath.parentPath.node.type !== "ImportDeclaration") {
+                    // if (alias == nodeObservable.value.name && nodeObservable.parentPath.parentPath.node.type !== "ImportDeclaration") {
+                    //     count++;
+                    // }
+                    if (nodeObservable.value.name == alias && nodeObservable.parentPath.parentPath.node.type !== "ImportDeclaration" && nodeObservable.parentPath.value.type == "NewExpression") {
                         count++;
-                    }
-                    if (nodeObservable.value.name == "Observable" && nodeObservable.parentPath.parentPath.node.type !== "ImportDeclaration" && nodeObservable.parentPath.value.type == "NewExpression") {
-                        newCount++;
+                        console.log(nodeObservable.value.name )
+                    } 
+                    if (nodeObservable.parentPath.parentPath.node.type !== "ImportDeclaration" && nodeObservable.parentPath.parentPath.value.type == "AssignmentExpression") {
+                        // console.log(nodeObservable.parentPath.parentPath.value);
+    
+                        if(nodeObservable.parentPath.parentPath.value.right.type == "NewExpression" && nodeObservable.parentPath.parentPath.value.right.callee.name== alias && nodeObservable.parentPath.parentPath.value.right.callee.type== "Identifier") {
+                            // console.log(nodeObservable.parentPath.parentPath.value);
+    
+                            if (nodeObservable.parentPath.parentPath.value.left.type == "MemberExpression") {
+                                if (nodeObservable.parentPath.parentPath.value.left.property.type == "Identifier") {
+                                // console.log(nodeObservable.parentPath.parentPath.value.left.property.name);
+                                importedVariable.push(nodeObservable.parentPath.parentPath.value.left.property.name);
+                                //continue implementing the idea of varaibles
+                                }
+                            }
+                        }
                     }
                 })
                
                 if (count > 0) {
                     showObservableUsed.push({
-                        observableVar: alias,
-                        observableCalled: count,
+                        subjectVar: 'Alias: '+alias,
+                        subjectCalled: count,
                         file: dir
                     })
                     count = 0;
@@ -74,10 +103,27 @@ myModule.observablesInUse = function (root, j, dir, filename, filesArray, index,
             })
         }
 
+        uniqueVariables = [...new Set(importedVariable)];
+
+        uniqueVariables.forEach(variable => {
+            rxjsImportDeclarations.forEach(nodeObservable => {
+                if (variable == nodeObservable.value.name && nodeObservable.parentPath.parentPath.node.type !== "ImportDeclaration") {
+                    // console.log(nodeObservable.value)
+                    variableCount++;
+                }
+            })
+            showObservableUsed.push({
+                subjectVar: 'Variable: '+variable,
+                subjectCalled: variableCount,
+                file: dir
+            })
+            newCount = 0;
+        })
+
         if (newCount > 0) {
             showObservableUsed.push({
-                observableVar: "Observable_without_variable",
-                observableCalled: newCount,
+                subjectVar: "Observable_without_variable",
+                subjectCalled: newCount,
                 file: dir
             })
             newCount = 0;
@@ -95,20 +141,14 @@ myModule.observablesInUse = function (root, j, dir, filename, filesArray, index,
 
             //iterate into csvRows in order to console log specific results.
             let tempConsoleArray = csvRows.rows
-            let res = alasql('SELECT observableVar, SUM(observableCalled) AS observableCalled FROM ? GROUP BY observableVar', [tempConsoleArray]);
+            let res = alasql('SELECT subjectVar, SUM(subjectCalled) AS subjectCalled FROM ? GROUP BY subjectVar', [tempConsoleArray]);
             res.shift();
-            console.log(res);
+            // console.log(res);
         }
 
     } catch (err) {
         console.log(err)
     }
-
-    // if (importedCalled.length > 0) {
-    //     console.log(`File has imported : ` + importedCalled.length + "  observable constructor.");
-    // } else {
-    //     console.log("File doesn't not include  rxjs observables constructors")
-    // }
 
 };
 

@@ -1,14 +1,9 @@
 const csvModule = require('../utils/jsonToCsv');
-let fs = require('fs');
 var myModule = {};
 const readFile = require('fs').readFile;
 const writeFile = require('fs').writeFile;
 const converter = require('json-2-csv');
 const alasql = require('alasql');
-
-function containsWord(str, word) {
-    return str.match(new RegExp("\\b" + word + "\\b")) != null;
-}
 
 myModule.subjectInUse = function (root, j, dir, filename, filesArray, index, csvRows) {
     const rxjsImportDeclarations = root.find(j.Identifier)
@@ -147,18 +142,12 @@ myModule.subjectInUse = function (root, j, dir, filename, filesArray, index, csv
             let tempConsoleArray = csvRows.rows
             let res = alasql('SELECT subjectVar, SUM(subjectCalled) AS subjectCalled FROM ? GROUP BY subjectVar', [tempConsoleArray]);
             res.shift();
-            console.log(res);
+            // console.log(res);
         }
 
     } catch (err) {
         console.log(err)
     }
-
-    // if (importedCalled.length > 0) {
-    //     console.log(`File has imported : ` + importedCalled.length + "  observable constructor.");
-    // } else {
-    //     console.log("File doesn't not include  rxjs observables constructors")
-    // }
 
 };
 
