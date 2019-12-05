@@ -32,7 +32,7 @@ myModule.operatorsUse = function (root, j, dir, filename, filesArray, index, csv
         if (p.parentPath.parentPath.node.type == "ImportDeclaration" && p.parentPath.parentPath.node.source.value == "rxjs/operators") {
             if (p.parentPath.value.imported.name !== p.parentPath.value.local.name) {
                 importedCalledWithAlias.push(p.parentPath.value.imported.name);
-            }else {
+            } else {
                 p.parentPath.parentPath.node.specifiers.forEach(operatorImport => {
                     importSpecifier.push(operatorImport.imported.name);
                 })
@@ -53,55 +53,52 @@ myModule.operatorsUse = function (root, j, dir, filename, filesArray, index, csv
     //iterate the imported identifiers  and scan files for operators
     try {
         if (uniqueAlias.length < 1) {
-        uniqueOperators.forEach(operator => {
-            rxjsImportDeclarations.forEach(nodeOperator => {
-                // console.log(nodeOperator.value.name)
-                if(operator == nodeOperator.value.name && nodeOperator.parentPath.parentPath.node.type !== "ImportDeclaration" ) {
-                    newCount++;
-                }
-            })
-            showOperatorsUsed.push({
-                operatorName: operator,
-                operatorCalled: newCount,
-                file: dir
-            })
-            newCount = 0;
-        })
-    }  else {
-        uniqueAlias.forEach(alias => {
-            rxjsImportDeclarations.forEach(nodeObservable => {
-        
-                if (nodeObservable.value.name == alias && nodeObservable.parentPath.parentPath.node.type !== "ImportDeclaration" ) {
-                    count++;
-                } 
-            })
-           
-            if (count > 0) {
+            uniqueOperators.forEach(operator => {
+                rxjsImportDeclarations.forEach(nodeOperator => {
+                    // console.log(nodeOperator.value.name)
+                    if (operator == nodeOperator.value.name && nodeOperator.parentPath.parentPath.node.type !== "ImportDeclaration") {
+                        newCount++;
+                    }
+                })
                 showOperatorsUsed.push({
-                    operatorName: 'Alias: '+alias,
-                    operatorCalled: count,
+                    operatorName: operator,
+                    operatorCalled: newCount,
                     file: dir
                 })
-                count = 0;
-            }
-        })
-    }
+                newCount = 0;
+            })
+        } else {
+            uniqueAlias.forEach(alias => {
+                rxjsImportDeclarations.forEach(nodeObservable => {
 
-        //     //Push the array of objects for csv export 
-            Array.prototype.push.apply(csvRows.rows, showOperatorsUsed);
+                    if (nodeObservable.value.name == alias && nodeObservable.parentPath.parentPath.node.type !== "ImportDeclaration") {
+                        count++;
+                    }
+                })
 
-        //     //When we come down to the last file to scan we aggregate all the results in order to export them into a csv file
-            if (index == (filesArray.length - 1)) {
-                converter.json2csv(csvRows.rows, csvModule.json2csvCallback, {
-                    prependHeader: false // removes the generated header of "value1,value2,value3,value4" (in case you don't want it)
-                });
-
-                //iterate into csvRows in order to console log specific results.
-                let tempConsoleArray = csvRows.rows
-                let res = alasql('SELECT operatorName, SUM(operatorCalled) AS operatorCalled FROM ? GROUP BY operatorName', [tempConsoleArray]);
-                res.shift();
-                // console.log(res);
-            }
+                if (count > 0) {
+                    showOperatorsUsed.push({
+                        operatorName: 'Alias: ' + alias,
+                        operatorCalled: count,
+                        file: dir
+                    })
+                    count = 0;
+                }
+            })
+        }
+        //Push the array of objects for csv export 
+        Array.prototype.push.apply(csvRows.rows, showOperatorsUsed);
+        //When we come down to the last file to scan we aggregate all the results in order to export them into a csv file
+        if (index == (filesArray.length - 1)) {
+            converter.json2csv(csvRows.rows, csvModule.json2csvCallback, {
+                prependHeader: false // removes the generated header of "value1,value2,value3,value4" (in case you don't want it)
+            });
+            //iterate into csvRows in order to console log specific results.
+            let tempConsoleArray = csvRows.rows
+            let res = alasql('SELECT operatorName, SUM(operatorCalled) AS operatorCalled FROM ? GROUP BY operatorName', [tempConsoleArray]);
+            res.shift();
+            // console.log(res);
+        }
     } catch (err) {
         console.log(err)
     }

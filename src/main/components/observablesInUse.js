@@ -42,21 +42,17 @@ myModule.observablesInUse = function (root, j, dir, filename, filesArray, index,
     try {
         if (uniqueAlias.length < 1) {
             rxjsImportDeclarations.forEach(nodeObservable => {
-                // console.log(nodeObservable.parentPath.value.type)
 
                 if (nodeObservable.value.name == "Observable" && nodeObservable.parentPath.parentPath.node.type !== "ImportDeclaration" && nodeObservable.parentPath.value.type == "NewExpression") {
                     newCount++;
                 } 
                  if (nodeObservable.parentPath.parentPath.node.type !== "ImportDeclaration" && nodeObservable.parentPath.parentPath.value.type == "AssignmentExpression") {
-                    // console.log(nodeObservable.parentPath.parentPath.value);
 
                     if(nodeObservable.parentPath.parentPath.value.right.type == "NewExpression" && nodeObservable.parentPath.parentPath.value.right.callee.name== "Observable" && nodeObservable.parentPath.parentPath.value.right.callee.type== "Identifier") {
-                        // console.log(nodeObservable.parentPath.parentPath.value);
 
                         if (nodeObservable.parentPath.parentPath.value.left.type == "MemberExpression") {
                             if (nodeObservable.parentPath.parentPath.value.left.property.type == "Identifier") {
-                            // console.log(nodeObservable.parentPath.parentPath.value.left.property.name);
-                            importedVariable.push(nodeObservable.parentPath.parentPath.value.left.property.name);
+                                importedVariable.push(nodeObservable.parentPath.parentPath.value.left.property.name);
                             //continue implementing the idea of varaibles
                             }
                         }
@@ -67,24 +63,18 @@ myModule.observablesInUse = function (root, j, dir, filename, filesArray, index,
         } else {
             uniqueAlias.forEach(alias => {
                 rxjsImportDeclarations.forEach(nodeObservable => {
-                    // console.log(nodeObservable.parentPath.value.type)
-                    // if (alias == nodeObservable.value.name && nodeObservable.parentPath.parentPath.node.type !== "ImportDeclaration") {
-                    //     count++;
-                    // }
                     if (nodeObservable.value.name == alias && nodeObservable.parentPath.parentPath.node.type !== "ImportDeclaration" && nodeObservable.parentPath.value.type == "NewExpression") {
                         count++;
                         console.log(nodeObservable.value.name )
                     } 
                     if (nodeObservable.parentPath.parentPath.node.type !== "ImportDeclaration" && nodeObservable.parentPath.parentPath.value.type == "AssignmentExpression") {
-                        // console.log(nodeObservable.parentPath.parentPath.value);
     
                         if(nodeObservable.parentPath.parentPath.value.right.type == "NewExpression" && nodeObservable.parentPath.parentPath.value.right.callee.name== alias && nodeObservable.parentPath.parentPath.value.right.callee.type== "Identifier") {
-                            // console.log(nodeObservable.parentPath.parentPath.value);
     
                             if (nodeObservable.parentPath.parentPath.value.left.type == "MemberExpression") {
                                 if (nodeObservable.parentPath.parentPath.value.left.property.type == "Identifier") {
                                 // console.log(nodeObservable.parentPath.parentPath.value.left.property.name);
-                                importedVariable.push(nodeObservable.parentPath.parentPath.value.left.property.name);
+                                    importedVariable.push(nodeObservable.parentPath.parentPath.value.left.property.name);
                                 //continue implementing the idea of varaibles
                                 }
                             }
