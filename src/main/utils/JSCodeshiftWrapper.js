@@ -8,17 +8,14 @@ const defaultOptions = {
     esproposal_optional_chaining: true,
     esproposal_nullish_coalescing: true,
     tokens: true,
-    types: true,
-    plugins: ["jsx","flow"]
+    types: true
   };
 
 class JSCodeshiftWrapper {
 
     static parse(code) {
-        return jscodeshift(code, {
-            parser: flowParser,
-            defaultOptions
-        });
+        return jscodeshift.withParser('tsx')(code,
+            defaultOptions);
     }
 }
 
