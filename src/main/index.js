@@ -5,18 +5,21 @@ const j = require('./utils/JSCodeshiftWrapper').j
 
 //Import codemods
 const codeModeAst = require('./components/consoleAst');
-const codeModeOperators = require('./components/findOperators');
-const codeModeRxjsCalls = require('./components/operatorsUse');
-const codeModeRxjsSubject = require('./components/subjectInUse');
-const codeModeRxjsObservables = require('./components/observablesInUse');
+const codeModeOperators = require('./components/operators/findOperators');
+const codeModeRxjsCalls = require('./components/operators/operatorsUse');
+const codeModeRxjsSubject = require('./components/subjects/subjectInUse');
+const codeModeRxjsObservables = require('./components/observables/observablesInUse');
 const program = require('commander');
-const fileUtils = require('..//main/utils/fileutils');
+const fileUtils = require('../main/utils/fileutils');
 const {
     readdirSync
 } = require('fs')
 let csvRows = {
     rows: []
 }
+
+global.operatorsArray = [];
+
 program
     .option('-f, --findOperator <name>', 'count rxjs operator')
     .option('-o, --operatorsInUse <source>', 'find all operators of rxjs library that are used in the file')
@@ -55,25 +58,30 @@ function main(path, operatorName, option) {
         return;
     }
 
-    //Fetch js,jsx,ts,tsx files
-    files = fileUtils.getJSFilesSync(path)
-    files.map(file => {
-        //Read files one by one and trim them
-        console.log('Found file: ', file);
-        ast = parser(fileUtils.readFileSync(file).trim());
-        let filename = file.replace(/^.*[\\\/]/, '')
-        //Run script based on users arguments
-        if (option == "findOperator") {
-            console.log('Searching for: ', operatorName);
-            codeModeOperators.findOperators(ast, j, operatorName);
-        } else if (option == "ast") {
-            codeModeAst.consoleAst(ast, j, operatorName);
-        } else if (option == "operatorsInUse") {
-            codeModeRxjsCalls.operatorsUse(ast, j, file, filename, files, files.indexOf(file), csvRows)
-        } else if (option == "subjectInUse") {
-            codeModeRxjsSubject.subjectInUse(ast, j, file, filename, files, files.indexOf(file), csvRows)
-        } else if (option == "observablesInUse") {
-            codeModeRxjsObservables.observablesInUse(ast, j, file, filename, files, files.indexOf(file), csvRows)
-        }
+        files = fileUtils.getJSFilesSync(path)
+
+        //Fetch js,jsx,ts,tsx files
+        files.map(file => {
+            // if (file.indexOf('src') > -1) {
+
+            //Read files one by one and trim them
+            console.log('Found file: ', file);
+            ast = parser(fileUtils.readFileSync(file).trim());
+            let filename = file.replace(/^.*[\\\/]/, '')
+            //Run script based on users arguments
+            if (option == "findOperator") {
+                console.log('Searching for: ', operatorName);
+                codeModeOperators.findOperators(ast, j, operatorName);
+            } else if (option == "ast") {
+                codeModeAst.consoleAst(ast, j, operatorName);
+            } else if (option == "operatorsInUse") {
+                codeModeRxjsCalls.operatorsUse(ast, j, file, filename, files, files.indexOf(file), csvRows)
+            } else if (option == "subjectInUse") {
+                codeModeRxjsSubject.subjectInUse(ast, j, file, filename, files, files.indexOf(file), csvRows)
+            } else if (option == "observablesInUse") {
+                codeModeRxjsObservables.observablesInUse(ast, j, file, filename, files, files.indexOf(file), csvRows)
+            }
+        // }
     })
+    console.log(operatorsArray)
 };

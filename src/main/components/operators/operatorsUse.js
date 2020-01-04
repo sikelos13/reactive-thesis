@@ -1,10 +1,10 @@
-let csvModule = require('../utils/jsonToCsv');
+let csvModule = require('../../utils/jsonToCsv');
 var myModule = {};
 const readFile = require('fs').readFile;
 const writeFile = require('fs').writeFile;
 const converter = require('json-2-csv');
 const alasql = require('alasql');
-
+let operatorDomain = require('./utils/operatorDomain')
 /**
  * Rename to operatorsUse
  * Receives as input the src of the files to be scanned
@@ -58,6 +58,7 @@ myModule.operatorsUse = function (root, j, dir, filename, filesArray, index, csv
                     // console.log(nodeOperator.value.name)
                     if (operator == nodeOperator.value.name && nodeOperator.parentPath.parentPath.node.type !== "ImportDeclaration") {
                         newCount++;
+                        operatorDomain.operator(operator, "", nodeOperator);
                     }
                 })
                 showOperatorsUsed.push({
@@ -73,6 +74,7 @@ myModule.operatorsUse = function (root, j, dir, filename, filesArray, index, csv
 
                     if (nodeObservable.value.name == alias && nodeObservable.parentPath.parentPath.node.type !== "ImportDeclaration") {
                         count++;
+                        operatorDomain.operator("", alias, nodeObservable);
                     }
                 })
 

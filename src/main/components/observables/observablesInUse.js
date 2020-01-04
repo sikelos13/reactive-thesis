@@ -1,4 +1,4 @@
-const csvModule = require('../utils/jsonToCsv');
+const csvModule = require('../../utils/jsonToCsv');
 let fs = require('fs');
 var myModule = {};
 const readFile = require('fs').readFile;
@@ -53,7 +53,7 @@ myModule.observablesInUse = function (root, j, dir, filename, filesArray, index,
                         if (nodeObservable.parentPath.parentPath.value.left.type == "MemberExpression") {
                             if (nodeObservable.parentPath.parentPath.value.left.property.type == "Identifier") {
                                 importedVariable.push(nodeObservable.parentPath.parentPath.value.left.property.name);
-                            //continue implementing the idea of varaibles
+                            //continue implementing the idea of variables
                             }
                         }
                     }
@@ -131,6 +131,7 @@ myModule.observablesInUse = function (root, j, dir, filename, filesArray, index,
 
             //iterate into csvRows in order to console log specific results.
             let tempConsoleArray = csvRows.rows
+            global.observableResults = tempConsoleArray;
             let res = alasql('SELECT subjectVar, SUM(subjectCalled) AS subjectCalled FROM ? GROUP BY subjectVar', [tempConsoleArray]);
             res.shift();
             // console.log(res);
