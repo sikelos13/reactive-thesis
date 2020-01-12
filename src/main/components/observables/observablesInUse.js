@@ -1,4 +1,4 @@
-const csvModule = require('../../utils/jsonToCsv');
+const csvModule = require('../../utils/exportToCsv');
 let fs = require('fs');
 var myModule = {};
 const readFile = require('fs').readFile;
@@ -134,7 +134,6 @@ myModule.observablesInUse = function (root, j, dir, filename, filesArray, index,
             global.observableResults = tempConsoleArray;
             let res = alasql('SELECT subjectVar, SUM(subjectCalled) AS subjectCalled FROM ? GROUP BY subjectVar', [tempConsoleArray]);
             res.shift();
-            // console.log(res);
         }
 
     } catch (err) {

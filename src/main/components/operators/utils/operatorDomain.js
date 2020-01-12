@@ -1,12 +1,12 @@
-var operatorDomain = {};
-
-operatorDomain.operator = function (name, alias, astNode) {
-    global.operatorObject = {
-        name: name,
-        alias: alias,
-        astNode: astNode
-    };
-    operatorsArray.push(operatorObject)
+module.exports = {
+    operatorObjectCalc: (name, astNode, fileName) => {
+        operatorObject = {
+            name: name,
+            // alias: alias,
+            // astNode: astNode,
+            fileName: fileName
+        };
+    
+        return operatorObject;
+    }
 };
-
-module.exports = operatorDomain;

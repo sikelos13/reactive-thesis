@@ -1,4 +1,4 @@
-const csvModule = require('../../utils/jsonToCsv');
+const csvModule = require('../../utils/exportToCsv');
 var myModule = {};
 const readFile = require('fs').readFile;
 const writeFile = require('fs').writeFile;
