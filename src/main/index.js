@@ -16,7 +16,6 @@ const fileUtils = require('../main/utils/fileutils');
 const converter = require('json-2-csv');
 const csvModule = require('./utils/exportToCsv')
 
-
 const {
     readdirSync
 } = require('fs')
@@ -83,9 +82,8 @@ function main(path, operatorName, option) {
 
     if (option == "exportToCsv") {
         let tempResults = fs.readFileSync('./resultsArray.json');
-      
-        let results = eval('(' + tempResults.toString() + ')')
-        results = JSON.parse(results);
+        let results = eval('(' + tempResults.toString() + ')');
+
         //When we come down to the last file to scan we aggregate all the results in order to export them into a csv file
         if (results.length > 0) {
             converter.json2csv(results, csvModule.json2csvCallback, {
@@ -98,7 +96,6 @@ function main(path, operatorName, option) {
 
     //Fetch js,jsx,ts,tsx files
     files.map(file => {
-        // if (file.indexOf('src') > -1) {
 
         //Read files one by one and trim them
         console.log('Found file: ', file);
@@ -113,7 +110,7 @@ function main(path, operatorName, option) {
         } else if (option == "operatorsInUse") {
             resultsArray.push.apply(resultsArray, codeModeRxjsCalls.operatorsUse(ast, j, file, filename, files, files.indexOf(file), csvRows));
         } else if (option == "subjectInUse") {
-            codeModeRxjsSubject.subjectInUse(ast, j, file, filename, files, files.indexOf(file), csvRows)
+            codeModeRxjsSubject.subjectInUse(ast, j, file, filename, files, files.indexOf(file), csvRows);
         } else if (option == "observablesInUse") {
             codeModeRxjsObservables.observablesInUse(ast, j, file, filename, files, files.indexOf(file), csvRows);
         } else if (option == "aggregateResults") {
@@ -122,12 +119,6 @@ function main(path, operatorName, option) {
                 console.log(aggregationResults);
             }
         }
-        // }
     })
-    fs.writeFile('./resultsArray.json', util.inspect(JSON.stringify(resultsArray), { maxArrayLength: null }), (err) => {
-        if (err) {
-          console.error(err)
-          throw err
-        }
-        });
+    fs.writeFileSync('./resultsArray.json', util.inspect(resultsArray, { maxArrayLength: null }));
 };

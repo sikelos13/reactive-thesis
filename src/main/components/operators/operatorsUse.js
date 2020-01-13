@@ -19,7 +19,7 @@ const operatorDomainArray = []
  *    file: <path of file>
  * }
  */
-myModule.operatorsUse =  (root, j, dir, filename, filesArray, index, csvRows) => {
+myModule.operatorsUse = (root, j, dir, filename, filesArray, index, csvRows) => {
     const rxjsImportDeclarations = root.find(j.Identifier);
     let importedCalledWithAlias = [];
     let showOperatorsUsed = [];
@@ -28,7 +28,6 @@ myModule.operatorsUse =  (root, j, dir, filename, filesArray, index, csvRows) =>
     let uniqueOperators = [];
     let uniqueAlias = [];
     let importSpecifier = [];
-    let operatorObject = {}
 
     //Find how many identifiers we import from the rxjs library
     rxjsImportDeclarations.forEach(p => {
@@ -60,7 +59,7 @@ myModule.operatorsUse =  (root, j, dir, filename, filesArray, index, csvRows) =>
                 rxjsImportDeclarations.forEach(nodeOperator => {
                     if (operator == nodeOperator.value.name && nodeOperator.parentPath.parentPath.node.type !== "ImportDeclaration") {
                         newCount++;
-                        operatorDomainArray.push(operatorDomain.operatorObjectCalc(operator, nodeOperator,filename));
+                        operatorDomainArray.push(operatorDomain.operatorObjectCalc(operator, nodeOperator.value.start, nodeOperator.value.end, nodeOperator, filename));
                     }
                 })
                 showOperatorsUsed.push({
@@ -76,7 +75,7 @@ myModule.operatorsUse =  (root, j, dir, filename, filesArray, index, csvRows) =>
 
                     if (nodeOperator.value.name == alias && nodeOperator.parentPath.parentPath.node.type !== "ImportDeclaration") {
                         count++;
-                        operatorDomainArray.push(operatorDomain.operatorObjectCalc(alias, nodeOperator,filename));
+                        operatorDomainArray.push(operatorDomain.operatorObjectCalc(alias, nodeOperator.value.start, nodeOperator.value.end, nodeOperator, filename));
                     }
                 })
 
@@ -90,11 +89,13 @@ myModule.operatorsUse =  (root, j, dir, filename, filesArray, index, csvRows) =>
                 }
             })
         }
+        if (index == (filesArray.length - 1)) {
+            operatorDomainArray.unshift(operatorDomain.operatorObjectCalc("Alias or name used", "Position start", "Position end", "", "Filename"))
+        }
     } catch (err) {
         console.log(err)
     }
-    // console.log(operatorDomainArray);
-    // fs.writeFile('resultsArray.json', JSON.stringify(operatorObject))
+
     return operatorDomainArray;
 };
 

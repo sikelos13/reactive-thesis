@@ -15,7 +15,6 @@ module.exports = {
             // let observableResults = tempConsoleArray;
             let res = alasql(`SELECT subjectVar, SUM(subjectCalled) AS subjectCalled FROM ? GROUP BY subjectVar`, [tempConsoleArray]);
             res.shift();
-            // console.log(res);
         }
     }
 };
