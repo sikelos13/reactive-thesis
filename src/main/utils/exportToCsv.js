@@ -9,6 +9,7 @@ let name = Math.random().toString(36).substring(7);
 
 //Json to csv function
 csvModule.json2csvCallback = function (err, csv) {
+
     if (err) throw err;
     fs.writeFile(`./csv_results/${name}-${dateOfCsv}.csv`, csv, function (err) {
         if (err) {
