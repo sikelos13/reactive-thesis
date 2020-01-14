@@ -1,7 +1,8 @@
 module.exports = {
-    operatorObjectCalc: (name, start,end,astNode, fileName) => {
+    operatorObjectCalc: (name, start,end,astNode, fileName,timesUsed) => {
         operatorObject = {
             name: name,
+            timesUsed: timesUsed,
             position: {
                 start: start,
                 end: end

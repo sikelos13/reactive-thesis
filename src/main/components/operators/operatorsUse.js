@@ -3,8 +3,6 @@ let fs = require('fs');
 var myModule = {};
 const readFile = require('fs').readFile;
 const writeFile = require('fs').writeFile;
-const converter = require('json-2-csv');
-const alasql = require('alasql');
 const operatorDomain = require('./utils/operatorDomain');
 const operatorDomainArray = []
 /**
@@ -59,7 +57,7 @@ myModule.operatorsUse = (root, j, dir, filename, filesArray, index, csvRows) => 
                 rxjsImportDeclarations.forEach(nodeOperator => {
                     if (operator == nodeOperator.value.name && nodeOperator.parentPath.parentPath.node.type !== "ImportDeclaration") {
                         newCount++;
-                        operatorDomainArray.push(operatorDomain.operatorObjectCalc(operator, nodeOperator.value.start, nodeOperator.value.end, nodeOperator, filename));
+                        operatorDomainArray.push(operatorDomain.operatorObjectCalc(operator, nodeOperator.value.start, nodeOperator.value.end, nodeOperator, dir,1));
                     }
                 })
                 showOperatorsUsed.push({
@@ -75,7 +73,7 @@ myModule.operatorsUse = (root, j, dir, filename, filesArray, index, csvRows) => 
 
                     if (nodeOperator.value.name == alias && nodeOperator.parentPath.parentPath.node.type !== "ImportDeclaration") {
                         count++;
-                        operatorDomainArray.push(operatorDomain.operatorObjectCalc(alias, nodeOperator.value.start, nodeOperator.value.end, nodeOperator, filename));
+                        operatorDomainArray.push(operatorDomain.operatorObjectCalc(alias, nodeOperator.value.start, nodeOperator.value.end, nodeOperator, dir,1));
                     }
                 })
 

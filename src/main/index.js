@@ -32,7 +32,7 @@ program
     .option('-s, --subjectInUse <source>', 'find the usage of subject property of rxjs library')
     .option('-v, --observablesInUse <source>', 'find the usage of observable constructors  of rxjs library')
     .option('-e, --exportToCsv', 'export the results from previous calculations')
-    .option('-a, --aggregateResults <source>', 'aggregate the results from previous calculations');
+    .option('-a, --aggregateResults <aggregateType>', 'aggregate the results from previous calculations');
 program.parse(process.argv);
 
 if (program.findOperator) {
@@ -42,21 +42,24 @@ if (program.findOperator) {
         program.help();
         return;
     }
-    let source = program.operatorsInUse
+    let source = program.operatorsInUse;
+    let aggregateType = "";
     main(source, "", "operatorsInUse");
 } else if (program.subjectInUse) {
     if (program.subjectInUse.length < 2) {
         program.help();
         return;
     }
-    let source = program.subjectInUse
+    let source = program.subjectInUse;
+    let aggregateType = "";
     main(source, "", "subjectInUse");
 } else if (program.observablesInUse) {
     if (program.observablesInUse.length < 2) {
         program.help();
         return;
     }
-    let source = program.observablesInUse
+    let source = program.observablesInUse;
+    let aggregateType = "";
     main(source, "", "observablesInUse");
 } else if (program.exportToCsv) {
     if (program.exportToCsv.length < 2) {
@@ -64,18 +67,20 @@ if (program.findOperator) {
         return;
     }
     let source = program.exportToCsv
+    let aggregateType = ""
     main(source, "", "exportToCsv");
 } else if (program.aggregateResults) {
     if (program.aggregateResults.length < 2) {
         program.help();
         return;
     }
-    let source = program.aggregateResults
-    main(source, "", "aggregateResults");
+    let aggregateType = program.aggregateResults
+    let source = ""
+    main(source, "", "aggregateResults",aggregateType);
 }
 
-function main(path, operatorName, option) {
-    if (!fs.existsSync(path) && option !== "exportToCsv") {
+function main(path, operatorName, option, aggregateType) {
+    if (!fs.existsSync(path) && option !== "exportToCsv" && option !== "aggregateResults") {
         console.log("Wrong directory ", path);
         return;
     }
@@ -90,6 +95,16 @@ function main(path, operatorName, option) {
                 prependHeader: false // removes the generated header of "value1,value2,value3,value4" (in case you don't want it)
             });
         }
+        return;
+        
+    } else if (option == "aggregateResults") {
+        let tempResults = fs.readFileSync('./resultsArray.json');
+        let results = eval('(' + tempResults.toString() + ')');
+
+        if (results.length > 0) {
+            aggregateCalc.aggregateCalc(results,aggregateType);
+        }
+        return;
     }
 
     files = fileUtils.getJSFilesSync(path)
@@ -113,12 +128,13 @@ function main(path, operatorName, option) {
             codeModeRxjsSubject.subjectInUse(ast, j, file, filename, files, files.indexOf(file), csvRows);
         } else if (option == "observablesInUse") {
             codeModeRxjsObservables.observablesInUse(ast, j, file, filename, files, files.indexOf(file), csvRows);
-        } else if (option == "aggregateResults") {
-            if (resultsArray.length > 0) {
-                aggregationResults = aggregateCalc.aggregateCalc(resultsArray, csvRows);
-                console.log(aggregationResults);
-            }
-        }
+        } 
+        // else if (option == "aggregateResults") {
+        //     if (resultsArray.length > 0) {
+        //         aggregationResults = aggregateCalc.aggregateCalc(resultsArray, csvRows);
+        //         console.log(aggregationResults);
+        //     }
+        // }
     })
     fs.writeFileSync('./resultsArray.json', util.inspect(resultsArray, { maxArrayLength: null }));
 };
