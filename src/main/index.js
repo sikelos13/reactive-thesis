@@ -23,8 +23,8 @@ let csvRows = {
     rows: []
 }
 
-const aggregationResults = [];
 const resultsArray = [];
+let arrayToJson =[];
 
 program
     .option('-f, --findOperator <name>', 'count rxjs operator')
@@ -88,7 +88,7 @@ function main(path, operatorName, option, aggregateType) {
     if (option == "exportToCsv") {
         let tempResults = fs.readFileSync('./resultsArray.json');
         let results = eval('(' + tempResults.toString() + ')');
-
+        
         //When we come down to the last file to scan we aggregate all the results in order to export them into a csv file
         if (results.length > 0) {
             converter.json2csv(results, csvModule.json2csvCallback, {
@@ -123,18 +123,12 @@ function main(path, operatorName, option, aggregateType) {
         } else if (option == "ast") {
             codeModeAst.consoleAst(ast, j, operatorName);
         } else if (option == "operatorsInUse") {
-            resultsArray.push.apply(resultsArray, codeModeRxjsCalls.operatorsUse(ast, j, file, filename, files, files.indexOf(file), csvRows));
+            arrayToJson = [...resultsArray, ...codeModeRxjsCalls.operatorsUse(ast, j, file, filename, files, files.indexOf(file), csvRows)]
         } else if (option == "subjectInUse") {
             codeModeRxjsSubject.subjectInUse(ast, j, file, filename, files, files.indexOf(file), csvRows);
         } else if (option == "observablesInUse") {
             codeModeRxjsObservables.observablesInUse(ast, j, file, filename, files, files.indexOf(file), csvRows);
         } 
-        // else if (option == "aggregateResults") {
-        //     if (resultsArray.length > 0) {
-        //         aggregationResults = aggregateCalc.aggregateCalc(resultsArray, csvRows);
-        //         console.log(aggregationResults);
-        //     }
-        // }
     })
-    fs.writeFileSync('./resultsArray.json', util.inspect(resultsArray, { maxArrayLength: null }));
+    fs.writeFileSync('./resultsArray.json', util.inspect(arrayToJson, { maxArrayLength: null }));
 };

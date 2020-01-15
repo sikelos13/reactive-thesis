@@ -43,12 +43,9 @@ myModule.operatorsUse = (root, j, dir, filename, filesArray, index, csvRows) => 
     uniqueAlias = [...new Set(importedCalledWithAlias)];
     //Push the head titles only on first file
     if (index == 0) {
+        console.log("test")
         //Initialize array with columns titles
-        showOperatorsUsed.push({
-            operatorName: "Operator variable/alias used",
-            operatorCalled: "Times Used",
-            file: "Found in file:"
-        })
+        operatorDomainArray.push(operatorDomain.operatorObjectCalc("Alias or name used", "Position start", "Position end", "", "Filename"))
     }
     //iterate the imported identifiers  and scan files for operators
     try {
@@ -70,7 +67,6 @@ myModule.operatorsUse = (root, j, dir, filename, filesArray, index, csvRows) => 
         } else {
             uniqueAlias.forEach(alias => {
                 rxjsImportDeclarations.forEach(nodeOperator => {
-
                     if (nodeOperator.value.name == alias && nodeOperator.parentPath.parentPath.node.type !== "ImportDeclaration") {
                         count++;
                         operatorDomainArray.push(operatorDomain.operatorObjectCalc(alias, nodeOperator.value.start, nodeOperator.value.end, nodeOperator, dir,1));
@@ -86,9 +82,6 @@ myModule.operatorsUse = (root, j, dir, filename, filesArray, index, csvRows) => 
                     count = 0;
                 }
             })
-        }
-        if (index == (filesArray.length - 1)) {
-            operatorDomainArray.unshift(operatorDomain.operatorObjectCalc("Alias or name used", "Position start", "Position end", "", "Filename"))
         }
     } catch (err) {
         console.log(err)

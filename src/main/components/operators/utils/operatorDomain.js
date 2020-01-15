@@ -1,5 +1,5 @@
 module.exports = {
-    operatorObjectCalc: (name, start,end,astNode, fileName,timesUsed) => {
+    operatorObjectCalc: (name, start,end,astNode, path,timesUsed) => {
         operatorObject = {
             name: name,
             timesUsed: timesUsed,
@@ -9,7 +9,7 @@ module.exports = {
             },
             // alias: alias,
             // astNode: astNode,
-            fileName: fileName
+            fileName: path
         };
     
         return operatorObject;
