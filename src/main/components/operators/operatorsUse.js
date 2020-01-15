@@ -1,6 +1,4 @@
-let csvModule = require('../../utils/exportToCsv');
-let fs = require('fs');
-var myModule = {};
+let myModule = {};
 const readFile = require('fs').readFile;
 const writeFile = require('fs').writeFile;
 const operatorDomain = require('./utils/operatorDomain');
@@ -20,9 +18,9 @@ const operatorDomainArray = []
 myModule.operatorsUse = (root, j, dir, filename, filesArray, index, csvRows) => {
     const rxjsImportDeclarations = root.find(j.Identifier);
     let importedCalledWithAlias = [];
-    let showOperatorsUsed = [];
-    let count = 0;
-    let newCount = 0;
+    // let showOperatorsUsed = [];
+    // let count = 0;
+    // let newCount = 0;
     let uniqueOperators = [];
     let uniqueAlias = [];
     let importSpecifier = [];
@@ -53,34 +51,34 @@ myModule.operatorsUse = (root, j, dir, filename, filesArray, index, csvRows) => 
             uniqueOperators.forEach(operator => {
                 rxjsImportDeclarations.forEach(nodeOperator => {
                     if (operator == nodeOperator.value.name && nodeOperator.parentPath.parentPath.node.type !== "ImportDeclaration") {
-                        newCount++;
+                        // newCount++;
                         operatorDomainArray.push(operatorDomain.operatorObjectCalc(operator, nodeOperator.value.start, nodeOperator.value.end, nodeOperator, dir,1));
                     }
                 })
-                showOperatorsUsed.push({
-                    operatorName: operator,
-                    operatorCalled: newCount,
-                    file: dir
-                })
-                newCount = 0;
+                // showOperatorsUsed.push({
+                //     operatorName: operator,
+                //     operatorCalled: newCount,
+                //     file: dir
+                // })
+                // newCount = 0;
             })
         } else {
             uniqueAlias.forEach(alias => {
                 rxjsImportDeclarations.forEach(nodeOperator => {
                     if (nodeOperator.value.name == alias && nodeOperator.parentPath.parentPath.node.type !== "ImportDeclaration") {
-                        count++;
+                        // count++;
                         operatorDomainArray.push(operatorDomain.operatorObjectCalc(alias, nodeOperator.value.start, nodeOperator.value.end, nodeOperator, dir,1));
                     }
                 })
 
-                if (count > 0) {
-                    showOperatorsUsed.push({
-                        operatorName: 'Alias: ' + alias,
-                        operatorCalled: count,
-                        file: dir
-                    })
-                    count = 0;
-                }
+                // if (count > 0) {
+                //     showOperatorsUsed.push({
+                //         operatorName: 'Alias: ' + alias,
+                //         operatorCalled: count,
+                //         file: dir
+                //     })
+                //     count = 0;
+                // }
             })
         }
     } catch (err) {
