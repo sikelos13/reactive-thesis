@@ -29,9 +29,14 @@ Three available options:
 '-s, || --subjectInUse <directory>', 'find all subject constructors and its variables of rxjs library that are used in the file and export them into csv file'
 '-v, || --observablesInUse <directory>', 'find all observable constructors and its variables of rxjs library that are used in the file and export them into csv file'
 '-e, || --exportToCsv', 'export the results from previous calculations'
-'-a, || --aggregateResults', 'aggregate the results from previous calculations'
+'-a, || --aggregateResults <aggregationType>', 'aggregate the results from previous calculations'
 ```
-
+## Aggregation Types:
+  1. "operators"
+  2. "subjects"
+  3. "observables"
+  4. "all the above"
+  
 _Disclaimer:_
 
 - Folder directory must start from the root directory of the machine. i.e in Mac OS is Users/{username}/directory of your directory with the files that need to be parsed.
