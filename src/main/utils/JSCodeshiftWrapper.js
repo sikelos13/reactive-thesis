@@ -1,5 +1,5 @@
 const jscodeshift = require('jscodeshift');
-const flowParser = require('flow-parser');
+// const flowParser = require('flow-parser');
 const defaultOptions = {
     esproposal_class_instance_fields: true,
     esproposal_class_static_fields: true,

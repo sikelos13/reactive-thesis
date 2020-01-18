@@ -1,8 +1,7 @@
-let path = require('path'),
-    fs = require('fs');
+let fs = require('fs');
 const parser = require('./utils/JSCodeshiftWrapper').parser;
 const j = require('./utils/JSCodeshiftWrapper').j
-var util = require('util');
+let util = require('util');
 
 //Import codemods
 const codeModeAst = require('./components/consoleAst');
@@ -16,15 +15,13 @@ const fileUtils = require('../main/utils/fileutils');
 const converter = require('json-2-csv');
 const csvModule = require('./utils/exportToCsv')
 
-const {
-    readdirSync
-} = require('fs')
 let csvRows = {
     rows: []
 }
 
 const resultsArray = [];
-let arrayToJson =[];
+let aggregationToCsv = [];
+let arrayToJson = [];
 
 program
     .option('-f, --findOperator <name>', 'count rxjs operator')
@@ -32,7 +29,7 @@ program
     .option('-s, --subjectInUse <source>', 'find the usage of subject property of rxjs library')
     .option('-v, --observablesInUse <source>', 'find the usage of observable constructors  of rxjs library')
     .option('-e, --exportToCsv', 'export the results from previous calculations')
-    .option('-a, --aggregateResults <aggregateType>', 'aggregate the results from previous calculations');
+    .option('-a, --aggregateResults <showResultsInConsole>', 'aggregate the results from previous calculations and (optional) show them in terminal');
 program.parse(process.argv);
 
 if (program.findOperator) {
@@ -43,43 +40,39 @@ if (program.findOperator) {
         return;
     }
     let source = program.operatorsInUse;
-    let aggregateType = "";
-    main(source, "", "operatorsInUse");
+    main(source, "", "operatorsInUse","");
 } else if (program.subjectInUse) {
     if (program.subjectInUse.length < 2) {
         program.help();
         return;
     }
     let source = program.subjectInUse;
-    let aggregateType = "";
-    main(source, "", "subjectInUse");
+    main(source, "", "subjectInUse","");
 } else if (program.observablesInUse) {
     if (program.observablesInUse.length < 2) {
         program.help();
         return;
     }
     let source = program.observablesInUse;
-    let aggregateType = "";
-    main(source, "", "observablesInUse");
+    main(source, "", "observablesInUse","");
 } else if (program.exportToCsv) {
     if (program.exportToCsv.length < 2) {
         program.help();
         return;
     }
     let source = program.exportToCsv
-    let aggregateType = ""
-    main(source, "", "exportToCsv");
+    main(source, "", "exportToCsv","");
 } else if (program.aggregateResults) {
     if (program.aggregateResults.length < 2) {
         program.help();
         return;
     }
-    let aggregateType = program.aggregateResults
     let source = ""
-    main(source, "", "aggregateResults",aggregateType);
+    main(source, "", "aggregateResults", program.aggregateResults);
 }
 
-function main(path, operatorName, option, aggregateType) {
+function main(path, operatorName, option, showInTerminal) {
+    arrayToJson = [];
     if (!fs.existsSync(path) && option !== "exportToCsv" && option !== "aggregateResults") {
         console.log("Wrong directory ", path);
         return;
@@ -88,7 +81,7 @@ function main(path, operatorName, option, aggregateType) {
     if (option == "exportToCsv") {
         let tempResults = fs.readFileSync('./resultsArray.json');
         let results = eval('(' + tempResults.toString() + ')');
-        
+
         //When we come down to the last file to scan we aggregate all the results in order to export them into a csv file
         if (results.length > 0) {
             converter.json2csv(results, csvModule.json2csvCallback, {
@@ -96,13 +89,13 @@ function main(path, operatorName, option, aggregateType) {
             });
         }
         return;
-        
+
     } else if (option == "aggregateResults") {
         let tempResults = fs.readFileSync('./resultsArray.json');
         let results = eval('(' + tempResults.toString() + ')');
 
         if (results.length > 0) {
-            aggregateCalc.aggregateCalc(results,aggregateType);
+            aggregationToCsv = aggregateCalc.aggregateCalc(results, showInTerminal);
         }
         return;
     }
@@ -125,10 +118,12 @@ function main(path, operatorName, option, aggregateType) {
         } else if (option == "operatorsInUse") {
             arrayToJson = [...resultsArray, ...codeModeRxjsCalls.operatorsUse(ast, j, file, filename, files, files.indexOf(file), csvRows)]
         } else if (option == "subjectInUse") {
-            codeModeRxjsSubject.subjectInUse(ast, j, file, filename, files, files.indexOf(file), csvRows);
+            arrayToJson = [...resultsArray, ...codeModeRxjsSubject.subjectInUse(ast, j, file, filename, files, files.indexOf(file), csvRows)];
+            // codeModeRxjsSubject.subjectInUse(ast, j, file, filename, files, files.indexOf(file), csvRows);
         } else if (option == "observablesInUse") {
-            codeModeRxjsObservables.observablesInUse(ast, j, file, filename, files, files.indexOf(file), csvRows);
-        } 
+            arrayToJson = [...resultsArray, ...codeModeRxjsObservables.observablesInUse(ast, j, file, filename, files, files.indexOf(file), csvRows)];
+            // codeModeRxjsObservables.observablesInUse(ast, j, file, filename, files, files.indexOf(file), csvRows);
+        }
     })
     fs.writeFileSync('./resultsArray.json', util.inspect(arrayToJson, { maxArrayLength: null }));
 };

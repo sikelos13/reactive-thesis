@@ -1,18 +1,18 @@
-let csvModule = require('./exportToCsv');
 const alasql = require('alasql');
-
+const util = require('util')
 module.exports = {
-    aggregateCalc: (nonAggregatedResults, aggregateType) => {
-
+    aggregateCalc: (nonAggregatedResults, showResultsInConsole) => {
         nonAggregatedResults = nonAggregatedResults.filter(obj => {
             return obj.fileName !== 'Filename';
         });
-        // console.log(nonAggregatedResults)
-        if (aggregateType === "operators") {
-            let res = alasql('SELECT name, SUM(timesUsed) AS timesUsed FROM ? GROUP BY name', [nonAggregatedResults]);
-            console.log(res);
-     
+        if ( showResultsInConsole === "yes") {
+            let res = alasql('SELECT name,fileName, SUM(timesUsed) AS timesUsed FROM ? GROUP BY name,fileName', [nonAggregatedResults]);
+            console.log(util.inspect(res, { maxArrayLength: null }))
+            return res;
+        } else if (showResultsInConsole === "no") {
+            let res = alasql('SELECT name,fileName, SUM(timesUsed) AS timesUsed FROM ? GROUP BY name,fileName', [nonAggregatedResults]);
+            return res;
         }
-        
+
     }
 };

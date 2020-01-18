@@ -1,8 +1,7 @@
 let myModule = {};
-const readFile = require('fs').readFile;
-const writeFile = require('fs').writeFile;
-const operatorDomain = require('./utils/operatorDomain');
+const operatorDomain = require('../../utils/objectGenerator');
 const operatorDomainArray = []
+
 /**
  * Rename to operatorsUse
  * Receives as input the src of the files to be scanned
@@ -37,13 +36,13 @@ myModule.operatorsUse = (root, j, dir, filename, filesArray, index, csvRows) => 
             }
         }
     })
+
     uniqueOperators = [...new Set(importSpecifier)];
     uniqueAlias = [...new Set(importedCalledWithAlias)];
     //Push the head titles only on first file
     if (index == 0) {
-        console.log("test")
         //Initialize array with columns titles
-        operatorDomainArray.push(operatorDomain.operatorObjectCalc("Alias or name used", "Position start", "Position end", "", "Filename"))
+        operatorDomainArray.push(operatorDomain.createObjectFunc("Alias or name used", "Position start", "Position end", "", "Filename","Times Used"));
     }
     //iterate the imported identifiers  and scan files for operators
     try {
@@ -52,7 +51,7 @@ myModule.operatorsUse = (root, j, dir, filename, filesArray, index, csvRows) => 
                 rxjsImportDeclarations.forEach(nodeOperator => {
                     if (operator == nodeOperator.value.name && nodeOperator.parentPath.parentPath.node.type !== "ImportDeclaration") {
                         // newCount++;
-                        operatorDomainArray.push(operatorDomain.operatorObjectCalc(operator, nodeOperator.value.start, nodeOperator.value.end, nodeOperator, dir,1));
+                        operatorDomainArray.push(operatorDomain.createObjectFunc(operator, nodeOperator.value.start, nodeOperator.value.end, nodeOperator, dir,1));
                     }
                 })
                 // showOperatorsUsed.push({
@@ -67,7 +66,7 @@ myModule.operatorsUse = (root, j, dir, filename, filesArray, index, csvRows) => 
                 rxjsImportDeclarations.forEach(nodeOperator => {
                     if (nodeOperator.value.name == alias && nodeOperator.parentPath.parentPath.node.type !== "ImportDeclaration") {
                         // count++;
-                        operatorDomainArray.push(operatorDomain.operatorObjectCalc(alias, nodeOperator.value.start, nodeOperator.value.end, nodeOperator, dir,1));
+                        operatorDomainArray.push(operatorDomain.createObjectFunc(alias, nodeOperator.value.start, nodeOperator.value.end, nodeOperator, dir,1));
                     }
                 })
 

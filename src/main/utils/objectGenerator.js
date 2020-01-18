@@ -1,6 +1,6 @@
 module.exports = {
-    operatorObjectCalc: (name, start,end,astNode, path,timesUsed) => {
-        operatorObject = {
+    createObjectFunc: (name, start,end,astNode, path,timesUsed) => {
+        object = {
             name: name,
             timesUsed: timesUsed,
             position: {
@@ -12,6 +12,6 @@ module.exports = {
             fileName: path
         };
     
-        return operatorObject;
+        return object;
     }
 };

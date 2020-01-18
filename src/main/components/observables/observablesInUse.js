@@ -1,18 +1,11 @@
-const csvModule = require('../../utils/exportToCsv');
-let fs = require('fs');
-var myModule = {};
-const readFile = require('fs').readFile;
-const writeFile = require('fs').writeFile;
-const converter = require('json-2-csv');
-const alasql = require('alasql');
+let myModule = {};
+const observableDomain = require('../../utils/objectGenerator');
+const observableDomainArray = []
 
 myModule.observablesInUse = function (root, j, dir, filename, filesArray, index, csvRows) {
     const rxjsImportDeclarations = root.find(j.Identifier)
     let importedVariable = [];
     let importedCalledWithAlias = [];
-    let showObservableUsed = [];
-    let count = 0;
-    let newCount = 0;
     let variableCount = 0;
     let uniqueAlias = []
     let uniqueVariables = [];
@@ -20,7 +13,6 @@ myModule.observablesInUse = function (root, j, dir, filename, filesArray, index,
     //Find how many identifiers we import from the rxjs library
     rxjsImportDeclarations.forEach(p => {
         if (p.parentPath.parentPath.node.type == "ImportDeclaration" && (p.parentPath.parentPath.node.source.value == "rxjs/Observables" || p.parentPath.parentPath.node.source.value == "rxjs")) {
-            // console.log(p)
             if ((p.parentPath.value.imported.name !== p.parentPath.value.local.name) && (p.parentPath.value.local.name == "Observable")) {
                 importedCalledWithAlias.push(p.parentPath.value.imported.name);
             }
@@ -32,11 +24,13 @@ myModule.observablesInUse = function (root, j, dir, filename, filesArray, index,
     //Push the head titles only on first file
     if (index == 0) {
         //Initialize array with columns titles
-        showObservableUsed.push({
-            subjectVar: "Observable variable/alias used",
-            subjectCalled: "Times Used",
-            file: "Found in file:"
-        })
+        observableDomainArray.push(observableDomain.createObjectFunc("Observable variable/alias used", "Position start", "Position end", "", "Filename","Times Used"));
+
+        // showObservableUsed.push({
+        //     subjectVar: "Observable variable/alias used",
+        //     subjectCalled: "Times Used",
+        //     file: "Found in file:"
+        // })
     }
     //iterate the imported identifiers  and scan files for operators
     try {
@@ -44,7 +38,9 @@ myModule.observablesInUse = function (root, j, dir, filename, filesArray, index,
             rxjsImportDeclarations.forEach(nodeObservable => {
 
                 if (nodeObservable.value.name == "Observable" && nodeObservable.parentPath.parentPath.node.type !== "ImportDeclaration" && nodeObservable.parentPath.value.type == "NewExpression") {
-                    newCount++;
+                    // newCount++;
+                    observableDomainArray.push(observableDomain.createObjectFunc("Observable", nodeObservable.value.start, nodeObservable.value.end, nodeObservable, dir,1));
+
                 } 
                  if (nodeObservable.parentPath.parentPath.node.type !== "ImportDeclaration" && nodeObservable.parentPath.parentPath.value.type == "AssignmentExpression") {
 
@@ -64,8 +60,10 @@ myModule.observablesInUse = function (root, j, dir, filename, filesArray, index,
             uniqueAlias.forEach(alias => {
                 rxjsImportDeclarations.forEach(nodeObservable => {
                     if (nodeObservable.value.name == alias && nodeObservable.parentPath.parentPath.node.type !== "ImportDeclaration" && nodeObservable.parentPath.value.type == "NewExpression") {
-                        count++;
-                        console.log(nodeObservable.value.name )
+                        // count++;
+                        // console.log(nodeObservable.value.name )
+                        observableDomainArray.push(observableDomain.createObjectFunc(nodeObservable.value.name , nodeObservable.value.start, nodeObservable.value.end, nodeObservable, dir,1));
+
                     } 
                     if (nodeObservable.parentPath.parentPath.node.type !== "ImportDeclaration" && nodeObservable.parentPath.parentPath.value.type == "AssignmentExpression") {
     
@@ -82,14 +80,14 @@ myModule.observablesInUse = function (root, j, dir, filename, filesArray, index,
                     }
                 })
                
-                if (count > 0) {
-                    showObservableUsed.push({
-                        subjectVar: 'Alias: '+alias,
-                        subjectCalled: count,
-                        file: dir
-                    })
-                    count = 0;
-                }
+                // if (count > 0) {
+                //     showObservableUsed.push({
+                //         subjectVar: 'Alias: '+alias,
+                //         subjectCalled: count,
+                //         file: dir
+                //     })
+                //     count = 0;
+                // }
             })
         }
 
@@ -99,47 +97,33 @@ myModule.observablesInUse = function (root, j, dir, filename, filesArray, index,
             rxjsImportDeclarations.forEach(nodeObservable => {
                 if (variable == nodeObservable.value.name && nodeObservable.parentPath.parentPath.node.type !== "ImportDeclaration") {
                     // console.log(nodeObservable.value)
-                    variableCount++;
+                    // variableCount++;
+                    observableDomainArray.push(nodeObservable.value.name.createObjectFunc(nodeObservable.value.name , nodeObservable.value.start, nodeObservable.value.end, nodeObservable, dir,1));
+
                 }
             })
-            showObservableUsed.push({
-                subjectVar: 'Variable: '+variable,
-                subjectCalled: variableCount,
-                file: dir
-            })
-            newCount = 0;
+            // showObservableUsed.push({
+            //     subjectVar: 'Variable: '+variable,
+            //     subjectCalled: variableCount,
+            //     file: dir
+            // })
+            // newCount = 0;
         })
 
-        if (newCount > 0) {
-            showObservableUsed.push({
-                subjectVar: "Observable_without_variable",
-                subjectCalled: newCount,
-                file: dir
-            })
-            newCount = 0;
-        }
-
-        //Push the array of objects for csv export 
-        Array.prototype.push.apply(csvRows.rows, showObservableUsed);
-
-        //When we come down to the last file to scan we aggregate all the results in order to export them into a csv file
-        if (index == (filesArray.length - 1)) {
-
-            converter.json2csv(csvRows.rows, csvModule.json2csvCallback, {
-                prependHeader: false // removes the generated header of "value1,value2,value3,value4" (in case you don't want it)
-            });
-
-            //iterate into csvRows in order to console log specific results.
-            let tempConsoleArray = csvRows.rows
-            global.observableResults = tempConsoleArray;
-            let res = alasql('SELECT subjectVar, SUM(subjectCalled) AS subjectCalled FROM ? GROUP BY subjectVar', [tempConsoleArray]);
-            res.shift();
-        }
+        // if (newCount > 0) {
+        //     showObservableUsed.push({
+        //         subjectVar: "Observable_without_variable",
+        //         subjectCalled: newCount,
+        //         file: dir
+        //     })
+        //     newCount = 0;
+        // }
 
     } catch (err) {
         console.log(err)
     }
 
+    return observableDomainArray;
 };
 
 module.exports = myModule;
