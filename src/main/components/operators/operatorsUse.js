@@ -10,7 +10,7 @@ const operatorDomainArray = []
  * Object 
  * 
  * { operator: operator,
- *    count: <number>
+ *    timesUsed: <number>
  *    file: <path of file>
  * }
  */

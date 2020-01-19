@@ -6,10 +6,6 @@ myModule.subjectInUse = function (root, j, dir, filename, filesArray, index, csv
     const rxjsImportDeclarations = root.find(j.Identifier)
     let importedVariable = [];
     let importedCalledWithAlias = [];
-    // let showSubjectUsed = [];
-    // let count = 0;
-    // let newCount = 0;
-    // let variableCount = 0;
     let uniqueAlias = []
     let uniqueVariables = [];
 

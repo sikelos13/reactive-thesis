@@ -119,10 +119,8 @@ function main(path, operatorName, option, showInTerminal) {
             arrayToJson = [...resultsArray, ...codeModeRxjsCalls.operatorsUse(ast, j, file, filename, files, files.indexOf(file), csvRows)]
         } else if (option == "subjectInUse") {
             arrayToJson = [...resultsArray, ...codeModeRxjsSubject.subjectInUse(ast, j, file, filename, files, files.indexOf(file), csvRows)];
-            // codeModeRxjsSubject.subjectInUse(ast, j, file, filename, files, files.indexOf(file), csvRows);
         } else if (option == "observablesInUse") {
             arrayToJson = [...resultsArray, ...codeModeRxjsObservables.observablesInUse(ast, j, file, filename, files, files.indexOf(file), csvRows)];
-            // codeModeRxjsObservables.observablesInUse(ast, j, file, filename, files, files.indexOf(file), csvRows);
         }
     })
     fs.writeFileSync('./resultsArray.json', util.inspect(arrayToJson, { maxArrayLength: null }));
