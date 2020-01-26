@@ -30,6 +30,7 @@ Three available options:
 '-v, || --observablesInUse <directory>', 'find all observable constructors and its variables of rxjs library that are used in the file and export them into csv file'
 '-e, || --exportToCsv', 'export the results from previous calculations'
 '-a, || --aggregateResults <aggregationType>', 'aggregate the results from previous calculations'
+'-p, || --pipelinesUsage <source>', 'find the pipelines that have been used in your codebase'
 ```
 ## Aggregation Types:
   1. "operators"
