@@ -9,6 +9,7 @@ const codeModeOperators = require('./components/operators/findOperators');
 const codeModeRxjsCalls = require('./components/operators/operatorsUse');
 const codeModeRxjsSubject = require('./components/subjects/subjectInUse');
 const codeModeRxjsObservables = require('./components/observables/observablesInUse');
+const codeModeRxjsPipelines = require('./components/pipelines/pipelinesInUse')
 const aggregateCalc = require("./utils/aggregateResults")
 const program = require('commander');
 const fileUtils = require('../main/utils/fileutils');
@@ -29,7 +30,8 @@ program
     .option('-s, --subjectInUse <source>', 'find the usage of subject property of rxjs library')
     .option('-v, --observablesInUse <source>', 'find the usage of observable constructors  of rxjs library')
     .option('-e, --exportToCsv', 'export the results from previous calculations')
-    .option('-a, --aggregateResults <showResultsInConsole>', 'aggregate the results from previous calculations and (optional) show them in terminal');
+    .option('-a, --aggregateResults <showResultsInConsole>', 'aggregate the results from previous calculations and (optional) show them in terminal')
+    .option('-p, --pipelinesUsage <source>', 'find the pipelines that have been used in your codebase');
 program.parse(process.argv);
 
 if (program.findOperator) {
@@ -48,6 +50,13 @@ if (program.findOperator) {
     }
     let source = program.subjectInUse;
     main(source, "", "subjectInUse","");
+}  else if (program.pipelinesUsage) {
+    if (program.pipelinesUsage.length < 2) {
+        program.help();
+        return;
+    }
+    let source = program.pipelinesUsage;
+    main(source, "", "pipelinesUsage","");
 } else if (program.observablesInUse) {
     if (program.observablesInUse.length < 2) {
         program.help();
@@ -121,6 +130,8 @@ function main(path, operatorName, option, showInTerminal) {
             arrayToJson = [...resultsArray, ...codeModeRxjsSubject.subjectInUse(ast, j, file, filename, files, files.indexOf(file), csvRows)];
         } else if (option == "observablesInUse") {
             arrayToJson = [...resultsArray, ...codeModeRxjsObservables.observablesInUse(ast, j, file, filename, files, files.indexOf(file), csvRows)];
+        } else if (option == "pipelinesUsage") {
+            arrayToJson = [...resultsArray, ...codeModeRxjsPipelines.pipelinesInUse(ast, j, file, filename, files, files.indexOf(file), csvRows)];
         }
     })
     fs.writeFileSync('./resultsArray.json', util.inspect(arrayToJson, { maxArrayLength: null }));
