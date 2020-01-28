@@ -1,5 +1,5 @@
 module.exports = {
-    createObjectFunc: (name, start,end, path, isPipe, operators) => {
+    createObjectFunc: (name, start,end, path, isPipe, operators,nestedPipeline) => {
         object = {
             name: name,
             // timesUsed: timesUsed,
@@ -10,7 +10,8 @@ module.exports = {
             // astNode: astNode,
             fileName: path,
             isPipe: isPipe,
-            operators: operators
+            operators: operators,
+            nestedPipelines: nestedPipeline
         };
     
         return object;

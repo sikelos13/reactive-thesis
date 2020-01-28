@@ -3,28 +3,23 @@ const pipeDomain = require('./utils/pipeDomain');
 const pipeDomainArray = []
 
 /**
- * Rename to operatorsUse
  * Receives as input the src of the files to be scanned
  * returns the object with the operator, its usage and the file we had found it. 
  * 
  * Object 
  * 
- * { operator: operator,
- *    timesUsed: <number>
- *    file: <path of file>
- * }
  */
 myModule.pipelinesInUse = (root, j, dir, filename, filesArray, index, csvRows) => {
     const rxjsImportDeclarations = root.find(j.Identifier);
     let importedCalledWithAlias = [];
-    let operatorsInsidePipe = [];
-    let operatorsWithAliasInPipe = []
-    let uniqueOperators = [];
-    let operatorsObject = [];
-    let uniqueAlias = [];
+    // let operatorsInsidePipe = [];
+    // let operatorsWithAliasInPipe = []
+    // let uniqueOperators = [];
+    // let operatorsObject = [];
+    // let uniqueAlias = [];
     let importSpecifier = [];
-    let uniqueOperatorsInsidePipeline = [];
-    let uniqueOperatorsWithAliasInPipeline = [];
+    // let uniqueOperatorsInsidePipeline = [];
+    // let uniqueOperatorsWithAliasInPipeline = [];
     let pipeVar = {}
 
     //Find how many identifiers we import from the rxjs library
@@ -35,58 +30,71 @@ myModule.pipelinesInUse = (root, j, dir, filename, filesArray, index, csvRows) =
             } else {
                 p.parentPath.parentPath.node.specifiers.forEach(operatorImport => {
                     importSpecifier.push(operatorImport.imported.name);
-                })
+                });
             }
         }
-    })
+    });
+
     uniqueOperators = [...new Set(importSpecifier)];
     uniqueAlias = [...new Set(importedCalledWithAlias)];
 
     if (index == 0) {
         //Initialize array with columns titles
-        pipeDomainArray.push(pipeDomain.createObjectFunc("Alias or name used", "Position start", "Position end", "Filename", "Is Pipeline", "Nested Operators"));
+        pipeDomainArray.push(pipeDomain.createObjectFunc("Alias or name used", "Position start", "Position end", "Filename", "Is Pipeline", "Nested Operators", "Pipe is nested to"));
     }
-    // let argumentVar = {}
-    // let pipeArray = [];
-    // let pipeArguments = [];
+    let object = {}
 
-    // rxjsImportDeclarations.forEach(p => {
-    //     // p.parentPath.parentPath.node.arguments.forEach(arg => {
-    //     //     console.log(arg.callee.name)
-    //     // })
-
-    //     if (p.parentPath.parentPath.node.type == "CallExpression" && p.parentPath.parentPath.node.callee.property && p.parentPath.parentPath.node.callee.property.name === "pipe") {
-    //         argumentVar = p.value
-    //         pipeVar = p.parentPath.parentPath.node
-
-    //     }
-    // })
     rxjsImportDeclarations.forEach(p => {
         const pipeArguments = []
+        let pipeInit = []
 
         if (p.value.name === "pipe") {
-            // console.log("test")
-            pipeVar = p.value;
-            console.log(p.value)
-            // console.log(p.parentPath.parentPath.node.arguments)
-            p.parentPath.parentPath.__childCache.arguments.value.forEach(arg => {
-                pipeArguments.push(arg.callee.name)
+            pipeVar = {};
+
+            // console.log(p.parentPath.parentPath.value.arguments)
+            p.parentPath.parentPath.value.arguments.forEach(arg => {
+                if (p.parentPath.parentPath.name === "init") {
+                    object = {
+                        name: "pipe",
+                        start: arg.loc.start.line,
+                        end: arg.loc.end.line
+                    }
+                    pipeVar = {
+                        start: arg.loc.start.line,
+                        end: arg.loc.end.line
+                    }
+                    if (arg && arg.callee) {
+
+                        pipeArguments.push(arg.callee.name);
+                        // pipeInit.push(object)
+                    }
+                } else if (p.parentPath.parentPath.name === "argument") {
+                    // console.log(p.parentPath.value)
+                    if (p.parentPath.value.property.name === "pipe") {
+                        // console.log(p.parentPath.value.property.loc.start)
+                        pipeVar = {
+                            start: p.parentPath.value.property.loc.start.line,
+                            end: p.parentPath.value.property.loc.end.line
+                        }
+                        if (pipeInit.indexOf(object) === -1) {
+                            pipeInit.push(object);
+                        }
+                    }
+                    if (arg && arg.callee) {
+                        pipeArguments.push(arg.callee.name);
+                    }
+                }
+
             })
-            pipeDomainArray.push(pipeDomain.createObjectFunc("Pipe", pipeVar.start, pipeVar.end, filename, "True", pipeArguments));
+            if (p.parentPath.parentPath.name === "init") {
+                pipeDomainArray.push(pipeDomain.createObjectFunc("Pipe", pipeVar.start, pipeVar.end, filename, "True", pipeArguments, ''));
+            } else {
+                pipeDomainArray.push(pipeDomain.createObjectFunc("Pipe", pipeVar.start, pipeVar.end, filename, "True", pipeArguments, `Nested in pipe of lines ${object.start} to ${object.end}`));
+            }
         }
     })
+
     console.log(pipeDomainArray)
-    //     pipeArguments.forEach(argument => {
-    //         if (uniqueOperators.indexOf(argument.name) > -1){
-    //             operatorsInsidePipe.push(argument.name)
-
-    //             pipeDomainArray.push(pipeDomain.createObjectFunc(argument.name, argument.start, argument.end, filename, "False",""));
-
-    //         } else if (uniqueAlias.indexOf(argument.name) > -1) {
-    //             operatorsInsidePipe.push(argument.name)
-    //             pipeDomainArray.push(pipeDomain.createObjectFunc(argument.name, argument.start, argument.end, filename, "False",""));
-    //         }
-    //    })
 
     return pipeDomainArray;
 };
