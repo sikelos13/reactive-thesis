@@ -94,8 +94,6 @@ myModule.pipelinesInUse = (root, j, dir, filename, filesArray, index, csvRows) =
         }
     })
 
-    console.log(pipeDomainArray)
-
     return pipeDomainArray;
 };
 
