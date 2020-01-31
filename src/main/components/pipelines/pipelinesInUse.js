@@ -4,7 +4,7 @@ const pipeDomainArray = []
 
 /**
  * Receives as input the src of the files to be scanned
- * returns the object with the operator, its usage and the file we had found it. 
+ * returns the object with the  pipeline and its nested operators or pipes, its usage and the file we had found it. 
  * 
  * Object 
  * 
@@ -12,14 +12,7 @@ const pipeDomainArray = []
 myModule.pipelinesInUse = (root, j, dir, filename, filesArray, index, csvRows) => {
     const rxjsImportDeclarations = root.find(j.Identifier);
     let importedCalledWithAlias = [];
-    // let operatorsInsidePipe = [];
-    // let operatorsWithAliasInPipe = []
-    // let uniqueOperators = [];
-    // let operatorsObject = [];
-    // let uniqueAlias = [];
     let importSpecifier = [];
-    // let uniqueOperatorsInsidePipeline = [];
-    // let uniqueOperatorsWithAliasInPipeline = [];
     let pipeVar = {}
 
     //Find how many identifiers we import from the rxjs library
@@ -39,7 +32,6 @@ myModule.pipelinesInUse = (root, j, dir, filename, filesArray, index, csvRows) =
     uniqueAlias = [...new Set(importedCalledWithAlias)];
 
     if (index == 0) {
-        //Initialize array with columns titles
         pipeDomainArray.push(pipeDomain.createObjectFunc("Alias or name used", "Position start", "Position end", "Filename", "Is Pipeline", "Nested Operators", "Pipe is nested to"));
     }
     let object = {}
@@ -53,7 +45,8 @@ myModule.pipelinesInUse = (root, j, dir, filename, filesArray, index, csvRows) =
 
             // console.log(p.parentPath.parentPath.value.arguments)
             p.parentPath.parentPath.value.arguments.forEach(arg => {
-                if (p.parentPath.parentPath.name === "init") {
+                // console.log(p.parentPath.parentPath.parentPath.parentPath.name)
+                if (p.parentPath.parentPath.name === "init" || p.parentPath.parentPath.parentPath.parentPath.name === "init") {
                     object = {
                         name: "pipe",
                         start: arg.loc.start.line,
@@ -68,14 +61,17 @@ myModule.pipelinesInUse = (root, j, dir, filename, filesArray, index, csvRows) =
                         pipeArguments.push(arg.callee.name);
                         // pipeInit.push(object)
                     }
-                } else if (p.parentPath.parentPath.name === "argument") {
-                    // console.log(p.parentPath.value)
+                } else if (p.parentPath.parentPath.name === "argument" || p.parentPath.parentPath.parentPath.parentPath.name === "argument") {
+                    // console.log(arg)
+                    
                     if (p.parentPath.value.property.name === "pipe") {
                         // console.log(p.parentPath.value.property.loc.start)
+           
                         pipeVar = {
                             start: p.parentPath.value.property.loc.start.line,
                             end: p.parentPath.value.property.loc.end.line
                         }
+
                         if (pipeInit.indexOf(object) === -1) {
                             pipeInit.push(object);
                         }
@@ -88,7 +84,7 @@ myModule.pipelinesInUse = (root, j, dir, filename, filesArray, index, csvRows) =
             })
             if (p.parentPath.parentPath.name === "init") {
                 pipeDomainArray.push(pipeDomain.createObjectFunc("Pipe", pipeVar.start, pipeVar.end, filename, "True", pipeArguments, ''));
-            } else {
+            } else if(object.start && object.end && pipeVar.start && pipeVar.end ) {
                 pipeDomainArray.push(pipeDomain.createObjectFunc("Pipe", pipeVar.start, pipeVar.end, filename, "True", pipeArguments, `Nested in pipe of lines ${object.start} to ${object.end}`));
             }
         }
