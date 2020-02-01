@@ -24,24 +24,20 @@ Type node src/main/index.js <option> in order to run the script of your choice.
 Three available options:
 
 ```
-'-f, || --findOperator <name>', 'find the use of a specific rxjs operator'
-'-o, || --operatorsInUse <directory>', 'find all operators of rxjs library that are used in the file and export them in csv file'
-'-s, || --subjectInUse <directory>', 'find all subject constructors and its variables of rxjs library that are used in the file and export them into csv file'
-'-v, || --observablesInUse <directory>', 'find all observable constructors and its variables of rxjs library that are used in the file and export them into csv file'
-'-e, || --exportToCsv', 'export the results from previous calculations'
-'-a, || --aggregateResults <aggregationType>', 'aggregate the results from previous calculations'
-'-p, || --pipelinesUsage <source>', 'find the pipelines that have been used in your codebase'
+'*f, || --findOperator <name>', 'find the use of a specific rxjs operator'
+'*o, || --operatorsInUse <directory>', 'find all operators of rxjs library that are used in the file and export them in csv file'
+'*s, || --subjectInUse <directory>', 'find all subject constructors and its variables of rxjs library that are used in the file and export them into csv file'
+'*v, || --observablesInUse <directory>', 'find all observable constructors and its variables of rxjs library that are used in the file and export them into csv file'
+'*e, || --exportToCsv', 'export the results from previous calculations'
+'*a, || --aggregateResults <aggregationType>', 'aggregate the results from previous calculations'
+'*p, || --pipelinesUsage <source>', 'find the pipelines that have been used in your codebase'
 ```
-## Aggregation Types:
-  1. "operators"
-  2. "subjects"
-  3. "observables"
-  4. "all the above"
-  
-_Disclaimer:_
 
-- Folder directory must start from the root directory of the machine. i.e in Mac OS is Users/{username}/directory of your directory with the files that need to be parsed.
-- In order for _--operatorsInUse_ option to work out , you have to pre-create an **csv_results** folder inside the root directory of the repository.
+## _Disclaimer:
+*Aggregation process applies only on the latest results from the previous process.
+*Folder directory must start from the root directory of the machine. i.e in Mac OS is Users/{username}/directory of your directory with the files that need to be parsed.
+*Export to csv will always  point to the root of 
+*In order for _--exportToCsv--_ option to work out , you have to pre-create an **csv_results** folder inside the root directory of the repository.
 
 ## Instructions
 
@@ -54,7 +50,7 @@ Make 'csv_results'  folder in root directory.
 
 ## How We built the Scripting/Parsing Tool.
 
-We worked on plain javascript ,gulp.js and node.js .For handling terminal option we use commander.js and for the parsing we use jscodeshift in which we wrap codemods with flow parser. We use babel presets and babel cli in order to execute terminal commands within our js files. Also commander.js used for better cli usage.
+We worked on plain javascript ,gulp.js and node.js .For handling terminal options we use commander.js and for the parsing we use jscodeshift in which we wrap codemods with typescript parser. We use babel presets and babel cli in order to execute terminal commands within our js files. Rest of the packages that used in order to make our script work can be found in our package.json file.
 
 ## License
 
