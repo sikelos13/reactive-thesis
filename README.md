@@ -33,7 +33,7 @@ Three available options:
 -'p, || --pipelinesUsage <source>', 'find the pipelines that have been used in your codebase'
 ```
 
-## _Disclaimer:
+## Disclaimer:
 * Aggregation process applies only on the latest results from the previous process.
 * Folder directory must start from the root directory of the machine. i.e in Mac OS is Users/{username}/directory of your directory with the files that need to be parsed.
 * Export to csv will always  point to the root of 
