@@ -25,31 +25,36 @@ let aggregationToCsv = [];
 let arrayToJson = [];
 
 program
-    .option('-f, --findOperator <name>', 'count rxjs operator')
-    .option('-o, --operatorsInUse <source>', 'find all operators of rxjs library that are used in the file')
-    .option('-s, --subjectInUse <source>', 'find the usage of subject property of rxjs library')
-    .option('-v, --observablesInUse <source>', 'find the usage of observable constructors  of rxjs library')
-    .option('-e, --exportToCsv', 'export the results from previous calculations')
-    .option('-a, --aggregateResults <showResultsInConsole>', 'aggregate the results from previous calculations and (optional) show them in terminal')
+    // .option('-f, --findOperator <name>', 'count rxjs operator')
+    .option('-o, --operatorsInUse <source> <action>', 'find all operators of rxjs library that are used in the file')
+    .option('-s, --subjectInUse <source> <action>', 'find the usage of subject property of rxjs library')
+    .option('-v, --observablesInUse <source> <action>', 'find the usage of observable constructors  of rxjs library')
+    // .option('-e, --exportToCsv', 'export the results from previous calculations')
+    // .option('-a, --aggregateResults <showResultsInConsole>', 'aggregate the results from previous calculations and (optional) show them in terminal')
     .option('-p, --pipelinesUsage <source> <action>', 'find the pipelines that have been used in your codebase');
 program.parse(process.argv);
 
-if (program.findOperator) {
-    main('src/test/resources', program.findOperator, "findOperator");
-} else if (program.operatorsInUse) {
+// if (program.findOperator) {
+//     main('src/test/resources', program.findOperator, "findOperator");
+// } else 
+if (program.operatorsInUse) {
     if (program.operatorsInUse.length < 2) {
         program.help();
         return;
     }
+    let action = program.args[0];
+    let aggregateAnswer = program.args[1];
     let source = program.operatorsInUse;
-    main(source, "", "operatorsInUse", "");
+    main(source, "", "operatorsInUse",action,aggregateAnswer);
 } else if (program.subjectInUse) {
     if (program.subjectInUse.length < 2) {
         program.help();
         return;
     }
+    let action = program.args[0];
+    let aggregateAnswer = program.args[1];
     let source = program.subjectInUse;
-    main(source, "", "subjectInUse", "");
+    main(source, "", "subjectInUse",action,aggregateAnswer);
 } else if (program.pipelinesUsage) {
     if (program.pipelinesUsage.length < 2) {
         program.help();
@@ -58,14 +63,16 @@ if (program.findOperator) {
     let action = program.args[0];
     let aggregateAnswer = program.args[1];
     let source = program.pipelinesUsage;
-    main(source, "", "pipelinesUsage", "", action,aggregateAnswer);
+    main(source, "", "pipelinesUsage", action,aggregateAnswer);
 } else if (program.observablesInUse) {
     if (program.observablesInUse.length < 2) {
         program.help();
         return;
     }
+    let action = program.args[0];
+    let aggregateAnswer = program.args[1];
     let source = program.observablesInUse;
-    main(source, "", "observablesInUse", "");
+    main(source, "", "observablesInUse",action,aggregateAnswer);
 } 
 // else if (program.exportToCsv) {
 //     if (program.exportToCsv.length < 2) {
@@ -115,7 +122,8 @@ function main(path, operatorName, option, action,aggregateAnswer) {
         } else if (option == "pipelinesUsage") {
             arrayToJson = [...resultsArray, ...codeModeRxjsPipelines.pipelinesInUse(ast, j, file, filename, files, files.indexOf(file), csvRows)];
         }
-    })
+    });
+
     fs.writeFileSync('./resultsArray.json', util.inspect(arrayToJson, { maxArrayLength: null }));
     if (action === "e") {
         handleActions("exportToCsv");

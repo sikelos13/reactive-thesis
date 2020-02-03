@@ -42,7 +42,7 @@ myModule.operatorsUse = (root, j, dir, filename, filesArray, index, csvRows) => 
     //Push the head titles only on first file
     if (index == 0) {
         //Initialize array with columns titles
-        operatorDomainArray.push(operatorDomain.createObjectFunc("Alias or name used", "Position start", "Position end", "", "Filename"));
+        operatorDomainArray.push(operatorDomain.createObjectFunc("Alias or name used", "Line", "", "Filename"));
     }
     //iterate the imported identifiers  and scan files for operators
     try {
@@ -51,7 +51,13 @@ myModule.operatorsUse = (root, j, dir, filename, filesArray, index, csvRows) => 
                 rxjsImportDeclarations.forEach(nodeOperator => {
                     if (operator == nodeOperator.value.name && nodeOperator.parentPath.parentPath.node.type !== "ImportDeclaration") {
                         // newCount++;
-                        operatorDomainArray.push(operatorDomain.createObjectFunc(operator, nodeOperator.value.start, nodeOperator.value.end, nodeOperator, dir));
+                        if(nodeOperator.parentPath.value !== undefined && nodeOperator.parentPath.value.callee !== undefined){
+                            operatorDomainArray.push(operatorDomain.createObjectFunc(operator, nodeOperator.parentPath.value.callee.loc.start.line, nodeOperator, dir));
+                        }
+                        // console.log(nodeOperator.parentPath.value.callee.loc.start.line)
+                        // operatorDomainArray.push(operatorDomain.createObjectFunc(operator, nodeOperator.parentPath.value.callee.loc.start.line, nodeOperator, dir));
+
+                        // operatorDomainArray.push(operatorDomain.createObjectFunc(operator, nodeOperator.value.start, nodeOperator.value.end, nodeOperator, dir));
                     }
                 })
                 // showOperatorsUsed.push({
@@ -66,7 +72,11 @@ myModule.operatorsUse = (root, j, dir, filename, filesArray, index, csvRows) => 
                 rxjsImportDeclarations.forEach(nodeOperator => {
                     if (nodeOperator.value.name == alias && nodeOperator.parentPath.parentPath.node.type !== "ImportDeclaration") {
                         // count++;
-                        operatorDomainArray.push(operatorDomain.createObjectFunc(alias, nodeOperator.value.start, nodeOperator.value.end, nodeOperator, dir));
+                        // operatorDomainArray.push(operatorDomain.createObjectFunc(operator, nodeOperator.parentPath.value.callee.loc.start.line, nodeOperator, dir));
+                        if(nodeOperator.parentPath.value !== undefined && nodeOperator.parentPath.value.callee !== undefined){
+                            operatorDomainArray.push(operatorDomain.createObjectFunc(operator, nodeOperator.parentPath.value.callee.loc.start.line, nodeOperator, dir));
+                        }
+                        // operatorDomainArray.push(operatorDomain.createObjectFunc(alias, nodeOperator.value.start, nodeOperator.value.end, nodeOperator, dir));
                     }
                 })
 

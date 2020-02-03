@@ -35,61 +35,66 @@ myModule.pipelinesInUse = (root, j, dir, filename, filesArray, index, csvRows) =
         pipeDomainArray.push(pipeDomain.createObjectFunc("Alias or name used", "Position start", "Position end", "Filename", "Is Pipeline", "Nested Operators", "Pipe is nested to"));
     }
     let object = {}
+    try {
 
-    rxjsImportDeclarations.forEach(p => {
-        const pipeArguments = []
-        let pipeInit = []
+        rxjsImportDeclarations.forEach(p => {
+            const pipeArguments = []
+            let pipeInit = []
+            if (p.value.name === "pipe") {
+                pipeVar = {};
 
-        if (p.value.name === "pipe") {
-            pipeVar = {};
+                // console.log(p.parentPath.parentPath.value.arguments)
+                if (p.parentPath.parentPath.value.arguments !== undefined) {
 
-            // console.log(p.parentPath.parentPath.value.arguments)
-            p.parentPath.parentPath.value.arguments.forEach(arg => {
-                // console.log(p.parentPath.parentPath.parentPath.parentPath.name)
-                if (p.parentPath.parentPath.name === "init" || p.parentPath.parentPath.parentPath.parentPath.name === "init") {
-                    object = {
-                        name: "pipe",
-                        start: arg.loc.start.line,
-                        end: arg.loc.end.line
-                    }
-                    pipeVar = {
-                        start: arg.loc.start.line,
-                        end: arg.loc.end.line
-                    }
-                    if (arg && arg.callee) {
+                    p.parentPath.parentPath.value.arguments.forEach(arg => {
+                        // console.log(p.parentPath.parentPath.parentPath.parentPath.name)
+                        if (p.parentPath.parentPath.name === "init" || p.parentPath.parentPath.parentPath.parentPath.name === "init") {
+                            object = {
+                                name: "pipe",
+                                start: arg.loc.start.line,
+                                end: arg.loc.end.line
+                            }
+                            pipeVar = {
+                                start: arg.loc.start.line,
+                                end: arg.loc.end.line
+                            }
+                            if (arg && arg.callee) {
 
-                        pipeArguments.push(arg.callee.name);
-                        // pipeInit.push(object)
-                    }
-                } else if (p.parentPath.parentPath.name === "argument" || p.parentPath.parentPath.parentPath.parentPath.name === "argument") {
-                    // console.log(arg)
-                    
-                    if (p.parentPath.value.property.name === "pipe") {
-                        // console.log(p.parentPath.value.property.loc.start)
-           
-                        pipeVar = {
-                            start: p.parentPath.value.property.loc.start.line,
-                            end: p.parentPath.value.property.loc.end.line
+                                pipeArguments.push(arg.callee.name);
+                                // pipeInit.push(object)
+                            }
+                        } else if (p.parentPath.parentPath.name === "argument" || p.parentPath.parentPath.parentPath.parentPath.name === "argument") {
+                            // console.log(arg)
+
+                            if (p.parentPath.value.property.name === "pipe") {
+                                // console.log(p.parentPath.value.property.loc.start)
+
+                                pipeVar = {
+                                    start: p.parentPath.value.property.loc.start.line,
+                                    end: p.parentPath.value.property.loc.end.line
+                                }
+
+                                if (pipeInit.indexOf(object) === -1) {
+                                    pipeInit.push(object);
+                                }
+                            }
+                            if (arg && arg.callee) {
+                                pipeArguments.push(arg.callee.name);
+                            }
                         }
 
-                        if (pipeInit.indexOf(object) === -1) {
-                            pipeInit.push(object);
-                        }
-                    }
-                    if (arg && arg.callee) {
-                        pipeArguments.push(arg.callee.name);
-                    }
+                    })
                 }
-
-            })
-            if (p.parentPath.parentPath.name === "init") {
-                pipeDomainArray.push(pipeDomain.createObjectFunc("Pipe", pipeVar.start, pipeVar.end, filename, "True", pipeArguments, ''));
-            } else if(object.start && object.end && pipeVar.start && pipeVar.end ) {
-                pipeDomainArray.push(pipeDomain.createObjectFunc("Pipe", pipeVar.start, pipeVar.end, filename, "True", pipeArguments, `Nested in pipe of lines ${object.start} to ${object.end}`));
+                if (p.parentPath.parentPath.name === "init") {
+                    pipeDomainArray.push(pipeDomain.createObjectFunc("Pipe", pipeVar.start, pipeVar.end, filename, "True", pipeArguments, ''));
+                } else if (object.start && object.end && pipeVar.start && pipeVar.end) {
+                    pipeDomainArray.push(pipeDomain.createObjectFunc("Pipe", pipeVar.start, pipeVar.end, filename, "True", pipeArguments, `Nested in pipe of lines ${object.start} to ${object.end}`));
+                }
             }
-        }
-    })
-
+        })
+    } catch (error) {
+        return
+    }
     return pipeDomainArray;
 };
 
