@@ -21,17 +21,23 @@ $ npm test
 ## How it Works
 
 Type node src/main/index.js <option> in order to run the script of your choice.
-Three available options:
+Current available options:
 
 ```
 -'f, || --findOperator <name>', 'find the use of a specific rxjs operator'
 -'o, || --operatorsInUse <directory>', 'find all operators of rxjs library that are used in the file and export them in csv file'
 -'s, || --subjectInUse <directory>', 'find all subject constructors and its variables of rxjs library that are used in the file and export them into csv file'
 -'v, || --observablesInUse <directory>', 'find all observable constructors and its variables of rxjs library that are used in the file and export them into csv file'
--'e, || --exportToCsv', 'export the results from previous calculations'
--'a, || --aggregateResults <aggregationType>', 'aggregate the results from previous calculations'
--'p, || --pipelinesUsage <source>', 'find the pipelines that have been used in your codebase'
+-'p, || --pipelinesUsage <source> <action>', 'find the pipelines that have been used in your codebase'
 ```
+## Actions:
+Actions can be inserted inline with the preferable option.Currently we have two actions available.
+
+    1. Export to csv action. In order to use the action you just have to add "e" at the end of the command line"
+        i.e "node src/main/index.js -p Users/admin/thesis-examples e"
+    2. Aggregate results action. In order to use the action you just have to add "a" and after the "a" input user have to enter if he wants to show or not the aggregate results in the console at the end of the command line". 
+        For showing results user can enter "yes" or "no" after the action character.
+        i.e "node src/main/index.js -p Users/admin/thesis-examples a yes/no"
 
 ## Disclaimer:
 * Aggregation process applies only on the latest results from the previous process.
