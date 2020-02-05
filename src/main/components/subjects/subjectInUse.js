@@ -24,12 +24,8 @@ myModule.subjectInUse = function (root, j, dir, filename, filesArray, index, csv
     //Push the head titles only on first file
     if (index == 0) {
         //Initialize array with columns titles
-        subjectsDomainArray.push(subjectDomain.createObjectFunc("Subject variable/alias used", "Position start", "Position end", "", "Filename"));
-        // showSubjectUsed.push({
-        //     subjectVar: "Subject variable/alias used",
-        //     subjectCalled: "Times Used",
-        //     file: "Found in file:"
-        // })
+        subjectsDomainArray.push(subjectDomain.createObjectFunc("Subject variable/alias used", "Line start", "Line end", "", "Filename"));
+
     }
     //iterate the imported identifiers  and scan files for operators
     try {
@@ -38,7 +34,9 @@ myModule.subjectInUse = function (root, j, dir, filename, filesArray, index, csv
 
                 if (nodeSubject.value.name == "Subject" && nodeSubject.parentPath.parentPath.node.type !== "ImportDeclaration" && nodeSubject.parentPath.value.type == "NewExpression") {
                     // newCount++;
-                    subjectsDomainArray.push(subjectDomain.createObjectFunc("Subject", nodeSubject.value.start, nodeSubject.value.end, nodeSubject, dir));
+                    if(nodeSubject.parentPath.value !== undefined && nodeSubject.parentPath.value.callee !== undefined){
+                         subjectsDomainArray.push(subjectDomain.createObjectFunc("Subject", nodeSubject.parentPath.value.callee.loc.start.line, nodeSubject.parentPath.value.callee.loc.end.line, nodeSubject, dir));
+                    }
                 }
                 if (nodeSubject.parentPath.parentPath.node.type !== "ImportDeclaration" && nodeSubject.parentPath.parentPath.value.type == "AssignmentExpression") {
                     if (nodeSubject.parentPath.parentPath.value.right.type == "NewExpression" && nodeSubject.parentPath.parentPath.value.right.callee.name == "Subject" && nodeSubject.parentPath.parentPath.value.right.callee.type == "Identifier") {
@@ -57,9 +55,10 @@ myModule.subjectInUse = function (root, j, dir, filename, filesArray, index, csv
             uniqueAlias.forEach(alias => {
                 rxjsImportDeclarations.forEach(nodeSubject => {
                     if (nodeSubject.value.name == alias && nodeSubject.parentPath.parentPath.node.type !== "ImportDeclaration" && nodeSubject.parentPath.value.type == "NewExpression") {
-                        // count++;
-                        // console.log(nodeSubject.value.name)
-                        subjectsDomainArray.push(subjectDomain.createObjectFunc(nodeSubject.value.name, nodeSubject.value.start, nodeSubject.value.end, nodeSubject, dir));
+
+                        if(nodeSubject.parentPath.value !== undefined && nodeSubject.parentPath.value.callee !== undefined){
+                            subjectsDomainArray.push(subjectDomain.createObjectFunc(nodeSubject.value.name, nodeSubject.parentPath.value.callee.loc.start.line, nodeSubject.parentPath.value.callee.loc.end.line, nodeSubject, dir));
+                        }
                     }
                     if (nodeSubject.parentPath.parentPath.node.type !== "ImportDeclaration" && nodeSubject.parentPath.parentPath.value.type == "AssignmentExpression") {
                         if (nodeSubject.parentPath.parentPath.value.right.type == "NewExpression" && nodeSubject.parentPath.parentPath.value.right.callee.name == alias && nodeSubject.parentPath.parentPath.value.right.callee.type == "Identifier") {
@@ -71,15 +70,6 @@ myModule.subjectInUse = function (root, j, dir, filename, filesArray, index, csv
                         }
                     }
                 })
-
-                // if (count > 0) {
-                //     showSubjectUsed.push({
-                //         subjectVar: 'Alias: ' + alias,
-                //         subjectCalled: count,
-                //         file: dir
-                //     })
-                //     count = 0;
-                // }
             })
         }
 
@@ -88,9 +78,9 @@ myModule.subjectInUse = function (root, j, dir, filename, filesArray, index, csv
         uniqueVariables.forEach(variable => {
             rxjsImportDeclarations.forEach(nodeSubject => {
                 if (variable == nodeSubject.value.name && nodeSubject.parentPath.parentPath.node.type !== "ImportDeclaration") {
-                    // console.log(nodeSubject.value)
-                    // variableCount++;
-                    subjectsDomainArray.push(subjectDomain.createObjectFunc("Variable: "+nodeSubject.value.name, nodeSubject.value.start, nodeSubject.value.end, nodeSubject, dir));
+                    if(nodeSubject.parentPath.value !== undefined){
+                        subjectsDomainArray.push(subjectDomain.createObjectFunc("Variable: "+nodeSubject.value.name, nodeSubject.parentPath.value.loc.start.line, nodeSubject.parentPath.value.loc.end.line, nodeSubject, dir));
+                    }
                 }
             });
         });
