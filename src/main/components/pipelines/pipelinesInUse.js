@@ -11,28 +11,10 @@ const pipeDomainArray = []
  */
 myModule.pipelinesInUse = (root, j, dir, filename, filesArray, index, csvRows) => {
     const rxjsImportDeclarations = root.find(j.Identifier);
-    let importedCalledWithAlias = [];
-    let importSpecifier = [];
     let pipeVar = {}
 
-    //Find how many identifiers we import from the rxjs library
-    rxjsImportDeclarations.forEach(p => {
-        if (p.parentPath.parentPath.node.type == "ImportDeclaration" && p.parentPath.parentPath.node.source.value == "rxjs/operators") {
-            if (p.parentPath.value.imported.name !== p.parentPath.value.local.name) {
-                importedCalledWithAlias.push(p.parentPath.value.imported.name);
-            } else {
-                p.parentPath.parentPath.node.specifiers.forEach(operatorImport => {
-                    importSpecifier.push(operatorImport.imported.name);
-                });
-            }
-        }
-    });
-
-    uniqueOperators = [...new Set(importSpecifier)];
-    uniqueAlias = [...new Set(importedCalledWithAlias)];
-
     if (index == 0) {
-        pipeDomainArray.push(pipeDomain.createObjectFunc("Alias or name used", "Position start", "Position end", "Filename", "Is Pipeline", "Nested Operators", "Pipe is nested to"));
+        pipeDomainArray.push(pipeDomain.createObjectFunc("Alias or name used", "Line start", "Line end", "Filename", "Nested Operators", "Pipe is nested to"));
     }
     let object = {}
     try {
@@ -41,14 +23,16 @@ myModule.pipelinesInUse = (root, j, dir, filename, filesArray, index, csvRows) =
             const pipeArguments = []
             let pipeInit = []
             if (p.value.name === "pipe") {
+                let firstRoot = p.parentPath.parentPath.parentPath.parentPath;
+                let secRoot = p.parentPath.parentPath;
+                let thirdRoot = p.parentPath.parentPath.parentPath;
+                let fourthRoot = p.parentPath.parentPath.parentPath.parentPath.parentPath;
                 pipeVar = {};
-
-                // console.log(p.parentPath.parentPath.value.arguments)
                 if (p.parentPath.parentPath.value.arguments !== undefined) {
-
+                    
                     p.parentPath.parentPath.value.arguments.forEach(arg => {
-                        // console.log(p.parentPath.parentPath.parentPath.parentPath.name)
-                        if (p.parentPath.parentPath.name === "init" || p.parentPath.parentPath.parentPath.parentPath.name === "init") {
+                        if (secRoot.name === "init" || firstRoot.name === "init" || thirdRoot.name === "init") {
+
                             object = {
                                 name: "pipe",
                                 start: arg.loc.start.line,
@@ -61,13 +45,9 @@ myModule.pipelinesInUse = (root, j, dir, filename, filesArray, index, csvRows) =
                             if (arg && arg.callee) {
 
                                 pipeArguments.push(arg.callee.name);
-                                // pipeInit.push(object)
                             }
-                        } else if (p.parentPath.parentPath.name === "argument" || p.parentPath.parentPath.parentPath.parentPath.name === "argument") {
-                            // console.log(arg)
-
+                        } else if (thirdRoot.name === "expression" || secRoot.name === "argument" || fourthRoot.name === "arguments" || firstRoot.name === "argument" || thirdRoot.name === "arguments" || thirdRoot.name === "argument" || firstRoot.name === "expression" || secRoot.name === "body" || firstRoot.name === "body") {
                             if (p.parentPath.value.property.name === "pipe") {
-                                // console.log(p.parentPath.value.property.loc.start)
 
                                 pipeVar = {
                                     start: p.parentPath.value.property.loc.start.line,
@@ -85,10 +65,12 @@ myModule.pipelinesInUse = (root, j, dir, filename, filesArray, index, csvRows) =
 
                     })
                 }
-                if (p.parentPath.parentPath.name === "init") {
-                    pipeDomainArray.push(pipeDomain.createObjectFunc("Pipe", pipeVar.start, pipeVar.end, filename, "True", pipeArguments, ''));
+                if (secRoot.name === "init" || firstRoot.name === "init" || thirdRoot.name === "init") {
+                    pipeDomainArray.push(pipeDomain.createObjectFunc("Pipe", pipeVar.start, pipeVar.end, filename, pipeArguments, ''));
                 } else if (object.start && object.end && pipeVar.start && pipeVar.end) {
-                    pipeDomainArray.push(pipeDomain.createObjectFunc("Pipe", pipeVar.start, pipeVar.end, filename, "True", pipeArguments, `Nested in pipe of lines ${object.start} to ${object.end}`));
+                    pipeDomainArray.push(pipeDomain.createObjectFunc("Pipe", pipeVar.start, pipeVar.end, filename, pipeArguments, `Nested in pipe of lines ${object.start} to ${object.end}`));
+                } else if (thirdRoot.name === "expression" || secRoot.name === "argument" || fourthRoot.name === "arguments" || firstRoot.name === "argument" || thirdRoot.name === "argument" || thirdRoot.name === "arguments" || firstRoot.name === "expression" || secRoot.name === "body" || firstRoot.name === "body") {
+                    pipeDomainArray.push(pipeDomain.createObjectFunc("Pipe as argument", pipeVar.start, pipeVar.end, filename, pipeArguments, `Nested in object or function`));
                 }
             }
         })

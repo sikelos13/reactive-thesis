@@ -73,7 +73,7 @@ myModule.observablesInUse = function (root, j, dir, filename, filesArray, index,
                                 if (nodeObservable.parentPath.parentPath.value.left.property.type == "Identifier") {
                                 // console.log(nodeObservable.parentPath.parentPath.value.left.property.name);
                                     importedVariable.push(nodeObservable.parentPath.parentPath.value.left.property.name);
-                                //continue implementing the idea of varaibles
+                                //continue implementing the idea of variables
                                 }
                             }
                         }
