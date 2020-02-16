@@ -13,14 +13,13 @@ myModule.observablesInUse = function (root, j, dir, filename, filesArray, index,
     //Find how many identifiers we import from the rxjs library
     rxjsImportDeclarations.forEach(p => {
         if (p.parentPath.parentPath.node.type == "ImportDeclaration" && (p.parentPath.parentPath.node.source.value == "rxjs/Observables" || p.parentPath.parentPath.node.source.value == "rxjs")) {
-            if ((p.parentPath.value.imported.name !== p.parentPath.value.local.name) && (p.parentPath.value.local.name == "Observable")) {
+            if (p.parentPath.value.imported.name !== p.parentPath.value.local.name || p.parentPath.value.local.name == "Observable") {
                 importedCalledWithAlias.push(p.parentPath.value.imported.name);
             }
         }
     })
 
     uniqueAlias = [...new Set(importedCalledWithAlias)];
-
     //Push the head titles only on first file
     if (index == 0) {
         //Initialize array with columns titles
