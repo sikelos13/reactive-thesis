@@ -1,8 +1,11 @@
 module.exports = {
-    createObjectFunc: (name, line,astNode, path) => {
+    createObjectFunc: (name, start,end,astNode, path) => {
         object = {
             name: name,
-            line: line,
+            position: {
+                start: start,
+                end: end
+            },
             // astNode: astNode,
             fileName: path
         };
