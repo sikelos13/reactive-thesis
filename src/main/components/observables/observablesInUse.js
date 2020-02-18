@@ -23,7 +23,7 @@ myModule.observablesInUse = function (root, j, dir, filename, filesArray, index,
     //Push the head titles only on first file
     if (index == 0) {
         //Initialize array with columns titles
-        observableDomainArray.push(observableDomain.createObjectFunc("Observable variable/alias used", "Position start", "Position end", "", "Filename","Times Used"));
+        observableDomainArray.push(observableDomain.createObjectFunc("Observable variable/alias used", "Line start", "Line end", "", "Filename","Times Used"));
 
         // showObservableUsed.push({
         //     subjectVar: "Observable variable/alias used",
@@ -38,7 +38,7 @@ myModule.observablesInUse = function (root, j, dir, filename, filesArray, index,
 
                 if (nodeObservable.value.name == "Observable" && nodeObservable.parentPath.parentPath.node.type !== "ImportDeclaration" && nodeObservable.parentPath.value.type == "NewExpression") {
                     // newCount++;
-                    observableDomainArray.push(observableDomain.createObjectFunc("Observable", nodeObservable.value.start, nodeObservable.value.end, nodeObservable, dir,1));
+                    observableDomainArray.push(observableDomain.createObjectFunc("Observable", nodeObservable.parentPath.value.callee.loc.start.line, nodeObservable.parentPath.value.callee.loc.end.line, nodeObservable, dir,1));
 
                 } 
                  if (nodeObservable.parentPath.parentPath.node.type !== "ImportDeclaration" && nodeObservable.parentPath.parentPath.value.type == "AssignmentExpression") {
@@ -61,7 +61,7 @@ myModule.observablesInUse = function (root, j, dir, filename, filesArray, index,
                     if (nodeObservable.value.name == alias && nodeObservable.parentPath.parentPath.node.type !== "ImportDeclaration" && nodeObservable.parentPath.value.type == "NewExpression") {
                         // count++;
                         // console.log(nodeObservable.value.name )
-                        observableDomainArray.push(observableDomain.createObjectFunc(nodeObservable.value.name , nodeObservable.value.start, nodeObservable.value.end, nodeObservable, dir,1));
+                        observableDomainArray.push(observableDomain.createObjectFunc(nodeObservable.value.name , nodeObservable.parentPath.value.callee.loc.start.line, nodeObservable.parentPath.value.callee.loc.end.line, nodeObservable, dir,1));
 
                     } 
                     if (nodeObservable.parentPath.parentPath.node.type !== "ImportDeclaration" && nodeObservable.parentPath.parentPath.value.type == "AssignmentExpression") {
@@ -97,7 +97,7 @@ myModule.observablesInUse = function (root, j, dir, filename, filesArray, index,
                 if (variable == nodeObservable.value.name && nodeObservable.parentPath.parentPath.node.type !== "ImportDeclaration") {
                     // console.log(nodeObservable.value)
                     // variableCount++;
-                    observableDomainArray.push(nodeObservable.value.name.createObjectFunc(nodeObservable.value.name , nodeObservable.value.start, nodeObservable.value.end, nodeObservable, dir,1));
+                    observableDomainArray.push(nodeObservable.value.name.createObjectFunc(nodeObservable.value.name , nodeObservable.parentPath.value.callee.loc.start.line, nodeObservable.parentPath.value.callee.loc.end.line, nodeObservable, dir,1));
 
                 }
             })
