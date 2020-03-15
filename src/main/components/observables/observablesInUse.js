@@ -24,12 +24,6 @@ myModule.observablesInUse = function (root, j, dir, filename, filesArray, index,
     if (index == 0) {
         //Initialize array with columns titles
         observableDomainArray.push(observableDomain.createObjectFunc("Observable variable/alias used", "Line start", "Line end", "", "Filename","Times Used"));
-
-        // showObservableUsed.push({
-        //     subjectVar: "Observable variable/alias used",
-        //     subjectCalled: "Times Used",
-        //     file: "Found in file:"
-        // })
     }
     //iterate the imported identifiers  and scan files for operators
     try {
@@ -56,14 +50,21 @@ myModule.observablesInUse = function (root, j, dir, filename, filesArray, index,
             })
 
         } else {
-            uniqueAlias.forEach(alias => {
                 rxjsImportDeclarations.forEach(nodeObservable => {
+                    uniqueAlias.forEach(alias => {
+
                     if (nodeObservable.value.name == alias && nodeObservable.parentPath.parentPath.node.type !== "ImportDeclaration" && nodeObservable.parentPath.value.type == "NewExpression") {
-                        // count++;
-                        // console.log(nodeObservable.value.name )
+
                         observableDomainArray.push(observableDomain.createObjectFunc(nodeObservable.value.name , nodeObservable.parentPath.value.callee.loc.start.line, nodeObservable.parentPath.value.callee.loc.end.line, nodeObservable, dir,1));
 
                     } 
+                })
+                if (nodeObservable.parentPath.parentPath.node.type !== "ImportDeclaration" && nodeObservable.parentPath.value.type == "NewExpression") {
+
+                    observableDomainArray.push(observableDomain.createObjectFunc(nodeObservable.value.name , nodeObservable.parentPath.value.callee.loc.start.line, nodeObservable.parentPath.value.callee.loc.end.line, nodeObservable, dir,1));
+
+                } 
+
                     if (nodeObservable.parentPath.parentPath.node.type !== "ImportDeclaration" && nodeObservable.parentPath.parentPath.value.type == "AssignmentExpression") {
     
                         if(nodeObservable.parentPath.parentPath.value.right.type == "NewExpression" && nodeObservable.parentPath.parentPath.value.right.callee.name== alias && nodeObservable.parentPath.parentPath.value.right.callee.type== "Identifier") {
@@ -77,7 +78,6 @@ myModule.observablesInUse = function (root, j, dir, filename, filesArray, index,
                             }
                         }
                     }
-                })
                
                 // if (count > 0) {
                 //     showObservableUsed.push({
