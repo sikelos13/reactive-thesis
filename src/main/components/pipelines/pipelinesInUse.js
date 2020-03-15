@@ -21,7 +21,6 @@ myModule.pipelinesInUse = (root, j, dir, filename, filesArray, index, csvRows) =
     const rxjsImportDeclarations = root.find(j.Identifier);
     const operatorsArray = codeModeRxjsCallsOperators.operatorsUse(root, j, dir, filename, filesArray, index, csvRows);
     const observablesArray = codeModeRxjsCallsObservables.observablesInUse(root, j, dir, filename, filesArray, index, csvRows);
-    console.log(observablesArray)
     const importedFromRxjs = [];
     let pipeVar = {};
     let object = {}
@@ -53,11 +52,6 @@ myModule.pipelinesInUse = (root, j, dir, filename, filesArray, index, csvRows) =
                 let argumentsArray = [];
                 let argumentsSecondArray = [];
                 pipeVar = {};
-                // console.log(firstRoot.name)
-                // console.log(secRoot.name)
-                // console.log(thirdRoot.name)
-                // console.log(fourthRoot.name)
-                // console.log(fifthRoot.name)
 
                 if (p.parentPath.parentPath.value.arguments != undefined) {
                     argumentsArray = p.parentPath.parentPath.value.arguments;
@@ -96,7 +90,7 @@ myModule.pipelinesInUse = (root, j, dir, filename, filesArray, index, csvRows) =
 
                         } else if (thirdRoot.name === "expression" || fifthRoot.name === "arguments" || secRoot.name === "argument" || fourthRoot.name === "arguments" || firstRoot.name === "argument" || thirdRoot.name === "arguments" || thirdRoot.name === "argument" || firstRoot.name === "expression" || secRoot.name === "body" || firstRoot.name === "body") {
                             if (p.parentPath.value.property.name === "pipe") {
-                                // console.log(thirdRoot.value.key.name)
+
                                 pipeVar = {
                                     start: p.parentPath.value.property.loc.start.line,
                                     end: p.parentPath.value.property.loc.end.line
@@ -112,21 +106,21 @@ myModule.pipelinesInUse = (root, j, dir, filename, filesArray, index, csvRows) =
                                 })
 
                                 uniqueImportations.map(importName => {
-                                    // console.log(importName)
+                                    console.log(importName)
                                     if (firstRoot.value.callee !== undefined && firstRoot.value.callee.name === importName) {
                                         initOfPipe = firstRoot.value.callee.name;
-                                    } else if (secRoot.value.callee.object.callee !== undefined && secRoot.value.callee.object.callee.name === importName) {
+                                    } else if (secRoot.value.callee && secRoot.value.callee.object.callee !== undefined && secRoot.value.callee.object.callee.name === importName) {
                                         initOfPipe = secRoot.value.callee.object.callee.name;
-                                    }
-                                    // } else if(fifthRoot.value.object.callee !== undefined && fifthRoot.value.callee.object.callee.name === importName) {
-                                    //     console.log(fifthRoot.value.object.callee.name)
-                                    // } else if(thirdRoot.value.object.callee !== undefined && thirdRoot.value.callee.object.callee.name === importName) {
+                                    } 
+                                    // else if(fifthRoot.value.callee && fifthRoot.value.object.callee !== undefined && fifthRoot.value.callee.object.callee.name === importName) {
+                                    //     initOfPipe = ifthRoot.value.callee.object.callee.name
+                                    // } else if(thirdRoot.value && thirdRoot.value.object.callee !== undefined && thirdRoot.value.callee.object.callee.name === importName) {
                                     //     console.log(thirdRoot.value.object.callee.name)
-                                    // } else if(fourthRoot.value.object.callee !== undefined && fourthRoot.value.callee.object.callee.name === importName) {
+                                    // } else if(fourthRoot.value && fourthRoot.value.object.callee !== undefined && fourthRoot.value.callee.object.callee.name === importName) {
                                     //     console.log(fourthRoot.value.object.callee.name)
-                                    // } else {
-                                    //     initOfPipe = "Random function"
-                                    // }
+                                     else {
+                                        initOfPipe = "Random function"
+                                    }
                                 })
 
                                 if (pipeInit.indexOf(object) === -1) {
@@ -220,7 +214,7 @@ myModule.pipelinesInUse = (root, j, dir, filename, filesArray, index, csvRows) =
                     pipeDomainArray.push(pipeDomain.createObjectFunc("Pipe", pipeVar.start, pipeVar.end, filename, pipeArguments, '', initOfPipe));
                 } else if (object.start && object.end && pipeVar.start && pipeVar.end && initOfPipe) {
                     pipeDomainArray.push(pipeDomain.createObjectFunc("Pipe", pipeVar.start, pipeVar.end, filename, pipeArguments, `Nested in pipe of lines ${object.start} to ${object.end}`, initOfPipe));
-                } else if (thirdRoot.name === "expression" || secRoot.name === "argument" || fourthRoot.name === "arguments" || firstRoot.name === "argument" || thirdRoot.name === "argument" || thirdRoot.name === "arguments" || firstRoot.name === "expression" || secRoot.name === "body" || firstRoot.name === "body") {
+                } else if (thirdRoot.name === "expression" || secRoot.name === "argument" || fifthRoot.name === "arguments" || fourthRoot.name === "arguments" || firstRoot.name === "argument" || thirdRoot.name === "arguments" || thirdRoot.name === "argument" || firstRoot.name === "expression" || secRoot.name === "body" || firstRoot.name === "body") {
                     pipeDomainArray.push(pipeDomain.createObjectFunc("Pipe as argument", pipeVar.start, pipeVar.end, filename, pipeArguments, `Nested in object or function`, initOfPipe));
                 }
             }
