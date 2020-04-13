@@ -20,7 +20,7 @@ const pipeDomainArray = []
 myModule.pipelinesInUse = (root, j, dir, filename, filesArray, index, csvRows) => {
     const rxjsImportDeclarations = root.find(j.Identifier);
     const operatorsArray = codeModeRxjsCallsOperators.operatorsUse(root, j, dir, filename, filesArray, index, csvRows);
-    const observablesArray = codeModeRxjsCallsObservables.observablesInUse(root, j, dir, filename, filesArray, index, csvRows);
+    // const observablesArray = codeModeRxjsCallsObservables.observablesInUse(root, j, dir, filename, filesArray, index, csvRows);
     const importedFromRxjs = [];
     let pipeVar = {};
     let object = {}
@@ -106,7 +106,7 @@ myModule.pipelinesInUse = (root, j, dir, filename, filesArray, index, csvRows) =
                                 })
 
                                 uniqueImportations.map(importName => {
-                                    console.log(importName)
+                                    // console.log(importName)
                                     if (firstRoot.value.callee !== undefined && firstRoot.value.callee.name === importName) {
                                         initOfPipe = firstRoot.value.callee.name;
                                     } else if (secRoot.value.callee && secRoot.value.callee.object.callee !== undefined && secRoot.value.callee.object.callee.name === importName) {
