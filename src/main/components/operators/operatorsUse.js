@@ -30,13 +30,16 @@ myModule.operatorsUse = (root, j, dir, filename, filesArray, index, csvRows) => 
     //Find how many identifiers we import from the rxjs library
     rxjsImportDeclarations.forEach(p => {
         if (p.parentPath.parentPath.node.type == "ImportDeclaration" && p.parentPath.parentPath.node.source.value == "rxjs/operators") {
-            if (p.parentPath.value.imported.name !== p.parentPath.value.local.name) {
-                importedCalledWithAlias.push({ alias: p.parentPath.value.local.name, name: p.parentPath.value.imported.name });
-            } else {
-                p.parentPath.parentPath.node.specifiers.forEach(operatorImport => {
-                    importSpecifier.push(operatorImport.imported.name);
-                })
+            if(p.parentPath.value !== undefined && p.parentPath.value.imported !== undefined) {
+                if (p.parentPath.value.imported.name !== p.parentPath.value.local.name) {
+                    importedCalledWithAlias.push({ alias: p.parentPath.value.local.name, name: p.parentPath.value.imported.name });
+                } else {
+                    p.parentPath.parentPath.node.specifiers.forEach(operatorImport => {
+                        importSpecifier.push(operatorImport.imported.name);
+                    })
+                }
             }
+        
         }
     })
 
