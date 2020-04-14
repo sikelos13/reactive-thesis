@@ -1,0 +1,53 @@
+Alias or name used,Line start,Line end,Filename,Nested Operators,Pipe is nested to,Initializing Pipeline
+Pipe as argument,undefined,undefined,example-hello-world.min.js,[],Nested in object or function,
+Pipe as argument,undefined,undefined,jquery.js,[],Nested in object or function,
+Pipe as argument,undefined,undefined,mock-dom-source.ts,[],Nested in object or function,
+Pipe as argument,undefined,undefined,mock-dom-source.ts,[],Nested in object or function,
+Pipe as argument,250,250,mock-dom-source.ts,"[""skip"",""take""]",Nested in object or function,Random function
+Pipe as argument,312,312,mock-dom-source.ts,"[""skip"",""take""]",Nested in object or function,Random function
+Pipe as argument,undefined,undefined,rxjs.ts,[],Nested in object or function,
+Pipe as argument,undefined,undefined,rxjs.ts,[],Nested in object or function,
+Pipe as argument,51,51,rxjs.ts,"[""skip""]",Nested in object or function,Random function
+Pipe as argument,73,73,rxjs.ts,"[""skip""]",Nested in object or function,Random function
+Pipe as argument,95,95,rxjs.ts,"[""skip""]",Nested in object or function,Random function
+Pipe as argument,117,117,rxjs.ts,"[""skip""]",Nested in object or function,Random function
+Pipe as argument,154,154,rxjs.ts,"[""skip""]",Nested in object or function,Random function
+Pipe as argument,undefined,undefined,rxjs.ts,[],Nested in object or function,
+Pipe as argument,undefined,undefined,rxjs.ts,[],Nested in object or function,
+Pipe as argument,41,41,rxjs.ts,"[""skip""]",Nested in object or function,Random function
+Pipe as argument,65,65,rxjs.ts,"[""skip""]",Nested in object or function,Random function
+Pipe as argument,89,89,rxjs.ts,"[""skip""]",Nested in object or function,Random function
+Pipe as argument,118,118,rxjs.ts,"[""skip""]",Nested in object or function,Random function
+Pipe as argument,148,148,rxjs.ts,"[""skip""]",Nested in object or function,Random function
+Pipe as argument,181,181,rxjs.ts,"[""skip""]",Nested in object or function,Random function
+Pipe as argument,214,214,rxjs.ts,"[""skip""]",Nested in object or function,Random function
+Pipe as argument,38,38,common.ts,"[""mergeAll""]",Nested in object or function,Random function
+Pipe as argument,69,69,common.ts,"[""mergeAll""]",Nested in object or function,Random function
+Pipe as argument,undefined,undefined,common.ts,[],Nested in object or function,
+Pipe as argument,undefined,undefined,common.ts,[],Nested in object or function,
+Pipe as argument,294,294,common.ts,"[""map""]",Nested in object or function,Random function
+Pipe,351,351,common.ts,"[""mergeAll"",""map""]",,Random function
+Pipe,421,421,common.ts,"[""delay""]",,Random function
+Pipe,451,451,common.ts,"[""delay""]",,Random function
+Pipe,455,455,common.ts,"[""shareReplay""]",,Random function
+Pipe,533,533,common.ts,"[""delay""]",,Random function
+Pipe,136,136,index.ts,"[""mergeAll"",""map""]",,Random function
+Pipe,167,167,index.ts,"[""take"",""map"",""publishReplay"",""refCount""]",,Random function
+Pipe,210,210,index.ts,"[""mergeAll"",""map""]",,Random function
+Pipe,241,241,index.ts,"[""take"",""map"",""publishReplay"",""refCount""]",,Random function
+Pipe,284,289,index.ts,"[""delay"",""mergeMap""]",,Random function
+Pipe,285,285,index.ts,"[""mergeAll"",""map""]",Nested in pipe of lines 284 to 289,Random function
+Pipe as argument,79,79,node.ts,"[""mergeAll""]",Nested in object or function,Random function
+Pipe as argument,107,107,node.ts,"[""mergeAll""]",Nested in object or function,Random function
+Pipe as argument,131,131,node.ts,"[""mergeAll""]",Nested in object or function,Random function
+Pipe as argument,160,160,node.ts,"[""mergeAll""]",Nested in object or function,Random function
+Pipe as argument,44,44,run.ts,"[""tap""]",Nested in object or function,Random function
+Pipe,61,63,run.ts,"[""take"",""startWith"",""delay"",""map""]",,Random function
+Pipe as argument,undefined,undefined,setup.ts,[],Nested in object or function,
+Pipe as argument,undefined,undefined,setup.ts,[],Nested in object or function,
+Pipe,150,150,setup.ts,"[""concatMap""]",,range
+Pipe,150,150,setup.ts,"[""delay""]",Nested in pipe of lines 150 to 150,Random function
+Pipe,12,12,rxjs.ts,[],,of
+Pipe as argument,27,27,time.ts,[],Nested in object or function,Random function
+Pipe as argument,39,39,time.ts,[null],Nested in object or function,Random function
+Pipe as argument,47,47,time.ts,[],Nested in object or function,Random function

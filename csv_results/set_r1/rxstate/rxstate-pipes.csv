@@ -1,0 +1,4 @@
+Alias or name used,Line start,Line end,Filename,Nested Operators,Pipe is nested to,Initializing Pipeline
+Pipe as argument,7,7,createStatus.js,"[""map""]",Nested in object or function,
+Pipe as argument,13,13,createStore.js,"[""map""]",Nested in object or function,Random function
+Pipe as argument,21,21,createStore.js,"[""startWith"",""scan""]",Nested in object or function,Random function

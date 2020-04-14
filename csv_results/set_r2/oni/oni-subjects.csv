@@ -1,0 +1,26 @@
+Subject variable/alias used,Line start,Line end,Filename
+Subject,75,75,/Users/stefanosathanasoulias/thesis-projects-container/projects/oni-master/browser/src/neovim/NeovimWindowManager.ts
+Variable: _scrollObservable,64,64,/Users/stefanosathanasoulias/thesis-projects-container/projects/oni-master/browser/src/neovim/NeovimWindowManager.ts
+Variable: _scrollObservable,75,75,/Users/stefanosathanasoulias/thesis-projects-container/projects/oni-master/browser/src/neovim/NeovimWindowManager.ts
+Variable: _scrollObservable,77,77,/Users/stefanosathanasoulias/thesis-projects-container/projects/oni-master/browser/src/neovim/NeovimWindowManager.ts
+Variable: _scrollObservable,111,111,/Users/stefanosathanasoulias/thesis-projects-container/projects/oni-master/browser/src/neovim/NeovimWindowManager.ts
+Variable: _scrollObservable,124,124,/Users/stefanosathanasoulias/thesis-projects-container/projects/oni-master/browser/src/neovim/NeovimWindowManager.ts
+Variable: _scrollObservable,141,141,/Users/stefanosathanasoulias/thesis-projects-container/projects/oni-master/browser/src/neovim/NeovimWindowManager.ts
+Subject,35,35,/Users/stefanosathanasoulias/thesis-projects-container/projects/oni-master/browser/src/Services/AutoUpdate.ts
+Subject,36,36,/Users/stefanosathanasoulias/thesis-projects-container/projects/oni-master/browser/src/Services/AutoUpdate.ts
+Subject,47,47,/Users/stefanosathanasoulias/thesis-projects-container/projects/oni-master/browser/src/Services/Configuration/FileConfigurationProvider.ts
+Subject,48,48,/Users/stefanosathanasoulias/thesis-projects-container/projects/oni-master/browser/src/Services/Configuration/FileConfigurationProvider.ts
+Variable: _configChangedObservable,35,35,/Users/stefanosathanasoulias/thesis-projects-container/projects/oni-master/browser/src/Services/Configuration/FileConfigurationProvider.ts
+Variable: _configChangedObservable,47,47,/Users/stefanosathanasoulias/thesis-projects-container/projects/oni-master/browser/src/Services/Configuration/FileConfigurationProvider.ts
+Variable: _configChangedObservable,50,50,/Users/stefanosathanasoulias/thesis-projects-container/projects/oni-master/browser/src/Services/Configuration/FileConfigurationProvider.ts
+Variable: _configChangedObservable,116,116,/Users/stefanosathanasoulias/thesis-projects-container/projects/oni-master/browser/src/Services/Configuration/FileConfigurationProvider.ts
+Variable: _configErrorObservable,36,36,/Users/stefanosathanasoulias/thesis-projects-container/projects/oni-master/browser/src/Services/Configuration/FileConfigurationProvider.ts
+Variable: _configErrorObservable,48,48,/Users/stefanosathanasoulias/thesis-projects-container/projects/oni-master/browser/src/Services/Configuration/FileConfigurationProvider.ts
+Variable: _configErrorObservable,54,54,/Users/stefanosathanasoulias/thesis-projects-container/projects/oni-master/browser/src/Services/Configuration/FileConfigurationProvider.ts
+Variable: _configErrorObservable,120,120,/Users/stefanosathanasoulias/thesis-projects-container/projects/oni-master/browser/src/Services/Configuration/FileConfigurationProvider.ts
+Subject,26,26,/Users/stefanosathanasoulias/thesis-projects-container/projects/oni-master/browser/src/Services/Search/index.tsx
+Subject,27,27,/Users/stefanosathanasoulias/thesis-projects-container/projects/oni-master/browser/src/Services/Snippets/SnippetManager.ts
+Subject,27,27,/Users/stefanosathanasoulias/thesis-projects-container/projects/oni-master/browser/src/Services/StatusBar.ts
+Subject,44,44,/Users/stefanosathanasoulias/thesis-projects-container/projects/oni-master/browser/src/Services/SyntaxHighlighting/SyntaxHighlighting.ts
+Subject,45,45,/Users/stefanosathanasoulias/thesis-projects-container/projects/oni-master/browser/src/Utility.ts
+Subject,216,216,/Users/stefanosathanasoulias/thesis-projects-container/projects/oni-master/browser/src/Utility.ts

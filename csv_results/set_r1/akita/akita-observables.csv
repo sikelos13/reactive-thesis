@@ -1,0 +1,23 @@
+Observable variable/alias used,Times Used,Line start,Line end,Filename
+Set,1,20,20,/Users/stefanosathanasoulias/thesis-projects-container/projects/set_r1/akita-master/apps/angular-store-app/src/app/movies/movies/movies.component.ts
+FormControl,1,17,17,/Users/stefanosathanasoulias/thesis-projects-container/projects/set_r1/akita-master/apps/angular-store-app/src/app/products/products.component.ts
+FormControl,1,18,18,/Users/stefanosathanasoulias/thesis-projects-container/projects/set_r1/akita-master/apps/angular-store-app/src/app/products/products.component.ts
+PersistNgFormPlugin,1,47,47,/Users/stefanosathanasoulias/thesis-projects-container/projects/set_r1/akita-master/apps/angular-store-app/src/app/stories/stories/stories.component.ts
+PersistNgFormPlugin,1,48,48,/Users/stefanosathanasoulias/thesis-projects-container/projects/set_r1/akita-master/apps/angular-store-app/src/app/stories/stories/stories.component.ts
+PersistNgFormPlugin,1,49,49,/Users/stefanosathanasoulias/thesis-projects-container/projects/set_r1/akita-master/apps/angular-store-app/src/app/stories/stories/stories.component.ts
+DirtyCheckPlugin,1,31,31,/Users/stefanosathanasoulias/thesis-projects-container/projects/set_r1/akita-master/apps/angular-store-app/src/app/widgets/widgets.component.ts
+EntityDirtyCheckPlugin,1,34,34,/Users/stefanosathanasoulias/thesis-projects-container/projects/set_r1/akita-master/apps/angular-store-app/src/app/widgets/widgets.component.ts
+Observable,1,2484,2484,/Users/stefanosathanasoulias/thesis-projects-container/projects/set_r1/akita-master/apps/svelte-todo/public/bundle.js
+Observable,1,2571,2571,/Users/stefanosathanasoulias/thesis-projects-container/projects/set_r1/akita-master/apps/svelte-todo/public/bundle.js
+Observable,1,2728,2728,/Users/stefanosathanasoulias/thesis-projects-container/projects/set_r1/akita-master/apps/svelte-todo/public/bundle.js
+Observable,1,3199,3199,/Users/stefanosathanasoulias/thesis-projects-container/projects/set_r1/akita-master/apps/svelte-todo/public/bundle.js
+Observable,1,3204,3204,/Users/stefanosathanasoulias/thesis-projects-container/projects/set_r1/akita-master/apps/svelte-todo/public/bundle.js
+Observable,1,3227,3227,/Users/stefanosathanasoulias/thesis-projects-container/projects/set_r1/akita-master/apps/svelte-todo/public/bundle.js
+Observable,1,3248,3248,/Users/stefanosathanasoulias/thesis-projects-container/projects/set_r1/akita-master/apps/svelte-todo/public/bundle.js
+Observable,1,3276,3276,/Users/stefanosathanasoulias/thesis-projects-container/projects/set_r1/akita-master/apps/svelte-todo/public/bundle.js
+Observable,1,3279,3279,/Users/stefanosathanasoulias/thesis-projects-container/projects/set_r1/akita-master/apps/svelte-todo/public/bundle.js
+Observable,1,3872,3872,/Users/stefanosathanasoulias/thesis-projects-container/projects/set_r1/akita-master/apps/svelte-todo/public/bundle.js
+Observable,1,3889,3889,/Users/stefanosathanasoulias/thesis-projects-container/projects/set_r1/akita-master/apps/svelte-todo/public/bundle.js
+Observable,1,3911,3911,/Users/stefanosathanasoulias/thesis-projects-container/projects/set_r1/akita-master/apps/svelte-todo/public/bundle.js
+Observable,1,3988,3988,/Users/stefanosathanasoulias/thesis-projects-container/projects/set_r1/akita-master/apps/svelte-todo/public/bundle.js
+Observable,1,4234,4234,/Users/stefanosathanasoulias/thesis-projects-container/projects/set_r1/akita-master/apps/svelte-todo/public/bundle.js

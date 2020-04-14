@@ -1,0 +1,76 @@
+Alias or name used,Line start,Line end,Filename,Nested Operators,Pipe is nested to,Initializing Pipeline
+Pipe,28,28,contacts-page.component.ts,"[""startWith""]",,Random function
+Pipe,30,30,contacts-page.component.ts,"[""tap""]",Nested in pipe of lines 28 to 28,Random function
+Pipe,30,30,contacts-page.component.ts,"[""switchMap""]",Nested in pipe of lines 28 to 28,Random function
+Pipe as argument,35,35,server.ts,"[""mapTo""]",Nested in object or function,timer
+Pipe as argument,14,14,is-logged-in.directive.ts,[],Nested in object or function,
+Pipe as argument,12,12,auth.service.ts,"[""tap""]",Nested in object or function,
+Pipe as argument,9,9,cart.query.ts,"[""map""]",Nested in object or function,
+Pipe as argument,26,26,filters.component.ts,"[""tap"",""untilDestroyed""]",Nested in object or function,
+Pipe as argument,23,23,products-page.component.ts,"[""switchMap"",""untilDestroyed""]",Nested in object or function,Random function
+Pipe as argument,19,19,search-product.component.ts,"[""debounceTime"",""distinctUntilChanged""]",Nested in object or function,
+Pipe as argument,29,29,products.query.ts,"[""filter""]",Nested in object or function,
+Pipe as argument,16,16,products.service.ts,"[""tap""]",Nested in object or function,
+Pipe as argument,20,20,products.service.ts,"[""tap""]",Nested in object or function,
+Pipe as argument,15,15,auth.guard.ts,"[""map"",""take""]",Nested in object or function,Random function
+Pipe as argument,18,18,auth.service.ts,"[""tap""]",Nested in object or function,Random function
+Pipe as argument,27,27,auth.service.ts,"[""mapTo""]",Nested in object or function,timer
+Pipe as argument,14,14,cart.query.ts,"[""map"",""shareReplay""]",Nested in object or function,combineLatest
+Pipe as argument,19,19,cart.query.ts,"[""map""]",Nested in object or function,Random function
+Pipe,64,64,contacts-page.component.ts,"[""startWith""]",,Random function
+Pipe,65,65,contacts-page.component.ts,"[""startWith""]",,Random function
+Pipe,67,67,contacts-page.component.ts,"[""tap""]",Nested in pipe of lines 65 to 65,combineLatest
+Pipe,67,67,contacts-page.component.ts,"[""switchMap""]",Nested in pipe of lines 65 to 65,combineLatest
+Pipe as argument,34,34,contacts.data.ts,"[""mapTo""]",Nested in object or function,timer
+Pipe as argument,50,50,forms-manager.component.ts,[],Nested in object or function,
+Pipe as argument,31,31,movies.query.ts,"[""map""]",Nested in object or function,
+Pipe,18,26,movies.service.ts,"[""mapTo"",""withTransaction""]",,timer
+Pipe as argument,29,29,posts.component.ts,"[""ofType"",""filterMethod"",""untilDestroyed""]",Nested in object or function,
+Pipe as argument,23,23,product-page.component.ts,"[""map"",""filter"",""switchMap""]",Nested in object or function,
+Pipe as argument,26,26,products.component.ts,"[""startWith""]",Nested in object or function,Random function
+Pipe as argument,26,26,products.component.ts,"[""startWith""]",Nested in object or function,Random function
+Pipe as argument,26,26,products.component.ts,"[""switchMap""]",Nested in object or function,Random function
+Pipe,17,17,products.service.ts,"[""mapTo"",""map""]",,timer
+Pipe,26,26,products.service.ts,"[""mapTo"",""map""]",Nested in pipe of lines 17 to 17,timer
+Pipe as argument,13,13,stories.service.ts,"[""mapTo""]",Nested in object or function,timer
+Pipe as argument,14,14,stories.service.ts,"[""tap""]",Nested in object or function,Random function
+Pipe as argument,36,36,todos-filters.component.ts,[],Nested in object or function,
+Pipe as argument,13,13,todos.query.ts,"[""map""]",Nested in object or function,combineLatest
+Pipe as argument,25,25,todo.component.ts,"[""untilDestroyed""]",Nested in object or function,
+Pipe as argument,29,29,todos-page.component.ts,"[""map""]",Nested in object or function,Random function
+Pipe as argument,9,9,tweets.query.ts,"[""map""]",Nested in object or function,
+Pipe as argument,12,12,tweets.service.ts,"[""tap""]",Nested in object or function,
+Pipe as argument,16,16,tweets.service.ts,"[""tap""]",Nested in object or function,
+Pipe as argument,33,33,tweets.component.ts,[],Nested in object or function,
+Pipe as argument,33,33,tweets.data.ts,"[""map""]",Nested in object or function,timer
+Pipe as argument,52,52,tweets.data.ts,"[""mapTo""]",Nested in object or function,timer
+Pipe as argument,12,12,BooksPage.tsx,"[""untilDestroyed""]",Nested in object or function,
+Pipe as argument,17,17,BooksPage.tsx,"[""untilDestroyed""]",Nested in object or function,
+Pipe as argument,13,13,ifLoggedIn.tsx,"[""untilDestroyed""]",Nested in object or function,
+Pipe as argument,17,17,take-until.ts,"[""takeUntil""]",Nested in object or function,Random function
+Pipe as argument,29,29,TodosPage.tsx,"[""untilDestroyed""]",Nested in object or function,
+Pipe as argument,31,31,TodosPage.tsx,"[""untilDestroyed""]",Nested in object or function,
+Pipe as argument,undefined,undefined,bundle.js,[],Nested in object or function,
+Pipe as argument,4002,4002,bundle.js,[],Nested in object or function,
+Pipe as argument,4002,4002,bundle.js,[],Nested in object or function,
+Pipe as argument,4874,4874,bundle.js,[],Nested in object or function,
+Pipe as argument,4874,4874,bundle.js,[],Nested in object or function,
+Pipe as argument,5833,5833,bundle.js,[],Nested in object or function,
+Pipe as argument,8210,8210,bundle.js,[],Nested in object or function,
+Pipe as argument,8253,8253,bundle.js,[],Nested in object or function,
+Pipe as argument,8282,8282,bundle.js,[],Nested in object or function,
+Pipe as argument,8381,8381,bundle.js,[],Nested in object or function,
+Pipe as argument,8387,8387,bundle.js,[],Nested in object or function,
+Pipe as argument,8446,8446,bundle.js,[],Nested in object or function,
+Pipe as argument,8531,8531,bundle.js,[],Nested in object or function,
+Pipe as argument,8684,8684,bundle.js,[],Nested in object or function,
+Pipe as argument,8724,8724,bundle.js,[],Nested in object or function,
+Pipe as argument,9171,9171,bundle.js,[],Nested in object or function,
+Pipe as argument,9313,9313,bundle.js,[],Nested in object or function,
+Pipe as argument,9678,9678,bundle.js,[],Nested in object or function,
+Pipe as argument,9761,9761,bundle.js,[],Nested in object or function,
+Pipe as argument,10837,10837,bundle.js,[],Nested in object or function,
+Pipe as argument,11043,11043,bundle.js,[],Nested in object or function,
+Pipe as argument,11185,11185,bundle.js,[],Nested in object or function,
+Pipe as argument,11296,11296,bundle.js,[],Nested in object or function,
+Pipe as argument,11304,11304,bundle.js,[],Nested in object or function,

@@ -1,0 +1,8 @@
+Observable variable/alias used,Times Used,Line start,Line end,Filename
+WebSocket,1,38,38,/Users/stefanosathanasoulias/thesis-projects-container/projects/rxjs-websockets-master/src/index.ts
+Observable,1,54,54,/Users/stefanosathanasoulias/thesis-projects-container/projects/rxjs-websockets-master/src/index.ts
+Observable,1,54,54,/Users/stefanosathanasoulias/thesis-projects-container/projects/rxjs-websockets-master/src/index.ts
+Subject,1,56,56,/Users/stefanosathanasoulias/thesis-projects-container/projects/rxjs-websockets-master/src/index.ts
+Error,1,72,72,/Users/stefanosathanasoulias/thesis-projects-container/projects/rxjs-websockets-master/src/index.ts
+Error,1,98,98,/Users/stefanosathanasoulias/thesis-projects-container/projects/rxjs-websockets-master/src/index.ts
+Error,1,110,110,/Users/stefanosathanasoulias/thesis-projects-container/projects/rxjs-websockets-master/src/index.ts

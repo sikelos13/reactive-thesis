@@ -1,0 +1,93 @@
+Alias or name used,Line start,Line end,Filename,Nested Operators,Pipe is nested to,Initializing Pipeline
+Pipe as argument,50,50,app.component.ts,"[""mergeMap"",""mergeMap""]",Nested in object or function,Random function
+Pipe as argument,60,60,app.component.ts,"[""mergeMap""]",Nested in object or function,Random function
+Pipe as argument,64,64,app.component.ts,"[""mergeMap"",""catchError""]",Nested in object or function,Random function
+Pipe as argument,70,70,app.component.ts,"[""mergeMap"",""mergeMap""]",Nested in object or function,Random function
+Pipe as argument,75,75,app.component.ts,"[""mergeMap"",""mergeMap""]",Nested in object or function,Random function
+Pipe as argument,80,80,app.component.ts,"[""mergeMap"",""toArray""]",Nested in object or function,Random function
+Pipe as argument,85,85,app.component.ts,"[""mergeMap""]",Nested in object or function,Random function
+Pipe as argument,14,14,data.service.ts,"[""mergeMap""]",Nested in object or function,Random function
+Pipe as argument,36,36,app.component.ts,"[""switchMap""]",Nested in object or function,Random function
+Pipe as argument,46,46,app.component.ts,"[""mergeMap"",""mergeMap""]",Nested in object or function,Random function
+Pipe as argument,56,56,app.component.ts,"[""mergeMap""]",Nested in object or function,Random function
+Pipe as argument,60,60,app.component.ts,"[""mergeMap"",""catchError""]",Nested in object or function,Random function
+Pipe as argument,66,66,app.component.ts,"[""mergeMap"",""mergeMap""]",Nested in object or function,Random function
+Pipe as argument,71,71,app.component.ts,"[""mergeMap"",""mergeMap""]",Nested in object or function,Random function
+Pipe as argument,76,76,app.component.ts,"[""mergeMap"",""toArray""]",Nested in object or function,Random function
+Pipe as argument,81,81,app.component.ts,"[""mergeMap""]",Nested in object or function,Random function
+Pipe as argument,92,92,indexeddb-database.ts,"[""mergeMap"",""first""]",Nested in object or function,Random function
+Pipe as argument,101,101,indexeddb-database.ts,"[""map""]",Nested in object or function,Random function
+Pipe as argument,118,118,indexeddb-database.ts,"[""mergeMap"",""first""]",Nested in object or function,Random function
+Pipe as argument,127,127,indexeddb-database.ts,"[""map""]",Nested in object or function,Random function
+Pipe as argument,172,172,indexeddb-database.ts,"[""mergeMap"",""first""]",Nested in object or function,Random function
+Pipe as argument,184,184,indexeddb-database.ts,"[""mapTo""]",Nested in object or function,Random function
+Pipe as argument,201,201,indexeddb-database.ts,"[""mergeMap"",""first""]",Nested in object or function,Random function
+Pipe as argument,210,210,indexeddb-database.ts,"[""mapTo""]",Nested in object or function,Random function
+Pipe as argument,226,226,indexeddb-database.ts,"[""mergeMap"",""first""]",Nested in object or function,Random function
+Pipe as argument,235,235,indexeddb-database.ts,"[""mapTo""]",Nested in object or function,Random function
+Pipe as argument,251,251,indexeddb-database.ts,"[""first"",""mergeMap""]",Nested in object or function,Random function
+Pipe,273,273,indexeddb-database.ts,"[""takeWhile"",""map"",""tap""]",,Random function
+Pipe,294,294,indexeddb-database.ts,"[""mergeMap"",""first""]",Nested in pipe of lines 273 to 273,Random function
+Pipe,308,308,indexeddb-database.ts,"[""map""]",Nested in pipe of lines 273 to 273,Random function
+Pipe,350,350,indexeddb-database.ts,"[""first""]",Nested in pipe of lines 273 to 273,race
+Pipe,375,375,indexeddb-database.ts,"[""first""]",Nested in pipe of lines 273 to 273,Random function
+Pipe,404,404,indexeddb-database.ts,"[""mergeMap""]",Nested in pipe of lines 273 to 273,Random function
+Pipe,438,438,indexeddb-database.ts,"[""mergeMap""]",Nested in pipe of lines 273 to 273,Random function
+Pipe as argument,154,154,localstorage-database.ts,"[""observeOn""]",Nested in object or function,Random function
+Pipe as argument,325,325,get-item-overloads.spec.ts,"[""map""]",Nested in object or function,
+Pipe as argument,342,342,get-item-overloads.spec.ts,"[""map""]",Nested in object or function,
+Pipe as argument,56,56,local-storage.service.spec.ts,"[""mergeMap""]",Nested in object or function,
+Pipe as argument,72,72,local-storage.service.spec.ts,"[""mergeMap""]",Nested in object or function,
+Pipe as argument,88,88,local-storage.service.spec.ts,"[""mergeMap""]",Nested in object or function,
+Pipe as argument,104,104,local-storage.service.spec.ts,"[""mergeMap""]",Nested in object or function,
+Pipe as argument,120,120,local-storage.service.spec.ts,"[""mergeMap""]",Nested in object or function,
+Pipe as argument,136,136,local-storage.service.spec.ts,"[""mergeMap""]",Nested in object or function,
+Pipe as argument,152,152,local-storage.service.spec.ts,"[""mergeMap""]",Nested in object or function,
+Pipe as argument,166,166,local-storage.service.spec.ts,"[""mergeMap"",""mergeMap""]",Nested in object or function,
+Pipe as argument,181,181,local-storage.service.spec.ts,"[""mergeMap"",""mergeMap""]",Nested in object or function,
+Pipe as argument,198,198,local-storage.service.spec.ts,"[""mergeMap""]",Nested in object or function,
+Pipe as argument,214,214,local-storage.service.spec.ts,"[""mergeMap""]",Nested in object or function,
+Pipe as argument,228,228,local-storage.service.spec.ts,"[""mergeMap""]",Nested in object or function,
+Pipe as argument,249,249,local-storage.service.spec.ts,"[""mergeMap""]",Nested in object or function,
+Pipe as argument,269,269,local-storage.service.spec.ts,"[""mergeMap"",""mergeMap""]",Nested in object or function,
+Pipe as argument,300,300,local-storage.service.spec.ts,"[""tap"",""mergeMap"",""mergeMap"",""tap"",""mergeMap"",""mergeMap"",""tap"",""mergeMap"",""mergeMap"",""tap"",""mergeMap"",""mergeMap"",""tap""]",Nested in object or function,
+Pipe as argument,340,340,local-storage.service.spec.ts,"[""mergeMap""]",Nested in object or function,
+Pipe as argument,354,354,local-storage.service.spec.ts,"[""mergeMap""]",Nested in object or function,
+Pipe as argument,386,386,local-storage.service.spec.ts,"[""mergeMap""]",Nested in object or function,
+Pipe as argument,400,400,local-storage.service.spec.ts,"[""mergeMap""]",Nested in object or function,
+Pipe as argument,82,82,local-storage.service.ts,"[""map""]",Nested in object or function,Random function
+Pipe as argument,89,89,local-storage.service.ts,"[""map""]",Nested in object or function,Random function
+Pipe as argument,111,111,local-storage.service.ts,"[""mapTo""]",Nested in object or function,Random function
+Pipe as argument,128,128,local-storage.service.ts,"[""mapTo""]",Nested in object or function,Random function
+Pipe as argument,144,144,local-storage.service.ts,"[""mapTo""]",Nested in object or function,Random function
+Pipe as argument,54,54,storage-map.service.spec.ts,"[""mergeMap""]",Nested in object or function,
+Pipe as argument,70,70,storage-map.service.spec.ts,"[""mergeMap""]",Nested in object or function,
+Pipe as argument,86,86,storage-map.service.spec.ts,"[""mergeMap""]",Nested in object or function,
+Pipe as argument,102,102,storage-map.service.spec.ts,"[""mergeMap""]",Nested in object or function,
+Pipe as argument,118,118,storage-map.service.spec.ts,"[""mergeMap""]",Nested in object or function,
+Pipe as argument,134,134,storage-map.service.spec.ts,"[""mergeMap""]",Nested in object or function,
+Pipe as argument,150,150,storage-map.service.spec.ts,"[""mergeMap""]",Nested in object or function,
+Pipe as argument,164,164,storage-map.service.spec.ts,"[""mergeMap"",""mergeMap""]",Nested in object or function,
+Pipe as argument,179,179,storage-map.service.spec.ts,"[""mergeMap"",""mergeMap""]",Nested in object or function,
+Pipe as argument,196,196,storage-map.service.spec.ts,"[""mergeMap""]",Nested in object or function,
+Pipe as argument,212,212,storage-map.service.spec.ts,"[""mergeMap""]",Nested in object or function,
+Pipe as argument,247,247,storage-map.service.spec.ts,"[""mergeMap""]",Nested in object or function,
+Pipe as argument,255,255,storage-map.service.spec.ts,"[""mergeMap""]",Nested in object or function,
+Pipe as argument,276,276,storage-map.service.spec.ts,"[""mergeMap""]",Nested in object or function,
+Pipe as argument,296,296,storage-map.service.spec.ts,"[""mergeMap"",""mergeMap""]",Nested in object or function,
+Pipe as argument,327,327,storage-map.service.spec.ts,"[""tap"",""mergeMap"",""mergeMap"",""tap"",""mergeMap"",""mergeMap"",""tap"",""mergeMap"",""mergeMap"",""tap"",""mergeMap"",""mergeMap"",""tap""]",Nested in object or function,
+Pipe as argument,353,353,storage-map.service.spec.ts,"[""mergeMap"",""mergeMap""]",Nested in object or function,
+Pipe as argument,387,387,storage-map.service.spec.ts,"[""mergeMap""]",Nested in object or function,
+Pipe as argument,413,413,storage-map.service.spec.ts,"[""mergeMap"",""mergeMap"",""mergeMap"",""mergeMap"",""filter"",""mergeMap""]",Nested in object or function,
+Pipe as argument,455,455,storage-map.service.spec.ts,"[""mergeMap""]",Nested in object or function,
+Pipe as argument,469,469,storage-map.service.spec.ts,"[""mergeMap""]",Nested in object or function,
+Pipe as argument,483,483,storage-map.service.spec.ts,"[""mergeMap""]",Nested in object or function,
+Pipe as argument,525,525,storage-map.service.spec.ts,"[""mergeMap"",""mergeMap"",""mergeMap""]",Nested in object or function,
+Pipe as argument,572,572,storage-map.service.spec.ts,"[""mergeMap"",""mergeMap"",""mergeMap""]",Nested in object or function,
+Pipe as argument,44,44,storage-map.service.ts,[],Nested in object or function,Random function
+Pipe as argument,171,171,storage-map.service.ts,"[null,""mergeMap""]",Nested in object or function,Random function
+Pipe as argument,225,225,storage-map.service.ts,"[null,""tap""]",Nested in object or function,Random function
+Pipe as argument,243,243,storage-map.service.ts,"[""tap""]",Nested in object or function,Random function
+Pipe as argument,261,261,storage-map.service.ts,"[""tap""]",Nested in object or function,Random function
+Pipe as argument,291,291,storage-map.service.ts,[],Nested in object or function,Random function
+Pipe as argument,308,308,storage-map.service.ts,[null],Nested in object or function,Random function

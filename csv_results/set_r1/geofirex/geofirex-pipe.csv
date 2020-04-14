@@ -1,0 +1,6 @@
+Alias or name used,Line start,Line end,Filename,Nested Operators,Pipe is nested to,Initializing Pipeline
+Pipe as argument,53,53,collection.ts,[],Nested in object or function,Random function
+Pipe as argument,106,106,collection.ts,"[""shareReplay""]",Nested in object or function,Random function
+Pipe as argument,130,130,collection.ts,[],Nested in object or function,Random function
+Pipe,155,155,collection.ts,"[""map"",""shareReplay""]",,combineLatest
+Pipe,231,231,collection.ts,"[""first""]",Nested in pipe of lines 155 to 155,Random function

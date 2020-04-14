@@ -1,0 +1,86 @@
+Alias or name used,Line start,Line end,Filename,Nested Operators,Pipe is nested to,Initializing Pipeline
+Pipe,35,35,detector-spec.ts,[],,Random function
+Pipe,61,61,detector-spec.ts,[],,Random function
+Pipe,63,63,detector-spec.ts,"[""mergeMap""]",,Random function
+Pipe,63,63,detector-spec.ts,"[""tag""]",Nested in pipe of lines 63 to 63,Random function
+Pipe as argument,16,16,hidden-spec.ts,[],Nested in object or function,from
+Pipe,17,17,identify-spec.ts,"[""mapTo""]",,Random function
+Pipe,32,32,identify-spec.ts,"[""mapTo""]",,Random function
+Pipe,35,35,issues-spec.ts,"[""share""]",,Random function
+Pipe,52,52,issues-spec.ts,"[""share"",""hide""]",,Random function
+Pipe as argument,22,22,match-spec.ts,[],Nested in object or function,Random function
+Pipe,16,16,hide-spec.ts,[],,from
+Pipe,16,16,tag-spec.ts,[],,from
+Pipe,156,156,graph-plugin-spec.ts,[],,Random function
+Pipe,157,157,graph-plugin-spec.ts,"[""mergeMap""]",,Random function
+Pipe,182,182,graph-plugin-spec.ts,[],,Random function
+Pipe,183,183,graph-plugin-spec.ts,"[""mergeMap""]",,Random function
+Pipe,346,346,graph-plugin-spec.ts,"[""map""]",,Random function
+Pipe,402,402,graph-plugin-spec.ts,[],,Random function
+Pipe,404,408,graph-plugin-spec.ts,"[""mergeMap""]",,Random function
+Pipe,405,405,graph-plugin-spec.ts,[],,Random function
+Pipe,484,484,graph-plugin-spec.ts,"[""map""]",,Random function
+Pipe,502,502,graph-plugin-spec.ts,"[""map""]",,Random function
+Pipe,503,503,graph-plugin-spec.ts,"[""map""]",,Random function
+Pipe,550,550,graph-plugin-spec.ts,"[""switchMap""]",,Random function
+Pipe,551,551,graph-plugin-spec.ts,"[""switchMap""]",,Random function
+Pipe,574,574,graph-plugin-spec.ts,"[""map""]",,Random function
+Pipe,593,593,graph-plugin-spec.ts,[],,Random function
+Pipe,595,599,graph-plugin-spec.ts,"[""mergeMap""]",,Random function
+Pipe,596,596,graph-plugin-spec.ts,[],,Random function
+Pipe,28,28,let-plugin-spec.ts,[],,Random function
+Pipe,43,43,let-plugin-spec.ts,[],,Random function
+Pipe,61,61,let-plugin-spec.ts,[],,Random function
+Pipe,77,77,let-plugin-spec.ts,[],,Random function
+Pipe,45,45,log-plugin-spec.ts,[],,Random function
+Pipe,66,66,log-plugin-spec.ts,[],,Random function
+Pipe,81,81,log-plugin-spec.ts,[],,Random function
+Pipe,96,96,log-plugin-spec.ts,[],,Random function
+Pipe,111,111,log-plugin-spec.ts,[],,Random function
+Pipe,36,36,pause-plugin-spec.ts,[],,Random function
+Pipe,51,51,pause-plugin-spec.ts,[],,Random function
+Pipe,66,66,pause-plugin-spec.ts,[],,Random function
+Pipe,85,85,pause-plugin-spec.ts,[],,Random function
+Pipe,108,108,pause-plugin-spec.ts,[],,Random function
+Pipe,137,137,pause-plugin-spec.ts,[],,Random function
+Pipe,160,160,pause-plugin-spec.ts,[],,Random function
+Pipe,191,191,pause-plugin-spec.ts,[],,Random function
+Pipe,208,208,pause-plugin-spec.ts,[],,Random function
+Pipe,226,226,pause-plugin-spec.ts,[],,Random function
+Pipe,237,237,pause-plugin-spec.ts,[],,Random function
+Pipe,254,254,pause-plugin-spec.ts,[],,Random function
+Pipe,274,274,pause-plugin-spec.ts,[],,Random function
+Pipe as argument,131,131,pause-plugin.ts,"[""dematerialize""]",Nested in object or function,Random function
+Pipe,241,241,snapshot-plugin-spec.ts,"[""map""]",,Random function
+Pipe,290,290,snapshot-plugin-spec.ts,[],,Random function
+Pipe,291,291,snapshot-plugin-spec.ts,"[""mergeMap""]",,Random function
+Pipe,291,291,snapshot-plugin-spec.ts,"[""tag""]",Nested in pipe of lines 291 to 291,Random function
+Pipe,323,323,snapshot-plugin-spec.ts,"[""map""]",,Random function
+Pipe,347,347,snapshot-plugin-spec.ts,"[""map""]",,Random function
+Pipe,348,348,snapshot-plugin-spec.ts,"[""map""]",,Random function
+Pipe,409,409,snapshot-plugin-spec.ts,"[""switchMap""]",,Random function
+Pipe,410,410,snapshot-plugin-spec.ts,"[""switchMap""]",,Random function
+Pipe as argument,51,51,snapshot-plugin.ts,"[""mapTo""]",Nested in object or function,Random function
+Pipe,32,32,stack-trace-plugin-spec.ts,"[""map""]",,Random function
+Pipe as argument,73,73,stack-trace-plugin.ts,"[""shareReplay""]",Nested in object or function,Random function
+Pipe as argument,81,81,stack-trace-plugin.ts,[],Nested in object or function,of
+Pipe,51,51,stats-plugin-spec.ts,"[""map""]",,Random function
+Pipe,79,79,stats-plugin-spec.ts,"[""switchMap""]",,Random function
+Pipe,183,183,stats-plugin-spec.ts,"[""map""]",,Random function
+Pipe,184,184,stats-plugin-spec.ts,"[""map""]",,Random function
+Pipe as argument,680,680,spy-core.ts,[],Nested in object or function,Random function
+Pipe as argument,49,49,spy-spec.ts,"[""mapTo""]",Nested in object or function,Random function
+Pipe,53,53,spy-spec.ts,[],,Random function
+Pipe,73,73,spy-spec.ts,[],,Random function
+Pipe,101,101,spy-spec.ts,[],,Random function
+Pipe,117,117,spy-spec.ts,"[""tag""]",,Random function
+Pipe,135,135,spy-spec.ts,[],,Random function
+Pipe,151,151,spy-spec.ts,[],,Random function
+Pipe,193,193,spy-spec.ts,"[""mapTo""]",,Random function
+Pipe,253,253,spy-spec.ts,[],,Random function
+Pipe,267,267,spy-spec.ts,[],,Random function
+Pipe,284,284,spy-spec.ts,[],,Random function
+Pipe,332,332,spy-spec.ts,[],,Random function
+Pipe,349,349,spy-spec.ts,[],,Random function
+Pipe,22,22,util-spec.ts,"[""mapTo""]",,Random function
+Pipe,38,38,util-spec.ts,"[""mapTo""]",,Random function

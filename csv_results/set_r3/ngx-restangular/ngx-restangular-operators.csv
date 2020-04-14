@@ -1,0 +1,6 @@
+Alias or name used,Line,Filename
+filter,24,/Users/stefanosathanasoulias/thesis-projects-container/projects/ngx-restangular-master/projects/ngx-restangular/src/lib/ngx-restangular-http.ts
+map,25,/Users/stefanosathanasoulias/thesis-projects-container/projects/ngx-restangular-master/projects/ngx-restangular/src/lib/ngx-restangular-http.ts
+map,31,/Users/stefanosathanasoulias/thesis-projects-container/projects/ngx-restangular-master/projects/ngx-restangular/src/lib/ngx-restangular-http.ts
+catchError,35,/Users/stefanosathanasoulias/thesis-projects-container/projects/ngx-restangular-master/projects/ngx-restangular/src/lib/ngx-restangular-http.ts
+filter,267,/Users/stefanosathanasoulias/thesis-projects-container/projects/ngx-restangular-master/projects/ngx-restangular/src/lib/ngx-restangular.ts

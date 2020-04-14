@@ -1,0 +1,60 @@
+Alias or name used,Line start,Line end,Filename,Nested Operators,Pipe is nested to,Initializing Pipeline
+Pipe as argument,undefined,undefined,aperture.ts,[],Nested in object or function,
+Pipe as argument,undefined,undefined,aperture.ts,[],Nested in object or function,
+Pipe as argument,undefined,undefined,aperture.ts,[],Nested in object or function,
+Pipe,undefined,undefined,aperture.ts,[],,
+Pipe,undefined,undefined,aperture.ts,[],,
+Pipe,undefined,undefined,aperture.ts,[],,
+Pipe as argument,34,34,aperture.ts,"[""map""]",Nested in object or function,Random function
+Pipe as argument,41,41,aperture.ts,"[""map""]",Nested in object or function,Random function
+Pipe as argument,48,48,aperture.ts,"[""mapTo""]",Nested in object or function,Random function
+Pipe as argument,54,54,aperture.ts,"[""mapTo""]",Nested in object or function,Random function
+Pipe as argument,60,60,aperture.ts,"[""mapTo""]",Nested in object or function,Random function
+Pipe,89,89,aperture.ts,"[""map"",""map""]",,Random function
+Pipe,100,100,aperture.ts,"[""map"",""map""]",,Random function
+Pipe,115,115,aperture.ts,"[""map""]",,Random function
+Pipe as argument,undefined,undefined,observable_callbag.ts,[],Nested in object or function,
+Pipe,undefined,undefined,observable_callbag.ts,[],,
+Pipe as argument,undefined,undefined,observable_callbag.ts,[],Nested in object or function,
+Pipe as argument,undefined,undefined,observable_callbag.ts,[],Nested in object or function,
+Pipe as argument,undefined,undefined,observable_callbag.ts,[],Nested in object or function,
+Pipe as argument,undefined,undefined,observable_callbag.ts,[],Nested in object or function,
+Pipe,86,90,observable.ts,"[""filter"",""map""]",,Random function
+Pipe,128,128,observable.ts,"[""filter"",""map""]",Nested in pipe of lines 86 to 90,Random function
+Pipe,138,138,observable.ts,"[""filter"",""map"",""distinctUntilChanged""]",Nested in pipe of lines 86 to 90,Random function
+Pipe,149,149,observable.ts,"[""filter"",""map"",""distinctUntilChanged""]",Nested in pipe of lines 86 to 90,Random function
+Pipe as argument,undefined,undefined,observable_callbag.ts,[],Nested in object or function,
+Pipe as argument,24,24,observable.ts,"[""map"",""distinctUntilChanged""]",Nested in object or function,Random function
+Pipe as argument,undefined,undefined,index.js,[],Nested in object or function,
+Pipe as argument,undefined,undefined,index.js,[],Nested in object or function,
+Pipe as argument,undefined,undefined,index.js,[],Nested in object or function,
+Pipe,23,23,index.js,"[""withLatestFrom"",""map"",""scan"",""startWith""]",,Random function
+Pipe,26,26,index.js,"[""map""]",Nested in pipe of lines 23 to 23,Random function
+Pipe as argument,undefined,undefined,index.js,[],Nested in object or function,
+Pipe as argument,undefined,undefined,index.js,[],Nested in object or function,
+Pipe,undefined,undefined,index.js,[],,
+Pipe,23,23,index.js,"[""filter"",""debounce"",""flatMap"",""map""]",,
+Pipe as argument,undefined,undefined,index.js,[],Nested in object or function,
+Pipe as argument,undefined,undefined,index.js,[],Nested in object or function,
+Pipe,undefined,undefined,index.js,[],,
+Pipe,23,25,index.js,"[""filter"",""debounce"",""flatMap"",""map""]",,
+Pipe as argument,undefined,undefined,index.js,[],Nested in object or function,
+Pipe as argument,undefined,undefined,index.js,[],Nested in object or function,
+Pipe,30,35,index.js,"[""filter"",""mergeMap"",""map""]",,
+Pipe,41,41,index.js,"[""filter"",""map"",""map""]",,
+Pipe as argument,undefined,undefined,index.js,[],Nested in object or function,
+Pipe as argument,undefined,undefined,index.js,[],Nested in object or function,
+Pipe,30,30,index.js,"[""filter"",""debounce"",""flatMap"",""map"",""map"",""map""]",,
+Pipe,36,36,index.js,"[""filter"",""map"",""map""]",,
+Pipe,52,52,index.js,"[""filter"",""debounce"",""flatMap"",""map"",""map""]",,
+Pipe as argument,undefined,undefined,index.js,[],Nested in object or function,
+Pipe as argument,undefined,undefined,index.js,[],Nested in object or function,
+Pipe as argument,undefined,undefined,index.js,[],Nested in object or function,
+Pipe as argument,undefined,undefined,index.js,[],Nested in object or function,
+Pipe,23,23,index.js,"[""map"",""startWith""]",,Random function
+Pipe,27,27,index.js,"[""mapTo""]",Nested in pipe of lines 23 to 23,Random function
+Pipe,28,28,index.js,"[""mapTo""]",Nested in pipe of lines 23 to 23,Random function
+Pipe,29,29,index.js,"[""startWith""]",,Random function
+Pipe,31,31,index.js,"[""map"",""distinctUntilChanged"",""switchMap""]",Nested in pipe of lines 29 to 29,Random function
+Pipe,37,37,index.js,"[""mapTo"",""startWith""]",Nested in pipe of lines 29 to 29,Random function
+Pipe as argument,14,14,test.js,[null],Nested in object or function,

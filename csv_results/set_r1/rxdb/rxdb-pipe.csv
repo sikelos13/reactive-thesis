@@ -1,0 +1,21 @@
+Alias or name used,Line start,Line end,Filename,Nested Operators,Pipe is nested to,Initializing Pipeline
+Pipe as argument,309,309,attachments.ts,"[""map"",""map"",""map""]",Nested in object or function,
+Pipe,157,159,in-memory.ts,"[""mergeMap""]",,Random function
+Pipe,179,179,in-memory.ts,"[""filter"",""first""]",Nested in pipe of lines 157 to 159,Random function
+Pipe,321,321,in-memory.ts,"[""map"",""filter"",""filter"",""map""]",,Random function
+Pipe,62,62,local-documents.ts,"[""filter""]",,
+Pipe as argument,176,176,local-documents.ts,"[""map"",""distinctUntilChanged""]",Nested in object or function,
+Pipe as argument,131,131,index.ts,"[""filter"",""first""]",Nested in object or function,Random function
+Pipe as argument,196,196,replication.ts,"[""skipUntil""]",Nested in object or function,Random function
+Pipe,44,44,watch-for-changes.ts,"[""map""]",,fromEvent
+Pipe as argument,138,138,rx-collection.ts,"[""filter""]",Nested in object or function,Random function
+Pipe as argument,143,143,rx-collection.ts,"[""filter""]",Nested in object or function,Random function
+Pipe as argument,148,148,rx-collection.ts,"[""filter""]",Nested in object or function,Random function
+Pipe as argument,154,154,rx-collection.ts,"[""filter""]",Nested in object or function,Random function
+Pipe as argument,218,218,rx-collection.ts,"[""filter""]",Nested in object or function,Random function
+Pipe as argument,225,225,rx-collection.ts,"[""filter""]",Nested in object or function,Random function
+Pipe as argument,116,116,rx-database.ts,"[""filter""]",Nested in object or function,Random function
+Pipe as argument,132,132,rx-document.ts,"[""map"",""distinctUntilChanged""]",Nested in object or function,Random function
+Pipe,91,95,rx-query.ts,"[""mergeMap"",""filter"",""map"",""map""]",,Random function
+Pipe,105,105,rx-query.ts,"[""tap"",""filter""]",,Random function
+Pipe,246,246,rx-query.ts,"[""first""]",Nested in pipe of lines 105 to 105,Random function

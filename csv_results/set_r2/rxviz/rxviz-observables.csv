@@ -1,0 +1,4 @@
+Observable variable/alias used,Times Used,Line start,Line end,Filename
+Promise,1,10,10,/Users/stefanosathanasoulias/thesis-projects-container/projects/rxviz-master/lib/data-stream.test.js
+Object,1,46,46,/Users/stefanosathanasoulias/thesis-projects-container/projects/rxviz-master/lib/data-stream.test.js
+ReferenceError,1,151,151,/Users/stefanosathanasoulias/thesis-projects-container/projects/rxviz-master/lib/data-stream.test.js

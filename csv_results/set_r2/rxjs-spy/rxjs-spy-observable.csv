@@ -1,0 +1,20 @@
+Observable variable/alias used,Times Used,Line start,Line end,Filename
+HideOperator,1,13,13,/Users/stefanosathanasoulias/thesis-projects-container/projects/rxjs-spy-master/source/operators/hide.ts
+TagOperator,1,13,13,/Users/stefanosathanasoulias/thesis-projects-container/projects/rxjs-spy-master/source/operators/tag.ts
+Promise,1,27,27,/Users/stefanosathanasoulias/thesis-projects-container/projects/rxjs-spy-master/source/plugin/graph-plugin-spec.ts
+GraphPlugin,1,34,34,/Users/stefanosathanasoulias/thesis-projects-container/projects/rxjs-spy-master/source/plugin/graph-plugin-spec.ts
+Map,1,39,39,/Users/stefanosathanasoulias/thesis-projects-container/projects/rxjs-spy-master/source/plugin/pause-plugin.ts
+Map,1,201,201,/Users/stefanosathanasoulias/thesis-projects-container/projects/rxjs-spy-master/source/plugin/snapshot-plugin.ts
+Map,1,202,202,/Users/stefanosathanasoulias/thesis-projects-container/projects/rxjs-spy-master/source/plugin/snapshot-plugin.ts
+Map,1,203,203,/Users/stefanosathanasoulias/thesis-projects-container/projects/rxjs-spy-master/source/plugin/snapshot-plugin.ts
+Map,1,227,227,/Users/stefanosathanasoulias/thesis-projects-container/projects/rxjs-spy-master/source/plugin/snapshot-plugin.ts
+Map,1,234,234,/Users/stefanosathanasoulias/thesis-projects-container/projects/rxjs-spy-master/source/plugin/snapshot-plugin.ts
+Map,1,250,250,/Users/stefanosathanasoulias/thesis-projects-container/projects/rxjs-spy-master/source/plugin/snapshot-plugin.ts
+Map,1,268,268,/Users/stefanosathanasoulias/thesis-projects-container/projects/rxjs-spy-master/source/plugin/snapshot-plugin.ts
+Map,1,353,353,/Users/stefanosathanasoulias/thesis-projects-container/projects/rxjs-spy-master/source/plugin/snapshot-plugin.ts
+StackTraceGps,1,68,68,/Users/stefanosathanasoulias/thesis-projects-container/projects/rxjs-spy-master/source/plugin/stack-trace-plugin.ts
+Error,1,95,95,/Users/stefanosathanasoulias/thesis-projects-container/projects/rxjs-spy-master/source/plugin/stack-trace-plugin.ts
+Map,1,13,13,/Users/stefanosathanasoulias/thesis-projects-container/projects/rxjs-spy-master/source/plugin/subscriber-refs-plugin.ts
+Error,1,75,75,/Users/stefanosathanasoulias/thesis-projects-container/projects/rxjs-spy-master/source/spy-core.ts
+Subscriber,1,71,71,/Users/stefanosathanasoulias/thesis-projects-container/projects/rxjs-spy-master/source/util.ts
+Subscriber,1,73,73,/Users/stefanosathanasoulias/thesis-projects-container/projects/rxjs-spy-master/source/util.ts

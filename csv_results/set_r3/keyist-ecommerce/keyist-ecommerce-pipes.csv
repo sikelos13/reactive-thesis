@@ -1,0 +1,62 @@
+Alias or name used,Line start,Line end,Filename,Nested Operators,Pipe is nested to,Initializing Pipeline
+Pipe as argument,91,91,reset-details.component.ts,"[""take"",""catchError""]",Nested in object or function,Random function
+Pipe as argument,32,32,reset-email.component.ts,"[""take"",""catchError""]",Nested in object or function,Random function
+Pipe as argument,37,37,reset-password.component.ts,"[""take"",""catchError""]",Nested in object or function,Random function
+Pipe as argument,30,30,list-orders.component.ts,"[""take"",""catchError""]",Nested in object or function,Random function
+Pipe as argument,28,28,forgot-password.component.ts,"[""take"",""catchError""]",Nested in object or function,Random function
+Pipe as argument,65,65,browse.component.ts,"[""take""]",Nested in object or function,Random function
+Pipe as argument,38,38,bank-accept.component.ts,"[""take"",""catchError""]",Nested in object or function,Random function
+Pipe as argument,38,38,confirmation.component.ts,"[""take""]",Nested in object or function,Random function
+Pipe as argument,46,46,confirmation.component.ts,"[""take""]",Nested in object or function,Random function
+Pipe as argument,68,68,display-cart.component.ts,"[""take""]",Nested in object or function,Random function
+Pipe as argument,30,30,interested.component.ts,"[""take""]",Nested in object or function,Random function
+Pipe as argument,42,42,order-form.component.ts,"[""take""]",Nested in object or function,
+Pipe as argument,68,68,item-detail.component.ts,"[""take"",""catchError""]",Nested in object or function,Random function
+Pipe as argument,105,105,item-detail.component.ts,"[""take""]",Nested in object or function,Random function
+Pipe as argument,33,33,related.component.ts,"[""take"",""catchError""]",Nested in object or function,Random function
+Pipe as argument,29,29,search.component.ts,"[""take"",""catchError""]",Nested in object or function,Random function
+Pipe as argument,51,51,search.component.ts,"[""take"",""catchError""]",Nested in object or function,Random function
+Pipe as argument,16,16,auth-guard.service.ts,"[""take"",""map""]",Nested in object or function,
+Pipe as argument,21,21,checkout-guard.service.ts,"[""map""]",Nested in object or function,Random function
+Pipe as argument,16,16,non-auth-guard.service.ts,"[""map""]",Nested in object or function,
+Pipe as argument,30,30,token.interceptor.ts,"[""catchError""]",Nested in object or function,Random function
+Pipe as argument,59,59,token.interceptor.ts,"[""switchMap"",""catchError"",""finalize""]",Nested in object or function,Random function
+Pipe as argument,81,81,token.interceptor.ts,"[""filter"",""take"",""switchMap"",""catchError""]",Nested in object or function,Random function
+Pipe as argument,20,20,auth.effects.ts,"[""map"",""switchMap""]",Nested in object or function,Random function
+Pipe as argument,26,26,auth.effects.ts,"[""switchMap"",""catchError""]",Nested in object or function,Random function
+Pipe as argument,48,48,auth.effects.ts,"[""map"",""switchMap""]",Nested in object or function,Random function
+Pipe as argument,54,54,auth.effects.ts,"[""switchMap"",""catchError""]",Nested in object or function,Random function
+Pipe as argument,71,71,auth.effects.ts,"[""concatMap""]",Nested in object or function,Random function
+Pipe as argument,92,92,auth.effects.ts,"[""switchMap""]",Nested in object or function,Random function
+Pipe as argument,113,113,auth.effects.ts,"[""switchMap""]",Nested in object or function,Random function
+Pipe as argument,116,116,auth.effects.ts,"[""map"",""catchError""]",Nested in object or function,Random function
+Pipe as argument,23,23,browse.effects.ts,"[""map"",""switchMap""]",Nested in object or function,Random function
+Pipe as argument,29,29,browse.effects.ts,"[""map"",""catchError""]",Nested in object or function,Random function
+Pipe as argument,49,49,browse.effects.ts,"[""ofType"",""map"",""mergeMap""]",Nested in object or function,Random function
+Pipe as argument,55,55,browse.effects.ts,"[""map"",""catchError""]",Nested in object or function,Random function
+Pipe as argument,75,75,browse.effects.ts,"[""switchMap""]",Nested in object or function,Random function
+Pipe as argument,78,78,browse.effects.ts,"[""map"",""catchError""]",Nested in object or function,Random function
+Pipe as argument,16,16,cart.effects.ts,"[""ofType"",""switchMap""]",Nested in object or function,Random function
+Pipe as argument,19,19,cart.effects.ts,"[""map"",""catchError""]",Nested in object or function,Random function
+Pipe as argument,31,31,cart.effects.ts,"[""map"",""switchMap""]",Nested in object or function,Random function
+Pipe as argument,37,37,cart.effects.ts,"[""map"",""catchError""]",Nested in object or function,Random function
+Pipe as argument,53,53,cart.effects.ts,"[""ofType"",""map"",""switchMap""]",Nested in object or function,Random function
+Pipe as argument,59,59,cart.effects.ts,"[""map"",""catchError""]",Nested in object or function,Random function
+Pipe as argument,71,71,cart.effects.ts,"[""map"",""switchMap""]",Nested in object or function,Random function
+Pipe as argument,77,77,cart.effects.ts,"[""map"",""catchError""]",Nested in object or function,Random function
+Pipe as argument,87,87,cart.effects.ts,"[""switchMap""]",Nested in object or function,Random function
+Pipe as argument,90,90,cart.effects.ts,"[""map"",""catchError""]",Nested in object or function,Random function
+Pipe as argument,26,26,order.effects.ts,"[""ofType"",""map"",""switchMap""]",Nested in object or function,Random function
+Pipe as argument,32,32,order.effects.ts,"[""switchMap"",""catchError""]",Nested in object or function,Random function
+Pipe as argument,14,14,showcase.effects.ts,"[""switchMap""]",Nested in object or function,
+Pipe as argument,16,16,showcase.effects.ts,"[""map""]",Nested in object or function,
+Pipe as argument,21,21,showcase.effects.ts,"[""ofType"",""switchMap""]",Nested in object or function,
+Pipe as argument,23,23,showcase.effects.ts,"[""map""]",Nested in object or function,
+Pipe as argument,28,28,showcase.effects.ts,"[""ofType"",""switchMap""]",Nested in object or function,
+Pipe as argument,30,30,showcase.effects.ts,"[""map""]",Nested in object or function,
+Pipe as argument,23,23,email-reset-verification.component.ts,"[""take"",""catchError""]",Nested in object or function,Random function
+Pipe as argument,28,28,email-reset-verification.component.ts,"[""take""]",Nested in object or function,Random function
+Pipe as argument,25,25,email-verification.component.ts,"[""take"",""catchError""]",Nested in object or function,Random function
+Pipe as argument,30,30,email-verification.component.ts,"[""take""]",Nested in object or function,Random function
+Pipe as argument,45,45,password-forgot-verification.component.ts,"[""take"",""catchError""]",Nested in object or function,Random function
+Pipe as argument,64,64,password-forgot-verification.component.ts,"[""take"",""catchError""]",Nested in object or function,Random function

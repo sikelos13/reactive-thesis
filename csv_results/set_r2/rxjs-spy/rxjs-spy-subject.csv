@@ -1,0 +1,132 @@
+Subject variable/alias used,Line start,Line end,Filename
+Subject,34,34,/Users/stefanosathanasoulias/thesis-projects-container/projects/rxjs-spy-master/source/detector-spec.ts
+Subject,60,60,/Users/stefanosathanasoulias/thesis-projects-container/projects/rxjs-spy-master/source/detector-spec.ts
+Subject,42,42,/Users/stefanosathanasoulias/thesis-projects-container/projects/rxjs-spy-master/source/plugin/cycle-plugin-spec.ts
+Subject,43,43,/Users/stefanosathanasoulias/thesis-projects-container/projects/rxjs-spy-master/source/plugin/cycle-plugin-spec.ts
+Subject,42,42,/Users/stefanosathanasoulias/thesis-projects-container/projects/rxjs-spy-master/source/plugin/graph-plugin-spec.ts
+Subject,60,60,/Users/stefanosathanasoulias/thesis-projects-container/projects/rxjs-spy-master/source/plugin/graph-plugin-spec.ts
+Subject,78,78,/Users/stefanosathanasoulias/thesis-projects-container/projects/rxjs-spy-master/source/plugin/graph-plugin-spec.ts
+Subject,96,96,/Users/stefanosathanasoulias/thesis-projects-container/projects/rxjs-spy-master/source/plugin/graph-plugin-spec.ts
+Subject,97,97,/Users/stefanosathanasoulias/thesis-projects-container/projects/rxjs-spy-master/source/plugin/graph-plugin-spec.ts
+Subject,125,125,/Users/stefanosathanasoulias/thesis-projects-container/projects/rxjs-spy-master/source/plugin/graph-plugin-spec.ts
+Subject,126,126,/Users/stefanosathanasoulias/thesis-projects-container/projects/rxjs-spy-master/source/plugin/graph-plugin-spec.ts
+Subject,154,154,/Users/stefanosathanasoulias/thesis-projects-container/projects/rxjs-spy-master/source/plugin/graph-plugin-spec.ts
+Subject,155,155,/Users/stefanosathanasoulias/thesis-projects-container/projects/rxjs-spy-master/source/plugin/graph-plugin-spec.ts
+Subject,180,180,/Users/stefanosathanasoulias/thesis-projects-container/projects/rxjs-spy-master/source/plugin/graph-plugin-spec.ts
+Subject,181,181,/Users/stefanosathanasoulias/thesis-projects-container/projects/rxjs-spy-master/source/plugin/graph-plugin-spec.ts
+Subject,206,206,/Users/stefanosathanasoulias/thesis-projects-container/projects/rxjs-spy-master/source/plugin/graph-plugin-spec.ts
+Subject,231,231,/Users/stefanosathanasoulias/thesis-projects-container/projects/rxjs-spy-master/source/plugin/graph-plugin-spec.ts
+Subject,256,256,/Users/stefanosathanasoulias/thesis-projects-container/projects/rxjs-spy-master/source/plugin/graph-plugin-spec.ts
+Subject,345,345,/Users/stefanosathanasoulias/thesis-projects-container/projects/rxjs-spy-master/source/plugin/graph-plugin-spec.ts
+Subject,368,368,/Users/stefanosathanasoulias/thesis-projects-container/projects/rxjs-spy-master/source/plugin/graph-plugin-spec.ts
+Subject,369,369,/Users/stefanosathanasoulias/thesis-projects-container/projects/rxjs-spy-master/source/plugin/graph-plugin-spec.ts
+Subject,401,401,/Users/stefanosathanasoulias/thesis-projects-container/projects/rxjs-spy-master/source/plugin/graph-plugin-spec.ts
+Subject,483,483,/Users/stefanosathanasoulias/thesis-projects-container/projects/rxjs-spy-master/source/plugin/graph-plugin-spec.ts
+Subject,501,501,/Users/stefanosathanasoulias/thesis-projects-container/projects/rxjs-spy-master/source/plugin/graph-plugin-spec.ts
+Subject,524,524,/Users/stefanosathanasoulias/thesis-projects-container/projects/rxjs-spy-master/source/plugin/graph-plugin-spec.ts
+Subject,525,525,/Users/stefanosathanasoulias/thesis-projects-container/projects/rxjs-spy-master/source/plugin/graph-plugin-spec.ts
+Subject,547,547,/Users/stefanosathanasoulias/thesis-projects-container/projects/rxjs-spy-master/source/plugin/graph-plugin-spec.ts
+Subject,548,548,/Users/stefanosathanasoulias/thesis-projects-container/projects/rxjs-spy-master/source/plugin/graph-plugin-spec.ts
+Subject,549,549,/Users/stefanosathanasoulias/thesis-projects-container/projects/rxjs-spy-master/source/plugin/graph-plugin-spec.ts
+Subject,573,573,/Users/stefanosathanasoulias/thesis-projects-container/projects/rxjs-spy-master/source/plugin/graph-plugin-spec.ts
+Subject,592,592,/Users/stefanosathanasoulias/thesis-projects-container/projects/rxjs-spy-master/source/plugin/graph-plugin-spec.ts
+Subject,20,20,/Users/stefanosathanasoulias/thesis-projects-container/projects/rxjs-spy-master/source/plugin/let-plugin-spec.ts
+Subject,27,27,/Users/stefanosathanasoulias/thesis-projects-container/projects/rxjs-spy-master/source/plugin/let-plugin-spec.ts
+Subject,42,42,/Users/stefanosathanasoulias/thesis-projects-container/projects/rxjs-spy-master/source/plugin/let-plugin-spec.ts
+Subject,45,45,/Users/stefanosathanasoulias/thesis-projects-container/projects/rxjs-spy-master/source/plugin/let-plugin-spec.ts
+Subject,60,60,/Users/stefanosathanasoulias/thesis-projects-container/projects/rxjs-spy-master/source/plugin/let-plugin-spec.ts
+Subject,63,63,/Users/stefanosathanasoulias/thesis-projects-container/projects/rxjs-spy-master/source/plugin/let-plugin-spec.ts
+Subject,76,76,/Users/stefanosathanasoulias/thesis-projects-container/projects/rxjs-spy-master/source/plugin/let-plugin-spec.ts
+Subject,79,79,/Users/stefanosathanasoulias/thesis-projects-container/projects/rxjs-spy-master/source/plugin/let-plugin-spec.ts
+Subject,43,43,/Users/stefanosathanasoulias/thesis-projects-container/projects/rxjs-spy-master/source/plugin/log-plugin-spec.ts
+Subject,64,64,/Users/stefanosathanasoulias/thesis-projects-container/projects/rxjs-spy-master/source/plugin/log-plugin-spec.ts
+Subject,79,79,/Users/stefanosathanasoulias/thesis-projects-container/projects/rxjs-spy-master/source/plugin/log-plugin-spec.ts
+Subject,94,94,/Users/stefanosathanasoulias/thesis-projects-container/projects/rxjs-spy-master/source/plugin/log-plugin-spec.ts
+Subject,109,109,/Users/stefanosathanasoulias/thesis-projects-container/projects/rxjs-spy-master/source/plugin/log-plugin-spec.ts
+Subject,125,125,/Users/stefanosathanasoulias/thesis-projects-container/projects/rxjs-spy-master/source/plugin/log-plugin-spec.ts
+Subject,154,154,/Users/stefanosathanasoulias/thesis-projects-container/projects/rxjs-spy-master/source/plugin/log-plugin-spec.ts
+Subject,171,171,/Users/stefanosathanasoulias/thesis-projects-container/projects/rxjs-spy-master/source/plugin/log-plugin-spec.ts
+Subject,188,188,/Users/stefanosathanasoulias/thesis-projects-container/projects/rxjs-spy-master/source/plugin/log-plugin-spec.ts
+Subject,35,35,/Users/stefanosathanasoulias/thesis-projects-container/projects/rxjs-spy-master/source/plugin/pause-plugin-spec.ts
+Subject,50,50,/Users/stefanosathanasoulias/thesis-projects-container/projects/rxjs-spy-master/source/plugin/pause-plugin-spec.ts
+Subject,65,65,/Users/stefanosathanasoulias/thesis-projects-container/projects/rxjs-spy-master/source/plugin/pause-plugin-spec.ts
+Subject,84,84,/Users/stefanosathanasoulias/thesis-projects-container/projects/rxjs-spy-master/source/plugin/pause-plugin-spec.ts
+Subject,107,107,/Users/stefanosathanasoulias/thesis-projects-container/projects/rxjs-spy-master/source/plugin/pause-plugin-spec.ts
+Subject,136,136,/Users/stefanosathanasoulias/thesis-projects-container/projects/rxjs-spy-master/source/plugin/pause-plugin-spec.ts
+Subject,159,159,/Users/stefanosathanasoulias/thesis-projects-container/projects/rxjs-spy-master/source/plugin/pause-plugin-spec.ts
+Subject,190,190,/Users/stefanosathanasoulias/thesis-projects-container/projects/rxjs-spy-master/source/plugin/pause-plugin-spec.ts
+Subject,207,207,/Users/stefanosathanasoulias/thesis-projects-container/projects/rxjs-spy-master/source/plugin/pause-plugin-spec.ts
+Subject,225,225,/Users/stefanosathanasoulias/thesis-projects-container/projects/rxjs-spy-master/source/plugin/pause-plugin-spec.ts
+Subject,236,236,/Users/stefanosathanasoulias/thesis-projects-container/projects/rxjs-spy-master/source/plugin/pause-plugin-spec.ts
+Subject,253,253,/Users/stefanosathanasoulias/thesis-projects-container/projects/rxjs-spy-master/source/plugin/pause-plugin-spec.ts
+Subject,273,273,/Users/stefanosathanasoulias/thesis-projects-container/projects/rxjs-spy-master/source/plugin/pause-plugin-spec.ts
+Subject,45,45,/Users/stefanosathanasoulias/thesis-projects-container/projects/rxjs-spy-master/source/plugin/pause-plugin.ts
+Subject,109,109,/Users/stefanosathanasoulias/thesis-projects-container/projects/rxjs-spy-master/source/plugin/pause-plugin.ts
+Variable: stats_,40,40,/Users/stefanosathanasoulias/thesis-projects-container/projects/rxjs-spy-master/source/plugin/pause-plugin.ts
+Variable: stats_,45,45,/Users/stefanosathanasoulias/thesis-projects-container/projects/rxjs-spy-master/source/plugin/pause-plugin.ts
+Variable: stats_,50,50,/Users/stefanosathanasoulias/thesis-projects-container/projects/rxjs-spy-master/source/plugin/pause-plugin.ts
+Variable: stats_,169,169,/Users/stefanosathanasoulias/thesis-projects-container/projects/rxjs-spy-master/source/plugin/pause-plugin.ts
+Variable: stats_,169,169,/Users/stefanosathanasoulias/thesis-projects-container/projects/rxjs-spy-master/source/plugin/pause-plugin.ts
+Variable: stats_,174,174,/Users/stefanosathanasoulias/thesis-projects-container/projects/rxjs-spy-master/source/plugin/pause-plugin.ts
+Subject,40,40,/Users/stefanosathanasoulias/thesis-projects-container/projects/rxjs-spy-master/source/plugin/snapshot-plugin-spec.ts
+Subject,68,68,/Users/stefanosathanasoulias/thesis-projects-container/projects/rxjs-spy-master/source/plugin/snapshot-plugin-spec.ts
+Subject,104,104,/Users/stefanosathanasoulias/thesis-projects-container/projects/rxjs-spy-master/source/plugin/snapshot-plugin-spec.ts
+Subject,140,140,/Users/stefanosathanasoulias/thesis-projects-container/projects/rxjs-spy-master/source/plugin/snapshot-plugin-spec.ts
+Subject,177,177,/Users/stefanosathanasoulias/thesis-projects-container/projects/rxjs-spy-master/source/plugin/snapshot-plugin-spec.ts
+Subject,217,217,/Users/stefanosathanasoulias/thesis-projects-container/projects/rxjs-spy-master/source/plugin/snapshot-plugin-spec.ts
+Subject,240,240,/Users/stefanosathanasoulias/thesis-projects-container/projects/rxjs-spy-master/source/plugin/snapshot-plugin-spec.ts
+Subject,263,263,/Users/stefanosathanasoulias/thesis-projects-container/projects/rxjs-spy-master/source/plugin/snapshot-plugin-spec.ts
+Subject,264,264,/Users/stefanosathanasoulias/thesis-projects-container/projects/rxjs-spy-master/source/plugin/snapshot-plugin-spec.ts
+Subject,289,289,/Users/stefanosathanasoulias/thesis-projects-container/projects/rxjs-spy-master/source/plugin/snapshot-plugin-spec.ts
+Subject,322,322,/Users/stefanosathanasoulias/thesis-projects-container/projects/rxjs-spy-master/source/plugin/snapshot-plugin-spec.ts
+Subject,346,346,/Users/stefanosathanasoulias/thesis-projects-container/projects/rxjs-spy-master/source/plugin/snapshot-plugin-spec.ts
+Subject,376,376,/Users/stefanosathanasoulias/thesis-projects-container/projects/rxjs-spy-master/source/plugin/snapshot-plugin-spec.ts
+Subject,377,377,/Users/stefanosathanasoulias/thesis-projects-container/projects/rxjs-spy-master/source/plugin/snapshot-plugin-spec.ts
+Subject,406,406,/Users/stefanosathanasoulias/thesis-projects-container/projects/rxjs-spy-master/source/plugin/snapshot-plugin-spec.ts
+Subject,407,407,/Users/stefanosathanasoulias/thesis-projects-container/projects/rxjs-spy-master/source/plugin/snapshot-plugin-spec.ts
+Subject,408,408,/Users/stefanosathanasoulias/thesis-projects-container/projects/rxjs-spy-master/source/plugin/snapshot-plugin-spec.ts
+Subject,442,442,/Users/stefanosathanasoulias/thesis-projects-container/projects/rxjs-spy-master/source/plugin/snapshot-plugin-spec.ts
+Subject,465,465,/Users/stefanosathanasoulias/thesis-projects-container/projects/rxjs-spy-master/source/plugin/snapshot-plugin-spec.ts
+Subject,487,487,/Users/stefanosathanasoulias/thesis-projects-container/projects/rxjs-spy-master/source/plugin/snapshot-plugin-spec.ts
+Subject,31,31,/Users/stefanosathanasoulias/thesis-projects-container/projects/rxjs-spy-master/source/plugin/stack-trace-plugin-spec.ts
+Subject,29,29,/Users/stefanosathanasoulias/thesis-projects-container/projects/rxjs-spy-master/source/plugin/stats-plugin-spec.ts
+Subject,50,50,/Users/stefanosathanasoulias/thesis-projects-container/projects/rxjs-spy-master/source/plugin/stats-plugin-spec.ts
+Subject,78,78,/Users/stefanosathanasoulias/thesis-projects-container/projects/rxjs-spy-master/source/plugin/stats-plugin-spec.ts
+Subject,114,114,/Users/stefanosathanasoulias/thesis-projects-container/projects/rxjs-spy-master/source/plugin/stats-plugin-spec.ts
+Subject,128,128,/Users/stefanosathanasoulias/thesis-projects-container/projects/rxjs-spy-master/source/plugin/stats-plugin-spec.ts
+Subject,145,145,/Users/stefanosathanasoulias/thesis-projects-container/projects/rxjs-spy-master/source/plugin/stats-plugin-spec.ts
+Subject,159,159,/Users/stefanosathanasoulias/thesis-projects-container/projects/rxjs-spy-master/source/plugin/stats-plugin-spec.ts
+Subject,182,182,/Users/stefanosathanasoulias/thesis-projects-container/projects/rxjs-spy-master/source/plugin/stats-plugin-spec.ts
+Subject,638,638,/Users/stefanosathanasoulias/thesis-projects-container/projects/rxjs-spy-master/source/spy-core.ts
+Variable: preSelectSubject,614,614,/Users/stefanosathanasoulias/thesis-projects-container/projects/rxjs-spy-master/source/spy-core.ts
+Variable: preSelectSubject,615,615,/Users/stefanosathanasoulias/thesis-projects-container/projects/rxjs-spy-master/source/spy-core.ts
+Variable: preSelectSubject,625,625,/Users/stefanosathanasoulias/thesis-projects-container/projects/rxjs-spy-master/source/spy-core.ts
+Variable: preSelectSubject,626,626,/Users/stefanosathanasoulias/thesis-projects-container/projects/rxjs-spy-master/source/spy-core.ts
+Variable: preSelectSubject,637,637,/Users/stefanosathanasoulias/thesis-projects-container/projects/rxjs-spy-master/source/spy-core.ts
+Variable: preSelectSubject,638,638,/Users/stefanosathanasoulias/thesis-projects-container/projects/rxjs-spy-master/source/spy-core.ts
+Variable: preSelectSubject,643,643,/Users/stefanosathanasoulias/thesis-projects-container/projects/rxjs-spy-master/source/spy-core.ts
+Variable: preSelectSubject,649,649,/Users/stefanosathanasoulias/thesis-projects-container/projects/rxjs-spy-master/source/spy-core.ts
+Variable: preSelectSubject,654,654,/Users/stefanosathanasoulias/thesis-projects-container/projects/rxjs-spy-master/source/spy-core.ts
+Variable: preSelectSubject,655,655,/Users/stefanosathanasoulias/thesis-projects-container/projects/rxjs-spy-master/source/spy-core.ts
+Variable: preSelectSubject,663,663,/Users/stefanosathanasoulias/thesis-projects-container/projects/rxjs-spy-master/source/spy-core.ts
+Subject,52,52,/Users/stefanosathanasoulias/thesis-projects-container/projects/rxjs-spy-master/source/spy-spec.ts
+Subject,66,66,/Users/stefanosathanasoulias/thesis-projects-container/projects/rxjs-spy-master/source/spy-spec.ts
+Subject,94,94,/Users/stefanosathanasoulias/thesis-projects-container/projects/rxjs-spy-master/source/spy-spec.ts
+Subject,110,110,/Users/stefanosathanasoulias/thesis-projects-container/projects/rxjs-spy-master/source/spy-spec.ts
+Subject,134,134,/Users/stefanosathanasoulias/thesis-projects-container/projects/rxjs-spy-master/source/spy-spec.ts
+Subject,150,150,/Users/stefanosathanasoulias/thesis-projects-container/projects/rxjs-spy-master/source/spy-spec.ts
+Subject,174,174,/Users/stefanosathanasoulias/thesis-projects-container/projects/rxjs-spy-master/source/spy-spec.ts
+Subject,191,191,/Users/stefanosathanasoulias/thesis-projects-container/projects/rxjs-spy-master/source/spy-spec.ts
+Subject,208,208,/Users/stefanosathanasoulias/thesis-projects-container/projects/rxjs-spy-master/source/spy-spec.ts
+Subject,225,225,/Users/stefanosathanasoulias/thesis-projects-container/projects/rxjs-spy-master/source/spy-spec.ts
+Subject,238,238,/Users/stefanosathanasoulias/thesis-projects-container/projects/rxjs-spy-master/source/spy-spec.ts
+Subject,251,251,/Users/stefanosathanasoulias/thesis-projects-container/projects/rxjs-spy-master/source/spy-spec.ts
+Subject,265,265,/Users/stefanosathanasoulias/thesis-projects-container/projects/rxjs-spy-master/source/spy-spec.ts
+Subject,282,282,/Users/stefanosathanasoulias/thesis-projects-container/projects/rxjs-spy-master/source/spy-spec.ts
+Subject,299,299,/Users/stefanosathanasoulias/thesis-projects-container/projects/rxjs-spy-master/source/spy-spec.ts
+Subject,312,312,/Users/stefanosathanasoulias/thesis-projects-container/projects/rxjs-spy-master/source/spy-spec.ts
+Subject,331,331,/Users/stefanosathanasoulias/thesis-projects-container/projects/rxjs-spy-master/source/spy-spec.ts
+Subject,348,348,/Users/stefanosathanasoulias/thesis-projects-container/projects/rxjs-spy-master/source/spy-spec.ts
+Subject,368,368,/Users/stefanosathanasoulias/thesis-projects-container/projects/rxjs-spy-master/source/spy-spec.ts
+Subject,390,390,/Users/stefanosathanasoulias/thesis-projects-container/projects/rxjs-spy-master/source/spy-spec.ts
+Subject,44,44,/Users/stefanosathanasoulias/thesis-projects-container/projects/rxjs-spy-master/source/util-spec.ts

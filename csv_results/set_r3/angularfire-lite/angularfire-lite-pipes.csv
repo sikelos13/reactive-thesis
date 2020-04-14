@@ -1,0 +1,5 @@
+Alias or name used,Line start,Line end,Filename,Nested Operators,Pipe is nested to,Initializing Pipeline
+Pipe as argument,127,127,database.service.ts,"[""map""]",Nested in object or function,Random function
+Pipe as argument,252,252,database.service.ts,"[""map""]",Nested in object or function,Random function
+Pipe as argument,46,46,firestore.service.ts,"[""map"",""tap""]",Nested in object or function,Random function
+Pipe as argument,172,172,firestore.service.ts,"[""map"",""tap""]",Nested in object or function,Random function

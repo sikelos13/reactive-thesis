@@ -1,0 +1,8 @@
+Alias or name used,Line start,Line end,Filename,Nested Operators,Pipe is nested to,Initializing Pipeline
+Pipe as argument,24,24,city-search.component.ts,"[""debounceTime"",""filter"",""tap""]",Nested in object or function,
+Pipe as argument,25,25,current-weather.component.ts,"[""select""]",Nested in object or function,merge
+Pipe as argument,14,14,current-weather.effects.ts,"[""exhaustMap""]",Nested in object or function,Random function
+Pipe as argument,21,21,current-weather.effects.ts,"[""map"",""catchError""]",Nested in object or function,Random function
+Pipe as argument,41,41,postal-code.service.ts,"[""flatMap"",""defaultIfEmpty""]",Nested in object or function,Random function
+Pipe as argument,72,72,weather.service.ts,"[""switchMap""]",Nested in object or function,Random function
+Pipe as argument,99,99,weather.service.ts,"[""map""]",Nested in object or function,Random function

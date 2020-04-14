@@ -1,0 +1,5 @@
+Alias or name used,Line start,Line end,Filename,Nested Operators,Pipe is nested to,Initializing Pipeline
+Pipe as argument,45,45,index.spec.ts,"[""delay"",""switchMap""]",Nested in object or function,of
+Pipe as argument,50,50,index.spec.ts,"[""switchMap""]",Nested in object or function,Random function
+Pipe as argument,75,75,index.spec.ts,"[""switchMap""]",Nested in object or function,Random function
+Pipe as argument,88,88,index.spec.ts,"[""switchMap"",""catchError""]",Nested in object or function,Random function

@@ -1,0 +1,5 @@
+Alias or name used,Line start,Line end,Filename,Nested Operators,Pipe is nested to,Initializing Pipeline
+Pipe,57,57,createEpicMiddleware.ts,"[""observeOn""]",,Random function
+Pipe,59,59,createEpicMiddleware.ts,"[""observeOn""]",,Random function
+Pipe,76,81,createEpicMiddleware.ts,"[""map"",""mergeMap""]",,Random function
+Pipe,77,77,createEpicMiddleware.ts,"[""subscribeOn"",""observeOn""]",Nested in pipe of lines 76 to 81,Random function

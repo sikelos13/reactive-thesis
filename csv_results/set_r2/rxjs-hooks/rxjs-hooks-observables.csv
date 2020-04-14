@@ -1,0 +1,11 @@
+Observable variable/alias used,Times Used,Line start,Line end,Filename
+Observable,1,179,179,/Users/stefanosathanasoulias/thesis-projects-container/projects/rxjs-hooks-master/src/__test__/use-event-callback.spec.tsx
+Observable,1,179,179,/Users/stefanosathanasoulias/thesis-projects-container/projects/rxjs-hooks-master/src/__test__/use-event-callback.spec.tsx
+Observable,1,57,57,/Users/stefanosathanasoulias/thesis-projects-container/projects/rxjs-hooks-master/src/__test__/use-observable.spec.tsx
+Observable,1,57,57,/Users/stefanosathanasoulias/thesis-projects-container/projects/rxjs-hooks-master/src/__test__/use-observable.spec.tsx
+Subject,1,81,81,/Users/stefanosathanasoulias/thesis-projects-container/projects/rxjs-hooks-master/src/__test__/use-observable.spec.tsx
+Subject,1,48,48,/Users/stefanosathanasoulias/thesis-projects-container/projects/rxjs-hooks-master/src/use-event-callback.ts
+BehaviorSubject,1,49,49,/Users/stefanosathanasoulias/thesis-projects-container/projects/rxjs-hooks-master/src/use-event-callback.ts
+BehaviorSubject,1,51,51,/Users/stefanosathanasoulias/thesis-projects-container/projects/rxjs-hooks-master/src/use-event-callback.ts
+BehaviorSubject,1,27,27,/Users/stefanosathanasoulias/thesis-projects-container/projects/rxjs-hooks-master/src/use-observable.ts
+BehaviorSubject,1,28,28,/Users/stefanosathanasoulias/thesis-projects-container/projects/rxjs-hooks-master/src/use-observable.ts

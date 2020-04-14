@@ -1,0 +1,29 @@
+Alias or name used,Line start,Line end,Filename,Nested Operators,Pipe is nested to,Initializing Pipeline
+Pipe as argument,24,24,product-category.service.ts,"[""mergeMap"",""tap"",""catchError""]",Nested in object or function,Random function
+Pipe as argument,18,18,product-detail.component.ts,"[""tap"",""catchError""]",Nested in object or function,Random function
+Pipe as argument,25,25,product-detail.component.ts,"[""map""]",Nested in object or function,combineLatest
+Pipe as argument,17,17,product-list.component.ts,"[""catchError""]",Nested in object or function,Random function
+Pipe as argument,37,37,product.service.ts,"[""tap"",""shareReplay"",""catchError""]",Nested in object or function,Random function
+Pipe as argument,58,58,product.service.ts,"[""map"",""shareReplay""]",Nested in object or function,Random function
+Pipe as argument,78,78,product.service.ts,"[""map"",""tap"",""shareReplay""]",Nested in object or function,Random function
+Pipe as argument,91,91,product.service.ts,"[""filter"",""switchMap""]",Nested in object or function,Random function
+Pipe as argument,143,143,product.service.ts,"[""map"",""tap"",""catchError""]",Nested in object or function,Random function
+Pipe as argument,20,20,supplier.service.ts,"[""tap"",""catchError""]",Nested in object or function,Random function
+Pipe as argument,35,35,supplier.service.ts,"[""tap"",""catchError""]",Nested in object or function,forkJoin
+Pipe as argument,45,45,supplier.service.ts,"[""tap"",""catchError""]",Nested in object or function,Random function
+Pipe as argument,18,18,product-category.service.ts,"[""tap"",""catchError""]",Nested in object or function,Random function
+Pipe as argument,18,18,product-detail.component.ts,"[""catchError""]",Nested in object or function,Random function
+Pipe as argument,26,26,product-detail.component.ts,"[""map""]",Nested in object or function,Random function
+Pipe as argument,32,32,product-detail.component.ts,"[""catchError""]",Nested in object or function,Random function
+Pipe as argument,44,44,product-detail.component.ts,"[""filter"",""map""]",Nested in object or function,Random function
+Pipe as argument,20,20,product-list.component.ts,"[""catchError""]",Nested in object or function,Random function
+Pipe as argument,31,31,product-list.component.ts,"[""map""]",Nested in object or function,combineLatest
+Pipe as argument,23,23,product.service.ts,"[""tap"",""catchError""]",Nested in object or function,Random function
+Pipe as argument,35,35,product.service.ts,"[""map"",""shareReplay""]",Nested in object or function,Random function
+Pipe as argument,58,58,product.service.ts,"[""map"",""tap"",""shareReplay"",""catchError""]",Nested in object or function,Random function
+Pipe as argument,70,70,product.service.ts,"[""map""]",Nested in object or function,Random function
+Pipe as argument,16,16,supplier.service.ts,"[""tap"",""shareReplay"",""catchError""]",Nested in object or function,Random function
+Pipe as argument,23,23,supplier.service.ts,"[""map""]",Nested in object or function,of
+Pipe as argument,29,29,supplier.service.ts,"[""tap"",""concatMap""]",Nested in object or function,of
+Pipe as argument,35,35,supplier.service.ts,"[""tap"",""mergeMap""]",Nested in object or function,of
+Pipe as argument,41,41,supplier.service.ts,"[""tap"",""switchMap""]",Nested in object or function,of

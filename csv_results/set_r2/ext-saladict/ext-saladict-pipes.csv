@@ -1,0 +1,82 @@
+Alias or name used,Line start,Line end,Filename,Nested Operators,Pipe is nested to,Initializing Pipeline
+Pipe as argument,268,268,browser-api.ts,"[""map""]",Nested in object or function,fromEventPattern
+Pipe as argument,413,413,browser-api.ts,"[""map""]",Nested in object or function,Random function
+Pipe as argument,36,36,config-manager.ts,"[""map""]",Nested in object or function,concat
+Pipe as argument,294,294,browser-api.ts,"[""filter"",""map""]",Nested in object or function,fromEventPattern
+Pipe as argument,452,452,browser-api.ts,"[""map""]",Nested in object or function,Random function
+Pipe as argument,105,105,config-manager.ts,"[""map""]",Nested in object or function,fromEventPattern
+Pipe as argument,31,31,observables.ts,"[""filter"",""map""]",Nested in object or function,Random function
+Pipe as argument,48,48,observables.ts,"[""switchMap""]",Nested in object or function,Random function
+Pipe as argument,50,50,observables.ts,"[""delay""]",Nested in object or function,Random function
+Pipe as argument,58,58,observables.ts,"[""map"",""debounceTime""]",Nested in object or function,Random function
+Pipe as argument,73,73,observables.ts,"[""mergeMap""]",Nested in object or function,Random function
+Pipe as argument,75,75,observables.ts,"[""takeUntil""]",Nested in object or function,from
+Pipe as argument,76,76,observables.ts,"[""filter""]",Nested in object or function,Random function
+Pipe as argument,305,305,profile-manager.ts,"[""map""]",Nested in object or function,fromEventPattern
+Pipe as argument,319,319,profile-manager.ts,"[""map""]",Nested in object or function,fromEventPattern
+Pipe as argument,19,19,badge.ts,[],Nested in object or function,Random function
+Pipe,47,47,context-menus.ts,"[""distinctUntilChanged"",""filter""]",,Random function
+Pipe,51,51,context-menus.ts,"[""concatMap""]",Nested in pipe of lines 47 to 47,combineLatest
+Pipe as argument,36,36,i18n-manager.ts,"[""switchMap""]",Nested in object or function,Random function
+Pipe as argument,55,55,helpers.ts,"[""map""]",Nested in object or function,Random function
+Pipe as argument,56,56,helpers.ts,"[""filter"",""distinctUntilChanged""]",Nested in object or function,Random function
+Pipe as argument,44,44,AntdRoot.tsx,"[""distinctUntilChanged"",""map"",""startWith""]",Nested in object or function,
+Pipe as argument,414,414,helpers.ts,"[""map"",""debounceTime"",""tap""]",Nested in object or function,Random function
+Pipe as argument,42,42,MachineTrans.tsx,"[""debounce""]",Nested in object or function,Random function
+Pipe as argument,88,88,index.tsx,"[""debounceTime"",""switchMap""]",Nested in object or function,Random function
+Pipe as argument,96,96,index.tsx,"[""startWith""]",Nested in object or function,from
+Pipe as argument,78,78,MenuBar.tsx,"[""debounceTime"",""map""]",Nested in object or function,combineLatest
+Pipe,54,54,Profiles.tsx,"[""debounceTime""]",,Random function
+Pipe as argument,55,55,SearchBox.tsx,"[""filter""]",Nested in object or function,Random function
+Pipe as argument,59,59,SearchBox.tsx,"[""map"",""distinctUntilChanged""]",Nested in object or function,combineLatest
+Pipe as argument,42,42,Suggest.tsx,"[""map"",""filter"",""distinctUntilChanged"",""debounceTime"",""switchMap"",""startWith""]",Nested in object or function,Random function
+Pipe as argument,55,55,Suggest.tsx,"[""map"",""startWith""]",Nested in object or function,from
+Pipe as argument,121,121,MtaBox.tsx,"[""switchMap""]",Nested in object or function,Random function
+Pipe as argument,124,124,MtaBox.tsx,"[""mapTo"",""startWith""]",Nested in object or function,Random function
+Pipe as argument,78,78,Notes.tsx,"[""debounceTime"",""withLatestFrom"",""switchMap"",""startWith""]",Nested in object or function,Random function
+Pipe as argument,100,100,Notes.tsx,"[""withLatestFrom"",""switchMap""]",Nested in object or function,Random function
+Pipe as argument,50,50,create.ts,"[""map"",""distinctUntilChanged""]",Nested in object or function,Random function
+Pipe as argument,18,18,index.ts,"[""map""]",Nested in object or function,Random function
+Pipe as argument,31,31,index.ts,"[""ofType"",""mergeMap""]",Nested in object or function,Random function
+Pipe as argument,96,96,index.ts,"[""filter"",""mapTo""]",Nested in object or function,Random function
+Pipe,12,54,newSelection.epic.ts,"[""switchMap""]",,Random function
+Pipe,26,136,searchStart.epic.ts,"[""switchMap""]",,Random function
+Pipe,74,74,searchStart.epic.ts,"[""share""]",,Random function
+Pipe,114,114,searchStart.epic.ts,"[""filter"",""take"",""tap"",""switchMapTo""]",,Random function
+Pipe,118,118,searchStart.epic.ts,"[""map""]",Nested in pipe of lines 114 to 114,Random function
+Pipe,126,126,searchStart.epic.ts,"[""map""]",Nested in pipe of lines 114 to 114,Random function
+Pipe as argument,36,36,index.tsx,"[""distinctUntilChanged"",""debounceTime"",""scan""]",Nested in object or function,
+Pipe as argument,21,21,index.tsx,"[""switchMap""]",Nested in object or function,Random function
+Pipe as argument,22,22,index.tsx,"[""delay""]",Nested in object or function,of
+Pipe as argument,92,92,index.tsx,"[""map"",""startWith"",""distinctUntilChanged""]",Nested in object or function,
+Pipe,12,12,data.ts,"[""publishReplay""]",,Random function
+Pipe,15,15,data.ts,"[""publishReplay""]",,Random function
+Pipe,19,19,data.ts,"[""publishReplay""]",,Random function
+Pipe,56,56,upload.ts,"[""withLatestFrom"",""switchMap"",""share""]",,Random function
+Pipe,54,54,upload.ts,"[""startWith""]",Nested in pipe of lines 56 to 56,Random function
+Pipe as argument,23,23,index.tsx,"[""filter""]",Nested in object or function,combineLatest
+Pipe as argument,33,33,helper.ts,"[""distinctUntilChanged"",""filter""]",Nested in object or function,Random function
+Pipe,30,30,index.ts,"[""map"",""share""]",,
+Pipe as argument,86,86,index.ts,"[""switchMap""]",Nested in object or function,
+Pipe as argument,90,90,index.ts,"[""switchMap""]",Nested in object or function,
+Pipe as argument,109,109,index.ts,"[""switchMap""]",Nested in object or function,
+Pipe,30,30,instant-capture.ts,"[""pluck"",""startWith""]",,Random function
+Pipe,37,37,instant-capture.ts,"[""pluck""]",Nested in pipe of lines 30 to 30,Random function
+Pipe,40,40,instant-capture.ts,"[""map"",""startWith""]",,Random function
+Pipe,43,43,instant-capture.ts,"[""switchMap"",""map"",""filter"",""distinctUntilChanged""]",Nested in pipe of lines 40 to 40,Random function
+Pipe,64,64,instant-capture.ts,"[""map""]",Nested in pipe of lines 40 to 40,Random function
+Pipe,85,85,instant-capture.ts,"[""debounce""]",Nested in pipe of lines 40 to 40,Random function
+Pipe as argument,19,19,quick-search.ts,"[""buffer"",""filter""]",Nested in object or function,Random function
+Pipe,46,46,select-text.ts,"[""filter""]",,Random function
+Pipe,49,49,select-text.ts,"[""map""]",,Random function
+Pipe,55,55,select-text.ts,"[""filter""]",,Random function
+Pipe,58,58,select-text.ts,"[""map""]",,Random function
+Pipe,74,74,select-text.ts,"[""withLatestFrom"",""debounce"",""map"",""filter"",""withLatestFrom"",""map"",""throttle""]",Nested in pipe of lines 58 to 58,Random function
+Pipe,164,164,select-text.ts,"[""filter""]",,Random function
+Pipe,168,168,select-text.ts,"[""filter""]",,Random function
+Pipe,175,175,select-text.ts,"[""filter"",""delay"",""withLatestFrom"",""filter"",""map"",""distinctUntilChanged""]",Nested in pipe of lines 168 to 168,Random function
+Pipe,237,237,select-text.ts,"[""filter""]",Nested in pipe of lines 168 to 168,Random function
+Pipe,244,244,select-text.ts,"[""switchMap""]",Nested in pipe of lines 168 to 168,Random function
+Pipe,253,253,select-text.ts,"[""withLatestFrom"",""filter"",""map"",""delay"",""withLatestFrom"",""map"",""distinctUntilChanged""]",Nested in pipe of lines 168 to 168,Random function
+Pipe,337,337,select-text.ts,"[""switchMap"",""scan""]",Nested in pipe of lines 168 to 168,Random function
+Pipe,339,339,select-text.ts,"[""mapTo"",""startWith""]",Nested in pipe of lines 168 to 168,Random function
