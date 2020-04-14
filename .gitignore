@@ -1,4 +1,5 @@
 node_modules/
-*.csv
 .idea/workspace.xml
 resultsArray.json
+coverage/
+.idea/
