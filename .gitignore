@@ -2,4 +2,5 @@ node_modules/
 .idea/workspace.xml
 resultsArray.json
 coverage/
-.idea/
+/.idea
+/coverage
