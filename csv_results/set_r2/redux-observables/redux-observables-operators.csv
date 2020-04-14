@@ -1,0 +1,8 @@
+Alias or name used,Line,Filename
+observeOn,57,/Users/stefanosathanasoulias/thesis-projects-container/projects/redux-observable-master/src/createEpicMiddleware.ts
+observeOn,59,/Users/stefanosathanasoulias/thesis-projects-container/projects/redux-observable-master/src/createEpicMiddleware.ts
+map,64,/Users/stefanosathanasoulias/thesis-projects-container/projects/redux-observable-master/src/createEpicMiddleware.ts
+mergeMap,76,/Users/stefanosathanasoulias/thesis-projects-container/projects/redux-observable-master/src/createEpicMiddleware.ts
+subscribeOn,78,/Users/stefanosathanasoulias/thesis-projects-container/projects/redux-observable-master/src/createEpicMiddleware.ts
+observeOn,79,/Users/stefanosathanasoulias/thesis-projects-container/projects/redux-observable-master/src/createEpicMiddleware.ts
+filter,35,/Users/stefanosathanasoulias/thesis-projects-container/projects/redux-observable-master/src/operators.ts

@@ -1,0 +1,17 @@
+Observable variable/alias used,Times Used,Line start,Line end,Filename
+Subject,1,28,28,/Users/stefanosathanasoulias/thesis-projects-container/projects/angularfire-lite-master/src/auth/auth.service.ts
+Subject,1,42,42,/Users/stefanosathanasoulias/thesis-projects-container/projects/angularfire-lite-master/src/auth/auth.service.ts
+Subject,1,50,50,/Users/stefanosathanasoulias/thesis-projects-container/projects/angularfire-lite-master/src/auth/auth.service.ts
+Subject,1,59,59,/Users/stefanosathanasoulias/thesis-projects-container/projects/angularfire-lite-master/src/auth/auth.service.ts
+Subject,1,73,73,/Users/stefanosathanasoulias/thesis-projects-container/projects/angularfire-lite-master/src/auth/auth.service.ts
+Subject,1,100,100,/Users/stefanosathanasoulias/thesis-projects-container/projects/angularfire-lite-master/src/auth/auth.service.ts
+BehaviorSubject,1,226,226,/Users/stefanosathanasoulias/thesis-projects-container/projects/angularfire-lite-master/src/database/database.service.ts
+BehaviorSubject,1,239,239,/Users/stefanosathanasoulias/thesis-projects-container/projects/angularfire-lite-master/src/database/database.service.ts
+BehaviorSubject,1,271,271,/Users/stefanosathanasoulias/thesis-projects-container/projects/angularfire-lite-master/src/database/database.service.ts
+BehaviorSubject,1,82,82,/Users/stefanosathanasoulias/thesis-projects-container/projects/angularfire-lite-master/src/firestore/firestore.service.ts
+BehaviorSubject,1,321,321,/Users/stefanosathanasoulias/thesis-projects-container/projects/angularfire-lite-master/src/firestore/firestore.service.ts
+BehaviorSubject,1,341,341,/Users/stefanosathanasoulias/thesis-projects-container/projects/angularfire-lite-master/src/firestore/firestore.service.ts
+Subject,1,382,382,/Users/stefanosathanasoulias/thesis-projects-container/projects/angularfire-lite-master/src/firestore/firestore.service.ts
+Subject,1,410,410,/Users/stefanosathanasoulias/thesis-projects-container/projects/angularfire-lite-master/src/firestore/firestore.service.ts
+Subject,1,36,36,/Users/stefanosathanasoulias/thesis-projects-container/projects/angularfire-lite-master/src/messaging/messaging.service.ts
+Subject,1,57,57,/Users/stefanosathanasoulias/thesis-projects-container/projects/angularfire-lite-master/src/storage/storage.service.ts

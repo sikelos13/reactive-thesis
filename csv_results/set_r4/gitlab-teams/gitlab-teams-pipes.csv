@@ -1,0 +1,32 @@
+Alias or name used,Line start,Line end,Filename,Nested Operators,Pipe is nested to,Initializing Pipeline
+Pipe,36,36,api.js,"[""switchMap""]",,Random function
+Pipe,38,38,api.js,"[""share""]",,Random function
+Pipe,42,42,api.js,"[""pluck"",""take"",""flatMap""]",,Random function
+Pipe,46,46,api.js,"[""pluck"",""map""]",,Random function
+Pipe,48,48,api.js,"[""pluck""]",,Random function
+Pipe,51,51,api.js,"[""pluck"",""take""]",,Random function
+Pipe,59,59,api.js,"[""flatMap"",""distinct""]",,combineLatest
+Pipe,64,64,api.js,"[""pairwise"",""map"",""flatMap""]",,Random function
+Pipe,69,69,api.js,"[""pairwise"",""map"",""flatMap""]",,Random function
+Pipe,110,110,api.js,"[""switchMap"",""pluck""]",,Random function
+Pipe,116,116,api.js,"[""flatMap"",""distinct""]",,Random function
+Pipe,123,123,api.js,"[""share""]",,Random function
+Pipe,137,137,api.js,"[""startWith"",""distinctUntilChanged"",""skip"",""filter""]",,Random function
+Pipe,179,179,api.js,"[""switchMap"",""pluck""]",Nested in pipe of lines 137 to 137,Random function
+Pipe,186,186,api.js,"[""switchMap"",""pluck""]",Nested in pipe of lines 137 to 137,Random function
+Pipe,201,201,api.js,"[""switchMap""]",,Random function
+Pipe,204,204,api.js,"[""share""]",,Random function
+Pipe,209,209,api.js,"[""pluck"",""flatMap"",""distinct""]",,Random function
+Pipe,214,214,api.js,"[""pluck"",""map""]",,Random function
+Pipe,231,231,api.js,"[""switchMap""]",,Random function
+Pipe,234,234,api.js,"[""share""]",,Random function
+Pipe,239,239,api.js,"[""pluck"",""flatMap"",""distinct""]",,Random function
+Pipe,244,244,api.js,"[""pluck"",""map""]",,Random function
+Pipe,261,261,api.js,"[""switchMap""]",,Random function
+Pipe,264,264,api.js,"[""share""]",,Random function
+Pipe,269,269,api.js,"[""pluck"",""flatMap"",""distinct""]",,Random function
+Pipe,274,274,api.js,"[""pluck"",""map""]",,Random function
+Pipe,296,296,api.js,"[""switchMap""]",,Random function
+Pipe,299,299,api.js,"[""share""]",,Random function
+Pipe,304,304,api.js,"[""pluck"",""flatMap"",""distinct""]",,Random function
+Pipe,309,309,api.js,"[""pluck"",""map""]",,Random function

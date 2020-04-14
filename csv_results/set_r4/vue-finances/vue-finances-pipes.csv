@@ -1,0 +1,4 @@
+Alias or name used,Line start,Line end,Filename,Nested Operators,Pipe is nested to,Initializing Pipeline
+Pipe as argument,13,13,accounts-service.js,"[""map""]",Nested in object or function,from
+Pipe as argument,14,14,categories-service.js,"[""map""]",Nested in object or function,from
+Pipe as argument,85,85,records-service.js,"[""map""]",Nested in object or function,from

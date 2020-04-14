@@ -1,0 +1,4 @@
+Alias or name used,Line start,Line end,Filename,Nested Operators,Pipe is nested to,Initializing Pipeline
+Pipe,74,80,data-stream.js,"[""scan""]",,Random function
+Pipe as argument,201,201,data-stream.test.js,"[""groupBy""]",Nested in object or function,Random function
+Pipe as argument,259,259,data-stream.test.js,"[""groupBy""]",Nested in object or function,Random function

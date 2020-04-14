@@ -1,0 +1,12 @@
+Alias or name used,Line start,Line end,Filename,Nested Operators,Pipe is nested to,Initializing Pipeline
+Pipe as argument,50,50,Session.ts,[],Nested in object or function,
+Pipe as argument,51,51,Session.ts,[],Nested in object or function,
+Pipe,128,140,SessionsStore.ts,"[""auditTime"",""flatMap""]",,
+Pipe as argument,129,129,SessionsStore.ts,"[""flatMap"",""catchError""]",Nested in object or function,
+Pipe as argument,144,144,SessionsStore.ts,"[""auditTime"",""flatMap""]",Nested in object or function,
+Pipe as argument,148,148,SessionsStore.ts,"[""filter"",""flatMap"",""catchError""]",Nested in object or function,
+Pipe,160,176,SessionsStore.ts,"[""flatMap""]",,
+Pipe as argument,167,167,SessionsStore.ts,"[""flatMap"",""catchError""]",Nested in object or function,
+Pipe,190,190,SessionsStore.ts,"[""flatMap"",""catchError""]",,
+Pipe as argument,183,183,SessionsStore.ts,"[""flatMap""]",Nested in object or function,
+Pipe,196,223,SessionsStore.ts,"[""flatMap""]",,

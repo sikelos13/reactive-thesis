@@ -1,0 +1,7 @@
+Alias or name used,Line,Filename
+delay,48,/Users/stefanosathanasoulias/thesis-projects-container/projects/rxjs-websockets-master/src/index.spec.ts
+switchMap,49,/Users/stefanosathanasoulias/thesis-projects-container/projects/rxjs-websockets-master/src/index.spec.ts
+switchMap,51,/Users/stefanosathanasoulias/thesis-projects-container/projects/rxjs-websockets-master/src/index.spec.ts
+switchMap,75,/Users/stefanosathanasoulias/thesis-projects-container/projects/rxjs-websockets-master/src/index.spec.ts
+switchMap,89,/Users/stefanosathanasoulias/thesis-projects-container/projects/rxjs-websockets-master/src/index.spec.ts
+catchError,91,/Users/stefanosathanasoulias/thesis-projects-container/projects/rxjs-websockets-master/src/index.spec.ts

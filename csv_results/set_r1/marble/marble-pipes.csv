@@ -1,0 +1,314 @@
+Alias or name used,Line start,Line end,Filename,Nested Operators,Pipe is nested to,Initializing Pipeline
+Pipe,10,12,middlewares.js,[],,
+Pipe as argument,10,10,middlewares.js,[],Nested in object or function,
+Pipe as argument,12,12,routing.js,[],Nested in object or function,
+Pipe as argument,15,15,routing.js,[],Nested in object or function,
+Pipe as argument,23,23,routing.js,[],Nested in object or function,
+Pipe as argument,26,26,routing.js,[],Nested in object or function,
+Pipe as argument,13,13,eventbus.effects.ts,[],Nested in object or function,Random function
+Pipe as argument,15,15,eventbus.effects.ts,"[""map"",""tap"",""delay"",""map""]",Nested in object or function,of
+Pipe as argument,27,27,eventbus.effects.ts,[],Nested in object or function,Random function
+Pipe as argument,29,29,eventbus.effects.ts,"[""map"",""tap"",""delay"",""map""]",Nested in object or function,of
+Pipe,16,25,http.effects.ts,[null],,
+Pipe as argument,19,19,http.effects.ts,"[""map"",""tap"",""mapTo""]",Nested in object or function,
+Pipe,20,25,api.effects.ts,"[null,null]",,Random function
+Pipe,20,20,api.effects.ts,"[""use"",""map"",""map"",""map""]",Nested in pipe of lines 20 to 25,Random function
+Pipe,30,34,api.effects.ts,[null],,Random function
+Pipe,30,30,api.effects.ts,"[""mergeMap""]",Nested in pipe of lines 30 to 34,Random function
+Pipe,39,43,api.effects.ts,[],,Random function
+Pipe,39,39,api.effects.ts,"[""mergeMap""]",Nested in pipe of lines 39 to 43,Random function
+Pipe,20,34,static.effects.ts,"[null,null]",,
+Pipe as argument,22,22,static.effects.ts,"[""use"",""map""]",Nested in object or function,
+Pipe,39,47,static.effects.ts,[],,
+Pipe as argument,41,41,static.effects.ts,"[""map"",""map"",""map""]",Nested in object or function,
+Pipe,52,60,static.effects.ts,[],,
+Pipe as argument,54,54,static.effects.ts,"[""map"",""mergeMap"",""map""]",Nested in object or function,
+Pipe,22,28,user.effects.ts,"[null,null]",,Random function
+Pipe,24,24,user.effects.ts,"[""mergeMap"",""map""]",Nested in pipe of lines 22 to 28,Random function
+Pipe,33,48,user.effects.ts,"[null,null,null]",,Random function
+Pipe,35,35,user.effects.ts,"[""map"",""mergeMap"",""map""]",Nested in pipe of lines 33 to 48,Random function
+Pipe,40,40,user.effects.ts,"[""catchError""]",Nested in pipe of lines 33 to 48,Random function
+Pipe,54,70,user.effects.ts,[],,Random function
+Pipe,56,56,user.effects.ts,"[""bufferCount"",""mergeMap""]",Nested in pipe of lines 54 to 70,Random function
+Pipe,58,58,user.effects.ts,"[""mergeMap""]",Nested in pipe of lines 54 to 70,Random function
+Pipe,59,59,user.effects.ts,"[""map"",""switchMap"",""map"",""catchError""]",Nested in pipe of lines 54 to 70,of
+Pipe,75,83,user.effects.ts,[],,Random function
+Pipe,77,77,user.effects.ts,"[""map"",""mergeMap"",""map""]",Nested in pipe of lines 75 to 83,Random function
+Pipe,8,12,auth.middleware.ts,"[""switchMap""]",,Random function
+Pipe,37,44,client.ts,[null],,Random function
+Pipe,40,40,client.ts,"[""mergeMap"",""mapTo""]",Nested in pipe of lines 37 to 44,Random function
+Pipe,50,57,client.ts,[],,Random function
+Pipe,53,53,client.ts,"[""mergeMap"",""mapTo""]",Nested in pipe of lines 50 to 57,Random function
+Pipe,63,70,client.ts,"[null,null,null]",,Random function
+Pipe,66,66,client.ts,"[""mergeMap"",""mapTo""]",Nested in pipe of lines 63 to 70,Random function
+Pipe,76,91,client.ts,[],,Random function
+Pipe,79,79,client.ts,"[""use"",""map"",""mergeMap"",""map""]",Nested in pipe of lines 76 to 91,Random function
+Pipe,16,21,server.ts,"[""mergeMap""]",,Random function
+Pipe,16,16,server.ts,"[""tap"",""map"",""map"",""catchError""]",Nested in pipe of lines 16 to 21,of
+Pipe,28,28,server.ts,"[""matchEvent"",""bufferCount"",""mapTo""]",,Random function
+Pipe,34,37,server.ts,"[""matchEvent"",""mergeMap""]",,Random function
+Pipe,34,34,server.ts,"[""delay"",""mapTo""]",Nested in pipe of lines 34 to 37,of
+Pipe,43,43,server.ts,"[""matchEvent"",""tap""]",,Random function
+Pipe,25,32,http.server.ts,"[null,null,null]",,Random function
+Pipe,28,28,http.server.ts,"[""tap"",""map""]",Nested in pipe of lines 25 to 32,Random function
+Pipe,37,40,http.server.ts,"[""matchEvent"",""mapToServer""]",,Random function
+Pipe,15,15,websockets.server.ts,[],,Random function
+Pipe,24,24,websockets.server.ts,"[""matchEvent"",""use"",""buffer"",""map"",""map""]",,Random function
+Pipe,30,30,websockets.server.ts,"[""matchEvent"",""mergeMap""]",,Random function
+Pipe,35,39,websockets.server.ts,"[""mergeMap""]",,Random function
+Pipe,93,93,http.helper.ts,"[""delay"",""tap"",""mapTo""]",,Random function
+Pipe as argument,undefined,undefined,any.util.ts,[],Nested in object or function,
+Pipe as argument,undefined,undefined,any.util.ts,[],Nested in object or function,
+Pipe,undefined,undefined,any.util.ts,[],,
+Pipe as argument,undefined,undefined,http.util.ts,[],Nested in object or function,
+Pipe as argument,undefined,undefined,http.util.ts,[],Nested in object or function,
+Pipe as argument,undefined,undefined,http.util.ts,[],Nested in object or function,
+Pipe as argument,undefined,undefined,array.util.spec.ts,[],Nested in object or function,
+Pipe as argument,undefined,undefined,array.util.spec.ts,[],Nested in object or function,
+Pipe as argument,undefined,undefined,stream.util.ts,[],Nested in object or function,
+Pipe as argument,undefined,undefined,context.factory.ts,[],Nested in object or function,
+Pipe as argument,undefined,undefined,context.factory.ts,[],Nested in object or function,
+Pipe,undefined,undefined,context.factory.ts,[],,
+Pipe as argument,undefined,undefined,context.hook.ts,[],Nested in object or function,
+Pipe as argument,undefined,undefined,context.hook.ts,[],Nested in object or function,
+Pipe,undefined,undefined,context.hook.ts,[],,
+Pipe as argument,undefined,undefined,context.reader.factory.ts,[],Nested in object or function,
+Pipe as argument,undefined,undefined,context.reader.factory.ts,[],Nested in object or function,
+Pipe,undefined,undefined,context.reader.factory.ts,[],,
+Pipe as argument,undefined,undefined,context.factory.spec.ts,[],Nested in object or function,
+Pipe as argument,undefined,undefined,context.factory.spec.ts,[],Nested in object or function,
+Pipe as argument,undefined,undefined,context.factory.spec.ts,[],Nested in object or function,
+Pipe as argument,undefined,undefined,context.factory.spec.ts,[],Nested in object or function,
+Pipe as argument,undefined,undefined,context.factory.spec.ts,[],Nested in object or function,
+Pipe,10,10,effects.combiner.spec.ts,"[""tap""]",,Random function
+Pipe,11,11,effects.combiner.spec.ts,"[""tap""]",,Random function
+Pipe,12,12,effects.combiner.spec.ts,"[""tap""]",,Random function
+Pipe,43,43,effects.combiner.spec.ts,"[""filter"",""mapTo""]",,Random function
+Pipe,44,44,effects.combiner.spec.ts,"[""filter"",""mapTo""]",,Random function
+Pipe,45,45,effects.combiner.spec.ts,"[""filter"",""mapTo""]",,Random function
+Pipe as argument,11,11,http.effects.ts,"[""matchEvent"",""map"",""tap""]",Nested in object or function,
+Pipe as argument,26,26,http.effects.ts,"[""matchEvent"",""map"",""tap""]",Nested in object or function,
+Pipe as argument,41,41,http.effects.ts,"[""matchEvent"",""map"",""tap""]",Nested in object or function,
+Pipe,23,23,http.effects.factory.spec.ts,"[""mapTo""]",,
+Pipe,33,37,http.error.effect.ts,"[""map""]",,
+Pipe as argument,undefined,undefined,http.responseHandler.ts,[],Nested in object or function,
+Pipe as argument,undefined,undefined,http.responseHandler.ts,[],Nested in object or function,
+Pipe as argument,38,38,http.responseHandler.ts,[],Nested in object or function,Random function
+Pipe as argument,55,55,http.server.ts,"[""takeWhile""]",Nested in object or function,Random function
+Pipe as argument,106,106,http.server.factory.spec.ts,"[""filter"",""take""]",Nested in object or function,forkJoin
+Pipe as argument,107,107,http.server.factory.spec.ts,"[""filter"",""take""]",Nested in object or function,forkJoin
+Pipe as argument,108,108,http.server.factory.spec.ts,"[""filter"",""take""]",Nested in object or function,forkJoin
+Pipe as argument,109,109,http.server.factory.spec.ts,"[""filter"",""take""]",Nested in object or function,forkJoin
+Pipe as argument,110,110,http.server.factory.spec.ts,"[""filter"",""take""]",Nested in object or function,forkJoin
+Pipe as argument,111,111,http.server.factory.spec.ts,"[""filter"",""take""]",Nested in object or function,forkJoin
+Pipe as argument,112,112,http.server.factory.spec.ts,"[""filter"",""take""]",Nested in object or function,forkJoin
+Pipe as argument,113,113,http.server.factory.spec.ts,"[""filter"",""take""]",Nested in object or function,forkJoin
+Pipe as argument,114,114,http.server.factory.spec.ts,"[""filter"",""take""]",Nested in object or function,forkJoin
+Pipe as argument,115,115,http.server.factory.spec.ts,"[""tap""]",Nested in object or function,forkJoin
+Pipe as argument,undefined,undefined,logger.ts,[],Nested in object or function,
+Pipe as argument,undefined,undefined,logger.ts,[],Nested in object or function,
+Pipe,undefined,undefined,logger.ts,[],,
+Pipe,19,19,act.operator.spec.ts,"[""act""]",,Random function
+Pipe,39,43,act.operator.spec.ts,[],,Random function
+Pipe,39,39,act.operator.spec.ts,"[""mergeMap""]",Nested in pipe of lines 39 to 43,Random function
+Pipe,63,65,act.operator.spec.ts,"[""act""]",,Random function
+Pipe,63,63,act.operator.spec.ts,"[""filter""]",Nested in pipe of lines 63 to 65,Random function
+Pipe,87,89,act.operator.spec.ts,[],,Random function
+Pipe,87,87,act.operator.spec.ts,"[""tap""]",Nested in pipe of lines 87 to 89,Random function
+Pipe,110,118,act.operator.spec.ts,"[""act""]",,Random function
+Pipe,111,111,act.operator.spec.ts,"[""tap""]",Nested in pipe of lines 110 to 118,Random function
+Pipe,139,147,act.operator.spec.ts,[],,Random function
+Pipe,140,140,act.operator.spec.ts,"[""tap""]",Nested in pipe of lines 139 to 147,Random function
+Pipe,168,176,act.operator.spec.ts,[],,Random function
+Pipe,169,169,act.operator.spec.ts,"[""tap""]",Nested in pipe of lines 168 to 176,Random function
+Pipe as argument,undefined,undefined,act.operator.ts,[],Nested in object or function,
+Pipe as argument,undefined,undefined,act.operator.ts,[],Nested in object or function,
+Pipe as argument,39,39,act.operator.ts,"[""mergeMap""]",Nested in object or function,Random function
+Pipe as argument,41,41,act.operator.ts,"[""catchError""]",Nested in object or function,Random function
+Pipe as argument,undefined,undefined,act.operator.ts,[],Nested in object or function,
+Pipe,21,21,matchEvent.operator.spec.ts,"[""matchEvent"",""mapTo""]",,Random function
+Pipe,43,43,matchEvent.operator.spec.ts,"[""matchEvent"",""mapTo""]",,Random function
+Pipe,63,63,matchEvent.operator.spec.ts,"[""matchEvent"",""map""]",,Random function
+Pipe,83,83,matchEvent.operator.spec.ts,"[""matchEvent"",""map""]",,Random function
+Pipe as argument,67,67,matchEvent.operator.ts,"[""filter""]",Nested in object or function,Random function
+Pipe,32,32,switchToProtocol.operator.spec.ts,"[""switchToProtocol""]",,
+Pipe,9,18,switchToProtocol.operator.ts,"[""mergeMap""]",,Random function
+Pipe,14,14,use.operator.spec.ts,"[""tap""]",,Random function
+Pipe,19,19,use.operator.spec.ts,"[""use"",""use""]",,Random function
+Pipe,35,35,use.operator.spec.ts,"[""tap""]",,Random function
+Pipe,40,40,use.operator.spec.ts,"[""tap""]",,Random function
+Pipe,45,45,use.operator.spec.ts,"[""tap""]",,Random function
+Pipe,51,51,use.operator.spec.ts,"[""map"",""tap""]",,Random function
+Pipe,64,69,use.operator.spec.ts,"[""use"",""use"",""use"",""use"",""tap"",""tap"",""tap"",""tap"",""map""]",,Random function
+Pipe,9,9,use.operator.ts,"[""mergeMap""]",,Random function
+Pipe as argument,undefined,undefined,messaging.client.ts,[],Nested in object or function,
+Pipe as argument,undefined,undefined,messaging.client.ts,[],Nested in object or function,
+Pipe as argument,73,73,messaging.client.ts,"[""timeout"",""map"",""mergeMap"",""take""]",Nested in object or function,Random function
+Pipe,89,89,messaging.client.ts,"[""take"",""mergeMap""]",,Random function
+Pipe as argument,undefined,undefined,messaging.client.ts,[],Nested in object or function,
+Pipe,17,17,messaging.eventBus.reader.spec.ts,"[""matchEvent"",""delay"",""map""]",,Random function
+Pipe,38,38,messaging.eventBus.reader.spec.ts,"[""matchEvent"",""use"",""delay"",""map""]",,Random function
+Pipe,46,46,messaging.eventBus.reader.spec.ts,"[""matchEvent"",""use"",""delay"",""map""]",,Random function
+Pipe,79,82,messaging.eventBus.reader.spec.ts,"[""act""]",,Random function
+Pipe,79,79,messaging.eventBus.reader.spec.ts,"[""use"",""delay""]",Nested in pipe of lines 79 to 82,of
+Pipe,122,122,messaging.eventBus.reader.spec.ts,"[""matchEvent"",""tap"",""ignoreElements""]",,Random function
+Pipe,138,144,messaging.eventBus.reader.spec.ts,[],,Random function
+Pipe,164,170,messaging.eventBus.reader.spec.ts,[],,Random function
+Pipe,190,190,messaging.eventBus.reader.spec.ts,[],,Random function
+Pipe as argument,undefined,undefined,messaging.eventBus.reader.ts,[],Nested in object or function,
+Pipe as argument,undefined,undefined,messaging.eventBus.reader.ts,[],Nested in object or function,
+Pipe,undefined,undefined,messaging.eventBus.reader.ts,[],,
+Pipe as argument,10,10,messaging.eventLogger.middleware.ts,"[""tap""]",Nested in object or function,
+Pipe as argument,30,30,messaging.eventLogger.middleware.ts,"[""tap""]",Nested in object or function,
+Pipe as argument,57,57,messaging.eventLogger.middleware.ts,"[""tap""]",Nested in object or function,
+Pipe as argument,25,25,messaging.statusLogger.middleware.ts,"[""matchEvent"",""map"",""distinctUntilChanged"",""filter"",""tap""]",Nested in object or function,
+Pipe as argument,43,43,messaging.statusLogger.middleware.ts,"[""matchEvent"",""map"",""distinctUntilChanged"",""filter"",""tap""]",Nested in object or function,
+Pipe as argument,61,61,messaging.statusLogger.middleware.ts,"[""matchEvent"",""map"",""tap""]",Nested in object or function,
+Pipe as argument,undefined,undefined,messaging.server.listener.ts,[],Nested in object or function,
+Pipe as argument,undefined,undefined,messaging.server.listener.ts,[],Nested in object or function,
+Pipe,40,40,messaging.server.listener.ts,"[""map""]",,Random function
+Pipe,83,83,messaging.server.listener.ts,"[""map"",""filter""]",Nested in pipe of lines 40 to 40,Random function
+Pipe,103,106,messaging.server.listener.ts,"[""catchError""]",,Random function
+Pipe,110,110,messaging.server.listener.ts,"[""takeUntil""]",Nested in pipe of lines 103 to 106,Random function
+Pipe,128,128,messaging.server.listener.ts,"[""takeUntil""]",Nested in pipe of lines 103 to 106,Random function
+Pipe,54,54,messaging.server.ts,"[""takeWhile""]",,Random function
+Pipe,67,67,messaging.server.ts,"[""takeUntil""]",Nested in pipe of lines 54 to 54,Random function
+Pipe,71,71,messaging.server.ts,"[""take""]",Nested in pipe of lines 54 to 54,Random function
+Pipe,75,75,messaging.server.ts,"[""takeUntil""]",Nested in pipe of lines 54 to 54,Random function
+Pipe,25,25,messaging.server.amqp.spec.ts,"[""matchEvent"",""delay"",""use"",""map""]",,Random function
+Pipe,65,65,messaging.server.amqp.spec.ts,"[""matchEvent"",""use"",""map"",""map"",""tap""]",,Random function
+Pipe,96,96,messaging.server.amqp.spec.ts,"[""use"",""map"",""tap""]",,Random function
+Pipe,114,114,messaging.server.amqp.spec.ts,"[""bufferCount""]",Nested in pipe of lines 96 to 96,Random function
+Pipe,130,130,messaging.server.amqp.spec.ts,"[""mergeMap""]",,Random function
+Pipe,136,136,messaging.server.amqp.spec.ts,"[""map""]",,Random function
+Pipe,142,142,messaging.server.amqp.spec.ts,"[""tap"",""map""]",,Random function
+Pipe,147,147,messaging.server.amqp.spec.ts,"[""tap""]",,Random function
+Pipe,34,34,messaging.server.redis.spec.ts,"[""matchEvent"",""use"",""map""]",,
+Pipe,58,64,messaging.server.redis.spec.ts,"[""matchEvent"",""use"",""map"",""map"",""tap""]",,
+Pipe,84,84,messaging.server.redis.spec.ts,"[""matchEvent"",""tap""]",,
+Pipe,90,97,messaging.server.redis.spec.ts,"[""map"",""tap""]",,
+Pipe,29,29,amqp.strategy.ts,"[""mapTo""]",,Random function
+Pipe,32,32,amqp.strategy.ts,"[""mapTo""]",,Random function
+Pipe,35,35,amqp.strategy.ts,"[""mapTo""]",,Random function
+Pipe,38,38,amqp.strategy.ts,"[""mapTo""]",,Random function
+Pipe,44,44,amqp.strategy.ts,"[""share"",""map""]",Nested in pipe of lines 38 to 38,Random function
+Pipe,63,63,amqp.strategy.ts,"[""first""]",Nested in pipe of lines 38 to 38,Random function
+Pipe,93,93,amqp.strategy.ts,"[""filter"",""take"",""mergeMap""]",Nested in pipe of lines 38 to 38,Random function
+Pipe,96,96,amqp.strategy.ts,"[""mapTo""]",Nested in pipe of lines 38 to 38,from
+Pipe as argument,undefined,undefined,local.strategy.provider.ts,[],Nested in object or function,
+Pipe as argument,undefined,undefined,local.strategy.provider.ts,[],Nested in object or function,
+Pipe as argument,undefined,undefined,local.strategy.provider.ts,[],Nested in object or function,
+Pipe as argument,21,21,local.strategy.ts,"[""share""]",Nested in object or function,Random function
+Pipe as argument,27,27,local.strategy.ts,"[""share""]",Nested in object or function,Random function
+Pipe as argument,33,33,local.strategy.ts,"[""share""]",Nested in object or function,Random function
+Pipe as argument,60,60,local.strategy.ts,"[""take""]",Nested in object or function,Random function
+Pipe,27,27,redis.strategy.ts,"[""mapTo""]",,merge
+Pipe,30,30,redis.strategy.ts,"[""mapTo""]",,merge
+Pipe,33,33,redis.strategy.ts,"[""mapTo""]",,merge
+Pipe,36,36,redis.strategy.ts,"[""mapTo""]",,merge
+Pipe,54,54,redis.strategy.ts,"[""map""]",Nested in pipe of lines 36 to 36,Random function
+Pipe,84,84,redis.strategy.ts,"[""take"",""map""]",Nested in pipe of lines 36 to 36,Random function
+Pipe,20,36,body.middleware.ts,"[""mergeMap""]",,Random function
+Pipe,26,26,body.middleware.ts,"[""mergeMap"",""map"",""tap"",""mapTo"",""catchError""]",Nested in pipe of lines 20 to 36,iif
+Pipe,19,19,body.util.ts,"[""toArray"",""map""]",,
+Pipe as argument,9,9,bodyParser.integration.ts,"[""map""]",Nested in object or function,
+Pipe as argument,28,28,middleware.ts,"[""mergeMap""]",Nested in object or function,Random function
+Pipe as argument,12,12,io.event.middleware.ts,"[""mergeMap""]",Nested in object or function,Random function
+Pipe as argument,13,13,io.event.middleware.ts,"[""map"",""catchError""]",Nested in object or function,Random function
+Pipe as argument,25,25,io.middleware.ts,"[""map"",""map"",""map""]",Nested in object or function,Random function
+Pipe as argument,undefined,undefined,io.reporter.ts,[],Nested in object or function,
+Pipe as argument,undefined,undefined,io.reporter.ts,[],Nested in object or function,
+Pipe,undefined,undefined,io.reporter.ts,[],,
+Pipe as argument,44,44,io.request.middleware.ts,"[""tap"",""mergeMap""]",Nested in object or function,Random function
+Pipe as argument,59,59,io.request.middleware.ts,"[""map"",""catchError""]",Nested in object or function,Random function
+Pipe as argument,undefined,undefined,io.json-schema.spec.ts,[],Nested in object or function,
+Pipe as argument,undefined,undefined,io.json-schema.spec.ts,[],Nested in object or function,
+Pipe as argument,undefined,undefined,io.json-schema.spec.ts,[],Nested in object or function,
+Pipe as argument,15,15,io-http.integration.ts,"[""use"",""map""]",Nested in object or function,
+Pipe,15,15,io-ws.integration.ts,"[""matchEvent"",""use"",""map""]",,
+Pipe,25,25,validator.middleware.ts,"[""mergeMap"",""toArray"",""mapTo""]",,Random function
+Pipe,13,13,validator.middleware.ts,"[""flatMap"",""map""]",Nested in pipe of lines 25 to 25,Random function
+Pipe,15,15,validator.middleware.ts,"[""catchError""]",Nested in pipe of lines 25 to 25,Random function
+Pipe,47,47,validator.middleware.ts,"[""switchMap"",""map""]",Nested in pipe of lines 25 to 25,Random function
+Pipe as argument,10,10,api.spec-util.ts,"[""use"",""map"",""map""]",Nested in object or function,
+Pipe as argument,22,22,api.spec-util.ts,"[""use"",""map"",""map""]",Nested in object or function,
+Pipe as argument,36,36,api.spec-util.ts,"[""use"",""map""]",Nested in object or function,
+Pipe as argument,48,48,api.spec-util.ts,"[""use"",""map"",""map""]",Nested in object or function,
+Pipe,16,25,jwt.middleware.ts,"[""mergeMap""]",,Random function
+Pipe,16,16,jwt.middleware.ts,"[""map"",""mergeMap"",""mergeMap"",""tap"",""mapTo"",""catchError""]",Nested in pipe of lines 16 to 25,Random function
+Pipe as argument,undefined,undefined,jwt.util.ts,[],Nested in object or function,
+Pipe as argument,undefined,undefined,jwt.util.ts,[],Nested in object or function,
+Pipe,undefined,undefined,jwt.util.ts,[],,
+Pipe,9,13,jwt.middleware.spec.ts,"[""flatMap""]",,Random function
+Pipe,14,18,jwt.integration.ts,"[""flatMap""]",,Random function
+Pipe,28,28,jwt.integration.ts,"[""map"",""map"",""map"",""map""]",Nested in pipe of lines 14 to 18,Random function
+Pipe,38,38,jwt.integration.ts,"[""map""]",Nested in pipe of lines 14 to 18,Random function
+Pipe as argument,12,12,logger.handler.ts,"[""take"",""mapTo"",""filter"",""filter"",""map"",""tap""]",Nested in object or function,Random function
+Pipe as argument,9,9,logger.middleware.ts,"[""timestamp"",""tap"",""map""]",Nested in object or function,
+Pipe as argument,undefined,undefined,logger.util.ts,[],Nested in object or function,
+Pipe as argument,undefined,undefined,logger.util.ts,[],Nested in object or function,
+Pipe,undefined,undefined,logger.util.ts,[],,
+Pipe,16,16,multipart.middleware.ts,"[""mergeMap"",""map""]",,Random function
+Pipe,17,17,multipart.parser.field.ts,"[""takeUntil"",""tap"",""mapTo"",""defaultIfEmpty""]",,Random function
+Pipe as argument,13,13,multipart.parser.file.ts,"[""takeUntil"",""mergeMapTo"",""ignoreElements""]",Nested in object or function,Random function
+Pipe as argument,22,22,multipart.parser.file.ts,"[""takeUntil"",""map"",""mergeMap"",""mergeMap"",""mergeMap"",""mapTo"",""defaultIfEmpty""]",Nested in object or function,Random function
+Pipe as argument,32,32,multipart.parser.file.ts,"[""mergeMap"",""tap"",""tap"",""mapTo""]",Nested in object or function,Random function
+Pipe as argument,38,38,multipart.parser.file.ts,"[""map"",""mergeMap"",""toArray"",""map"",""map"",""tap"",""tap"",""mapTo""]",Nested in object or function,Random function
+Pipe,21,21,multipart.parser.ts,"[""share""]",,Random function
+Pipe,39,39,multipart.parser.ts,"[""takeUntil"",""mergeMap"",""defaultIfEmpty""]",,Random function
+Pipe,47,47,multipart.parser.ts,"[""takeUntil"",""mergeMap"",""defaultIfEmpty""]",,Random function
+Pipe,50,50,multipart.parser.ts,[],Nested in pipe of lines 47 to 47,Random function
+Pipe,57,57,multipart.parser.ts,"[""mapTo"",""catchError""]",Nested in pipe of lines 47 to 47,forkJoin
+Pipe as argument,45,45,multipart.util.ts,[null],Nested in object or function,Random function
+Pipe,16,22,multipart.middleware.spec.ts,"[null,null,null]",,
+Pipe as argument,16,16,multipart.middleware.spec.ts,"[""use"",""map""]",Nested in object or function,
+Pipe,27,37,multipart.middleware.spec.ts,"[null,null,null]",,
+Pipe as argument,27,27,multipart.middleware.spec.ts,"[""use"",""map""]",Nested in object or function,
+Pipe,42,50,multipart.middleware.spec.ts,"[null,null,null]",,
+Pipe as argument,42,42,multipart.middleware.spec.ts,"[""use"",""map""]",Nested in object or function,
+Pipe,24,26,websocket.error.effect.ts,"[""map""]",,
+Pipe as argument,8,8,websockets.eventLogger.middleware.ts,"[""tap""]",Nested in object or function,
+Pipe as argument,26,26,websockets.eventLogger.middleware.ts,"[""tap""]",Nested in object or function,
+Pipe as argument,50,50,websockets.eventLogger.middleware.ts,"[""tap""]",Nested in object or function,
+Pipe as argument,9,9,websockets.statusLogger.middleware.ts,"[""matchEvent"",""map"",""tap""]",Nested in object or function,
+Pipe as argument,24,24,websockets.statusLogger.middleware.ts,"[""matchEvent"",""map"",""tap""]",Nested in object or function,
+Pipe as argument,39,39,websockets.statusLogger.middleware.ts,"[""matchEvent"",""map"",""tap""]",Nested in object or function,
+Pipe as argument,54,54,websockets.statusLogger.middleware.ts,"[""matchEvent"",""map"",""tap""]",Nested in object or function,
+Pipe,18,18,websocket.broadcast.operator.spec.ts,"[""broadcast""]",,Random function
+Pipe,11,13,websocket.broadcast.operator.ts,"[""map"",""mergeMap""]",,Random function
+Pipe,11,11,websocket.broadcast.operator.ts,"[""mapTo""]",Nested in pipe of lines 11 to 13,Random function
+Pipe,35,38,websocket.mapToServer.operator.spec.ts,"[""matchEvent"",""mapToServer""]",,
+Pipe,67,70,websocket.mapToServer.operator.spec.ts,"[""mapToServer""]",,
+Pipe as argument,undefined,undefined,websocket.mapToServer.operator.ts,[],Nested in object or function,
+Pipe as argument,undefined,undefined,websocket.mapToServer.operator.ts,[],Nested in object or function,
+Pipe as argument,26,26,websocket.mapToServer.operator.ts,"[""map"",""filter"",""mergeMap"",""mergeMapTo""]",Nested in object or function,Random function
+Pipe as argument,29,29,websocket.mapToServer.operator.ts,"[""filter"",""tap"",""mapTo"",""toArray"",""filter"",""tap""]",Nested in object or function,Random function
+Pipe as argument,undefined,undefined,websocket.mapToServer.operator.ts,[],Nested in object or function,
+Pipe,42,42,websocket.server.spec.ts,"[""mergeMap""]",,Random function
+Pipe,42,42,websocket.server.spec.ts,"[""mapTo""]",Nested in pipe of lines 42 to 42,Random function
+Pipe,56,56,websocket.server.spec.ts,"[""first""]",,Random function
+Pipe,57,57,websocket.server.spec.ts,"[""first""]",,Random function
+Pipe,99,99,websocket.server.spec.ts,"[""tap""]",,Random function
+Pipe,143,143,websocket.server.spec.ts,"[""take"",""toArray""]",Nested in pipe of lines 99 to 99,Random function
+Pipe,158,158,websocket.server.spec.ts,"[""mergeMap""]",,Random function
+Pipe,176,176,websocket.server.spec.ts,"[""take"",""toArray""]",Nested in pipe of lines 158 to 158,Random function
+Pipe,201,201,websocket.server.spec.ts,"[""take"",""toArray""]",Nested in pipe of lines 158 to 158,merge
+Pipe,208,208,websocket.server.spec.ts,"[""mergeMapTo""]",,Random function
+Pipe,223,223,websocket.server.spec.ts,"[""take"",""toArray""]",Nested in pipe of lines 208 to 208,merge
+Pipe,254,254,websocket.server.spec.ts,"[""map""]",,Random function
+Pipe,24,36,websocket.server.helper.ts,"[""takeUntil"",""mergeMapTo"",""map"",""mergeMap""]",,Random function
+Pipe,26,26,websocket.server.helper.ts,"[""tap"",""tap"",""mapTo""]",Nested in pipe of lines 24 to 36,of
+Pipe,31,31,websocket.server.helper.ts,"[""tap"",""tap"",""mapTo""]",Nested in pipe of lines 24 to 36,of
+Pipe,50,53,websocket.server.helper.ts,"[""takeUntil"",""timeout"",""mapTo"",""tap"",""map"",""catchError""]",,Random function
+Pipe as argument,undefined,undefined,websocket.server.listener.ts,[],Nested in object or function,
+Pipe as argument,undefined,undefined,websocket.server.listener.ts,[],Nested in object or function,
+Pipe as argument,68,68,websocket.server.listener.ts,"[""map""]",Nested in object or function,Random function
+Pipe as argument,69,69,websocket.server.listener.ts,"[""map""]",Nested in object or function,Random function
+Pipe as argument,71,71,websocket.server.listener.ts,"[""catchError""]",Nested in object or function,Random function
+Pipe as argument,78,78,websocket.server.listener.ts,"[""map""]",Nested in object or function,Random function
+Pipe as argument,81,81,websocket.server.listener.ts,"[""map""]",Nested in object or function,Random function
+Pipe as argument,82,82,websocket.server.listener.ts,"[""catchError""]",Nested in object or function,Random function
+Pipe as argument,98,98,websocket.server.listener.ts,"[""takeUntil""]",Nested in object or function,Random function
+Pipe as argument,116,116,websocket.server.listener.ts,"[""takeUntil""]",Nested in object or function,Random function
+Pipe as argument,45,45,websocket.server.ts,"[""map""]",Nested in object or function,Random function
+Pipe as argument,73,73,websocket.server.ts,"[""takeWhile""]",Nested in object or function,Random function

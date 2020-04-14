@@ -1,0 +1,6 @@
+Observable variable/alias used,Times Used,Line start,Line end,Filename
+ReplaySubject,1,16,16,/Users/stefanosathanasoulias/thesis-projects-container/projects/set_r3/Angular-DD-master/APM-WithRefresh/src/app/product-categories/product-category.service.ts
+ReplaySubject,1,22,22,/Users/stefanosathanasoulias/thesis-projects-container/projects/set_r3/Angular-DD-master/APM-WithRefresh/src/app/products/product.service.ts
+ReplaySubject,1,25,25,/Users/stefanosathanasoulias/thesis-projects-container/projects/set_r3/Angular-DD-master/APM-WithRefresh/src/app/products/product.service.ts
+Subject,1,15,15,/Users/stefanosathanasoulias/thesis-projects-container/projects/set_r3/Angular-DD-master/APM/src/app/products/product-detail/product-detail.component.ts
+Subject,1,17,17,/Users/stefanosathanasoulias/thesis-projects-container/projects/set_r3/Angular-DD-master/APM/src/app/products/product-list/product-list.component.ts

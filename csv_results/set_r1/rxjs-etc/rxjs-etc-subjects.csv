@@ -1,0 +1,25 @@
+Subject variable/alias used,Line start,Line end,Filename
+Subject,15,15,/Users/stefanosathanasoulias/thesis-projects-container/projects/rxjs-etc-master/source/observable/handler.ts
+Subject,32,32,/Users/stefanosathanasoulias/thesis-projects-container/projects/rxjs-etc-master/source/observable/NotificationQueue.ts
+Variable: _indices,19,19,/Users/stefanosathanasoulias/thesis-projects-container/projects/rxjs-etc-master/source/observable/NotificationQueue.ts
+Variable: _indices,28,28,/Users/stefanosathanasoulias/thesis-projects-container/projects/rxjs-etc-master/source/observable/NotificationQueue.ts
+Variable: _indices,32,32,/Users/stefanosathanasoulias/thesis-projects-container/projects/rxjs-etc-master/source/observable/NotificationQueue.ts
+Variable: _indices,34,34,/Users/stefanosathanasoulias/thesis-projects-container/projects/rxjs-etc-master/source/observable/NotificationQueue.ts
+Subject,53,53,/Users/stefanosathanasoulias/thesis-projects-container/projects/rxjs-etc-master/source/observable/progress.ts
+Subject,54,54,/Users/stefanosathanasoulias/thesis-projects-container/projects/rxjs-etc-master/source/observable/progress.ts
+Subject,21,21,/Users/stefanosathanasoulias/thesis-projects-container/projects/rxjs-etc-master/source/observable/resettable.ts
+Subject,22,22,/Users/stefanosathanasoulias/thesis-projects-container/projects/rxjs-etc-master/source/observable/resettable.ts
+Subject,328,328,/Users/stefanosathanasoulias/thesis-projects-container/projects/rxjs-etc-master/source/observable/traverse-spec.ts
+Subject,68,68,/Users/stefanosathanasoulias/thesis-projects-container/projects/rxjs-etc-master/source/observable/traverse.ts
+Subject,76,76,/Users/stefanosathanasoulias/thesis-projects-container/projects/rxjs-etc-master/source/observable/traverse.ts
+Subject,19,19,/Users/stefanosathanasoulias/thesis-projects-container/projects/rxjs-etc-master/source/operators/bucketBy.ts
+Subject,16,16,/Users/stefanosathanasoulias/thesis-projects-container/projects/rxjs-etc-master/source/operators/materializeTap-spec.ts
+Subject,27,27,/Users/stefanosathanasoulias/thesis-projects-container/projects/rxjs-etc-master/source/operators/materializeTap-spec.ts
+Subject,38,38,/Users/stefanosathanasoulias/thesis-projects-container/projects/rxjs-etc-master/source/operators/materializeTap-spec.ts
+Subject,34,34,/Users/stefanosathanasoulias/thesis-projects-container/projects/rxjs-etc-master/source/operators/multicastWithKind-spec.ts
+Subject,68,68,/Users/stefanosathanasoulias/thesis-projects-container/projects/rxjs-etc-master/source/operators/multicastWithKind-spec.ts
+Subject,102,102,/Users/stefanosathanasoulias/thesis-projects-container/projects/rxjs-etc-master/source/operators/multicastWithKind-spec.ts
+Subject,30,30,/Users/stefanosathanasoulias/thesis-projects-container/projects/rxjs-etc-master/source/operators/prioritize.ts
+Subject,37,37,/Users/stefanosathanasoulias/thesis-projects-container/projects/rxjs-etc-master/source/operators/refCountDelay.ts
+Subject,21,21,/Users/stefanosathanasoulias/thesis-projects-container/projects/rxjs-etc-master/source/operators/splitBy.ts
+Subject,69,69,/Users/stefanosathanasoulias/thesis-projects-container/projects/rxjs-etc-master/source/operators/startWithTimeout-spec.ts

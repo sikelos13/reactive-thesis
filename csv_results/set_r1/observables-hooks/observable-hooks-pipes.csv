@@ -1,0 +1,26 @@
+Alias or name used,Line start,Line end,Filename,Nested Operators,Pipe is nested to,Initializing Pipeline
+Pipe as argument,27,27,NormalValue.tsx,"[""scan"",""take""]",Nested in object or function,
+Pipe as argument,31,31,ObservableValue.tsx,"[""switchMap""]",Nested in object or function,Random function
+Pipe as argument,33,33,ObservableValue.tsx,"[""scan"",""take""]",Nested in object or function,Random function
+Pipe as argument,22,22,Timer.jsx,"[""map"",""distinctUntilChanged"",""switchMap""]",Nested in object or function,Random function
+Pipe as argument,30,30,Timer.jsx,"[""repeat"",""map"",""distinctUntilChanged"",""withLatestFrom"",""filter"",""take"",""scan""]",Nested in object or function,Random function
+Pipe,31,31,fakeApi.ts,"[""switchMap"",""share""]",,Random function
+Pipe,30,30,fakeApi.ts,"[""startWith""]",Nested in pipe of lines 31 to 31,from
+Pipe,42,42,fakeApi.ts,"[""switchMap"",""share""]",,Random function
+Pipe,53,53,fakeApi.ts,"[""timeout"",""catchError"",""take"",""switchMap""]",,Random function
+Pipe,15,21,api.ts,"[""map""]",,from
+Pipe as argument,14,14,input-time-ago.tsx,"[""switchMap""]",Nested in object or function,Random function
+Pipe as argument,16,16,input-time-ago.tsx,"[""startWith"",""map""]",Nested in object or function,interval
+Pipe as argument,64,64,Suggests.tsx,"[""filter"",""distinctUntilChanged"",""switchMap"",""catchError"",""startWith""]",Nested in object or function,Random function
+Pipe as argument,74,74,Suggests.tsx,"[""tap"",""withLatestFrom"",""switchMap""]",Nested in object or function,Random function
+Pipe as argument,79,79,Suggests.tsx,"[""map"",""startWith""]",Nested in object or function,Random function
+Pipe as argument,8,8,Warning.tsx,"[""take"",""mapTo""]",Nested in object or function,merge
+Pipe,12,12,pluck-current-target-checked.spec.ts,"[""toArray""]",,Random function
+Pipe,12,12,pluck-current-target-value.spec.ts,"[""toArray""]",,Random function
+Pipe,8,8,pluck-first.spec.ts,"[""toArray""]",,Random function
+Pipe as argument,20,20,use-layout-observable.spec.ts,"[""map""]",Nested in object or function,Random function
+Pipe as argument,35,35,use-observable-state.spec.ts,"[""map""]",Nested in object or function,Random function
+Pipe as argument,55,55,use-observable-state.spec.ts,"[""map""]",Nested in object or function,Random function
+Pipe as argument,20,20,use-observable.spec.ts,"[""map""]",Nested in object or function,Random function
+Pipe as argument,169,169,use-observable-get-state.ts,"[""map""]",Nested in object or function,Random function
+Pipe as argument,23,23,use-observable-pick-state.ts,"[""distinctUntilChanged"",""map""]",Nested in object or function,Random function

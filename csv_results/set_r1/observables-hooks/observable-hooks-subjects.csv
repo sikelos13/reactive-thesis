@@ -1,0 +1,18 @@
+Subject variable/alias used,Line start,Line end,Filename
+Subject,27,27,/Users/stefanosathanasoulias/thesis-projects-container/projects/observable-hooks-master/examples/suspense/src/fakeApi.ts
+Subject,39,39,/Users/stefanosathanasoulias/thesis-projects-container/projects/observable-hooks-master/examples/suspense/src/fakeApi.ts
+Subject,23,23,/Users/stefanosathanasoulias/thesis-projects-container/projects/observable-hooks-master/packages/observable-hooks/__tests__/observable-resource.spec.ts
+Subject,40,40,/Users/stefanosathanasoulias/thesis-projects-container/projects/observable-hooks-master/packages/observable-hooks/__tests__/observable-resource.spec.ts
+Subject,21,21,/Users/stefanosathanasoulias/thesis-projects-container/projects/observable-hooks-master/packages/observable-hooks/__tests__/use-observable-get-state.spec.ts
+Subject,23,23,/Users/stefanosathanasoulias/thesis-projects-container/projects/observable-hooks-master/packages/observable-hooks/__tests__/use-observable-pick-state.spec.ts
+Subject,98,98,/Users/stefanosathanasoulias/thesis-projects-container/projects/observable-hooks-master/packages/observable-hooks/__tests__/use-observable-state.spec.ts
+Subject,112,112,/Users/stefanosathanasoulias/thesis-projects-container/projects/observable-hooks-master/packages/observable-hooks/__tests__/use-observable-state.spec.ts
+Subject,84,84,/Users/stefanosathanasoulias/thesis-projects-container/projects/observable-hooks-master/packages/observable-hooks/__tests__/use-observable-suspense.spec.tsx
+Subject,138,138,/Users/stefanosathanasoulias/thesis-projects-container/projects/observable-hooks-master/packages/observable-hooks/__tests__/use-observable-suspense.spec.tsx
+Subject,171,171,/Users/stefanosathanasoulias/thesis-projects-container/projects/observable-hooks-master/packages/observable-hooks/__tests__/use-observable-suspense.spec.tsx
+Subject,267,267,/Users/stefanosathanasoulias/thesis-projects-container/projects/observable-hooks-master/packages/observable-hooks/__tests__/use-observable-suspense.spec.tsx
+Subject,94,94,/Users/stefanosathanasoulias/thesis-projects-container/projects/observable-hooks-master/packages/observable-hooks/__tests__/use-subscription.spec.ts
+Subject,123,123,/Users/stefanosathanasoulias/thesis-projects-container/projects/observable-hooks-master/packages/observable-hooks/__tests__/use-subscription.spec.ts
+Subject,159,159,/Users/stefanosathanasoulias/thesis-projects-container/projects/observable-hooks-master/packages/observable-hooks/__tests__/use-subscription.spec.ts
+Subject,91,91,/Users/stefanosathanasoulias/thesis-projects-container/projects/observable-hooks-master/packages/observable-hooks/src/helpers.ts
+Subject,16,16,/Users/stefanosathanasoulias/thesis-projects-container/projects/observable-hooks-master/packages/observable-hooks/src/observable-resource.ts

@@ -1,0 +1,16 @@
+Observable variable/alias used,Times Used,Line start,Line end,Filename
+Subject,1,385,385,/Users/stefanosathanasoulias/thesis-projects-container/projects/cyclejs-master/http/test/browser/common.ts
+Subject,1,398,398,/Users/stefanosathanasoulias/thesis-projects-container/projects/cyclejs-master/http/test/browser/common.ts
+Subject,1,411,411,/Users/stefanosathanasoulias/thesis-projects-container/projects/cyclejs-master/http/test/browser/common.ts
+Subject,1,441,441,/Users/stefanosathanasoulias/thesis-projects-container/projects/cyclejs-master/http/test/browser/common.ts
+Subject,1,523,523,/Users/stefanosathanasoulias/thesis-projects-container/projects/cyclejs-master/http/test/browser/common.ts
+Uint8Array,1,84,84,/Users/stefanosathanasoulias/thesis-projects-container/projects/cyclejs-master/http/test/browser/index.ts
+Uint8Array,1,85,85,/Users/stefanosathanasoulias/thesis-projects-container/projects/cyclejs-master/http/test/browser/index.ts
+FileReader,1,113,113,/Users/stefanosathanasoulias/thesis-projects-container/projects/cyclejs-master/http/test/browser/index.ts
+Uint8Array,1,116,116,/Users/stefanosathanasoulias/thesis-projects-container/projects/cyclejs-master/http/test/browser/index.ts
+Uint8Array,1,117,117,/Users/stefanosathanasoulias/thesis-projects-container/projects/cyclejs-master/http/test/browser/index.ts
+MyTestSource,1,470,470,/Users/stefanosathanasoulias/thesis-projects-container/projects/cyclejs-master/isolate/test/index.ts
+MyTestSource,1,492,492,/Users/stefanosathanasoulias/thesis-projects-container/projects/cyclejs-master/isolate/test/index.ts
+MyTestSource,1,509,509,/Users/stefanosathanasoulias/thesis-projects-container/projects/cyclejs-master/isolate/test/index.ts
+MyTestSource,1,531,531,/Users/stefanosathanasoulias/thesis-projects-container/projects/cyclejs-master/isolate/test/index.ts
+Error,1,62,62,/Users/stefanosathanasoulias/thesis-projects-container/projects/cyclejs-master/rxjs-run/test/run.ts

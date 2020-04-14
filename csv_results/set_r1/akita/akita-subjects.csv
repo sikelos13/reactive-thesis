@@ -1,0 +1,33 @@
+Subject variable/alias used,Line start,Line end,Filename
+Subject,8,8,/Users/stefanosathanasoulias/thesis-projects-container/projects/set_r1/akita-master/apps/react-akita-app/src/app/take-until.ts
+Subject,5340,5340,/Users/stefanosathanasoulias/thesis-projects-container/projects/set_r1/akita-master/apps/svelte-todo/public/bundle.js
+Subject,5356,5356,/Users/stefanosathanasoulias/thesis-projects-container/projects/set_r1/akita-master/apps/svelte-todo/public/bundle.js
+Subject,5560,5560,/Users/stefanosathanasoulias/thesis-projects-container/projects/set_r1/akita-master/apps/svelte-todo/public/bundle.js
+Subject,5566,5566,/Users/stefanosathanasoulias/thesis-projects-container/projects/set_r1/akita-master/apps/svelte-todo/public/bundle.js
+Subject,6571,6571,/Users/stefanosathanasoulias/thesis-projects-container/projects/set_r1/akita-master/apps/svelte-todo/public/bundle.js
+Subject,11042,11042,/Users/stefanosathanasoulias/thesis-projects-container/projects/set_r1/akita-master/apps/svelte-todo/public/bundle.js
+Subject,11291,11291,/Users/stefanosathanasoulias/thesis-projects-container/projects/set_r1/akita-master/apps/svelte-todo/public/bundle.js
+Variable: batchTransaction,5348,5348,/Users/stefanosathanasoulias/thesis-projects-container/projects/set_r1/akita-master/apps/svelte-todo/public/bundle.js
+Variable: batchTransaction,5356,5356,/Users/stefanosathanasoulias/thesis-projects-container/projects/set_r1/akita-master/apps/svelte-todo/public/bundle.js
+Variable: batchTransaction,5367,5367,/Users/stefanosathanasoulias/thesis-projects-container/projects/set_r1/akita-master/apps/svelte-todo/public/bundle.js
+Variable: batchTransaction,5368,5368,/Users/stefanosathanasoulias/thesis-projects-container/projects/set_r1/akita-master/apps/svelte-todo/public/bundle.js
+Variable: batchTransaction,5385,5385,/Users/stefanosathanasoulias/thesis-projects-container/projects/set_r1/akita-master/apps/svelte-todo/public/bundle.js
+Variable: batchTransaction,5385,5385,/Users/stefanosathanasoulias/thesis-projects-container/projects/set_r1/akita-master/apps/svelte-todo/public/bundle.js
+Variable: entityActions,6571,6571,/Users/stefanosathanasoulias/thesis-projects-container/projects/set_r1/akita-master/apps/svelte-todo/public/bundle.js
+Variable: entityActions,6582,6582,/Users/stefanosathanasoulias/thesis-projects-container/projects/set_r1/akita-master/apps/svelte-todo/public/bundle.js
+Variable: entityActions,6661,6661,/Users/stefanosathanasoulias/thesis-projects-container/projects/set_r1/akita-master/apps/svelte-todo/public/bundle.js
+Variable: entityActions,6725,6725,/Users/stefanosathanasoulias/thesis-projects-container/projects/set_r1/akita-master/apps/svelte-todo/public/bundle.js
+Variable: entityActions,6774,6774,/Users/stefanosathanasoulias/thesis-projects-container/projects/set_r1/akita-master/apps/svelte-todo/public/bundle.js
+Variable: entityActions,6939,6939,/Users/stefanosathanasoulias/thesis-projects-container/projects/set_r1/akita-master/apps/svelte-todo/public/bundle.js
+Variable: entityActions,6940,6940,/Users/stefanosathanasoulias/thesis-projects-container/projects/set_r1/akita-master/apps/svelte-todo/public/bundle.js
+Variable: entityActions,7046,7046,/Users/stefanosathanasoulias/thesis-projects-container/projects/set_r1/akita-master/apps/svelte-todo/public/bundle.js
+Variable: entityActions,7388,7388,/Users/stefanosathanasoulias/thesis-projects-container/projects/set_r1/akita-master/apps/svelte-todo/public/bundle.js
+Variable: _reset,11042,11042,/Users/stefanosathanasoulias/thesis-projects-container/projects/set_r1/akita-master/apps/svelte-todo/public/bundle.js
+Variable: _reset,11044,11044,/Users/stefanosathanasoulias/thesis-projects-container/projects/set_r1/akita-master/apps/svelte-todo/public/bundle.js
+Variable: _reset,11078,11078,/Users/stefanosathanasoulias/thesis-projects-container/projects/set_r1/akita-master/apps/svelte-todo/public/bundle.js
+Variable: _reset,11128,11128,/Users/stefanosathanasoulias/thesis-projects-container/projects/set_r1/akita-master/apps/svelte-todo/public/bundle.js
+Variable: _reset,11128,11128,/Users/stefanosathanasoulias/thesis-projects-container/projects/set_r1/akita-master/apps/svelte-todo/public/bundle.js
+Variable: _someDirty,11291,11291,/Users/stefanosathanasoulias/thesis-projects-container/projects/set_r1/akita-master/apps/svelte-todo/public/bundle.js
+Variable: _someDirty,11296,11296,/Users/stefanosathanasoulias/thesis-projects-container/projects/set_r1/akita-master/apps/svelte-todo/public/bundle.js
+Variable: _someDirty,11349,11349,/Users/stefanosathanasoulias/thesis-projects-container/projects/set_r1/akita-master/apps/svelte-todo/public/bundle.js
+Variable: _someDirty,11454,11454,/Users/stefanosathanasoulias/thesis-projects-container/projects/set_r1/akita-master/apps/svelte-todo/public/bundle.js

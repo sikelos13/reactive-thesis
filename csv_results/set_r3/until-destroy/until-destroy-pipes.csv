@@ -1,0 +1,5 @@
+Alias or name used,Line start,Line end,Filename,Nested Operators,Pipe is nested to,Initializing Pipeline
+Pipe as argument,51,51,until-destroyed.ts,"[""takeUntil""]",Nested in object or function,Random function
+Pipe as argument,72,72,until-destroyed.spec.ts,[],Nested in object or function,Random function
+Pipe as argument,76,76,until-destroyed.spec.ts,[],Nested in object or function,Random function
+Pipe as argument,162,162,until-destroyed.spec.ts,[],Nested in object or function,Random function

@@ -1,0 +1,7 @@
+Alias or name used,Line start,Line end,Filename,Nested Operators,Pipe is nested to,Initializing Pipeline
+Pipe as argument,50,50,use-event-callback.spec.tsx,"[""mapTo"",""delay""]",Nested in object or function,Random function
+Pipe as argument,73,73,use-event-callback.spec.tsx,"[""mapTo"",""delay""]",Nested in object or function,Random function
+Pipe,102,102,use-event-callback.spec.tsx,"[""withLatestFrom"",""map"",""delay""]",,Random function
+Pipe,145,145,use-event-callback.spec.tsx,"[""combineLatest"",""map"",""delay""]",,Random function
+Pipe as argument,84,84,use-observable.spec.tsx,"[""withLatestFrom"",""map"",""tap""]",Nested in object or function,Random function
+Pipe as argument,125,125,use-observable.spec.tsx,"[""tap""]",Nested in object or function,Random function

@@ -1,0 +1,2 @@
+Alias or name used,Line start,Line end,Filename,Nested Operators,Pipe is nested to,Initializing Pipeline
+Pipe as argument,62,62,socket-io.service.ts,"[""share""]",Nested in object or function,Random function

@@ -1,0 +1,25 @@
+Subject variable/alias used,Line start,Line end,Filename
+Subject,95,95,/Users/stefanosathanasoulias/thesis-projects-container/projects/rxdb-master/src/data-migrator.ts
+Subject,404,404,/Users/stefanosathanasoulias/thesis-projects-container/projects/rxdb-master/src/data-migrator.ts
+Subject,108,108,/Users/stefanosathanasoulias/thesis-projects-container/projects/rxdb-master/src/plugins/in-memory.ts
+Subject,115,115,/Users/stefanosathanasoulias/thesis-projects-container/projects/rxdb-master/src/plugins/in-memory.ts
+Variable: _observable$,108,108,/Users/stefanosathanasoulias/thesis-projects-container/projects/rxdb-master/src/plugins/in-memory.ts
+Variable: _observable$,133,133,/Users/stefanosathanasoulias/thesis-projects-container/projects/rxdb-master/src/plugins/in-memory.ts
+Variable: _observable$,200,200,/Users/stefanosathanasoulias/thesis-projects-container/projects/rxdb-master/src/plugins/in-memory.ts
+Variable: _nonPersistentRevisionsSubject,115,115,/Users/stefanosathanasoulias/thesis-projects-container/projects/rxdb-master/src/plugins/in-memory.ts
+Variable: _nonPersistentRevisionsSubject,121,121,/Users/stefanosathanasoulias/thesis-projects-container/projects/rxdb-master/src/plugins/in-memory.ts
+Variable: _nonPersistentRevisionsSubject,163,163,/Users/stefanosathanasoulias/thesis-projects-container/projects/rxdb-master/src/plugins/in-memory.ts
+Variable: _nonPersistentRevisionsSubject,179,179,/Users/stefanosathanasoulias/thesis-projects-container/projects/rxdb-master/src/plugins/in-memory.ts
+Subject,86,86,/Users/stefanosathanasoulias/thesis-projects-container/projects/rxdb-master/src/plugins/replication-graphql/index.ts
+Subject,87,87,/Users/stefanosathanasoulias/thesis-projects-container/projects/rxdb-master/src/plugins/replication-graphql/index.ts
+Subject,88,88,/Users/stefanosathanasoulias/thesis-projects-container/projects/rxdb-master/src/plugins/replication-graphql/index.ts
+Subject,67,67,/Users/stefanosathanasoulias/thesis-projects-container/projects/rxdb-master/src/plugins/replication.ts
+Subject,68,68,/Users/stefanosathanasoulias/thesis-projects-container/projects/rxdb-master/src/plugins/replication.ts
+Subject,69,69,/Users/stefanosathanasoulias/thesis-projects-container/projects/rxdb-master/src/plugins/replication.ts
+Subject,73,73,/Users/stefanosathanasoulias/thesis-projects-container/projects/rxdb-master/src/plugins/replication.ts
+Subject,114,114,/Users/stefanosathanasoulias/thesis-projects-container/projects/rxdb-master/src/rx-database.ts
+Subject,626,626,/Users/stefanosathanasoulias/thesis-projects-container/projects/rxdb-master/src/rx-database.ts
+Variable: broadcastChannel$,121,121,/Users/stefanosathanasoulias/thesis-projects-container/projects/rxdb-master/src/rx-database.ts
+Variable: broadcastChannel$,626,626,/Users/stefanosathanasoulias/thesis-projects-container/projects/rxdb-master/src/rx-database.ts
+Variable: broadcastChannel$,631,631,/Users/stefanosathanasoulias/thesis-projects-container/projects/rxdb-master/src/rx-database.ts
+Variable: broadcastChannel$,637,637,/Users/stefanosathanasoulias/thesis-projects-container/projects/rxdb-master/src/rx-database.ts

@@ -1,0 +1,6 @@
+Observable variable/alias used,Times Used,Line start,Line end,Filename
+Date,1,43,43,/Users/stefanosathanasoulias/thesis-projects-container/projects/local-weather-app-master/src/app/current-weather/current-weather.component.ts
+HttpParams,1,31,31,/Users/stefanosathanasoulias/thesis-projects-container/projects/local-weather-app-master/src/app/postal-code/postal-code.service.ts
+BehaviorSubject,1,47,47,/Users/stefanosathanasoulias/thesis-projects-container/projects/local-weather-app-master/src/app/weather/weather.service.ts
+HttpParams,1,58,58,/Users/stefanosathanasoulias/thesis-projects-container/projects/local-weather-app-master/src/app/weather/weather.service.ts
+HttpParams,1,80,80,/Users/stefanosathanasoulias/thesis-projects-container/projects/local-weather-app-master/src/app/weather/weather.service.ts

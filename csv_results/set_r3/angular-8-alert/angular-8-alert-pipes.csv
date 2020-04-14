@@ -1,0 +1,2 @@
+Alias or name used,Line start,Line end,Filename,Nested Operators,Pipe is nested to,Initializing Pipeline
+Pipe as argument,14,14,alert.service.ts,"[""filter""]",Nested in object or function,Random function

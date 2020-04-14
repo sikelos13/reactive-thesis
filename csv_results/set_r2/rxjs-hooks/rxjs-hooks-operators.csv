@@ -1,0 +1,15 @@
+Alias or name used,Line,Filename
+mapTo,51,/Users/stefanosathanasoulias/thesis-projects-container/projects/rxjs-hooks-master/src/__test__/use-event-callback.spec.tsx
+delay,52,/Users/stefanosathanasoulias/thesis-projects-container/projects/rxjs-hooks-master/src/__test__/use-event-callback.spec.tsx
+mapTo,74,/Users/stefanosathanasoulias/thesis-projects-container/projects/rxjs-hooks-master/src/__test__/use-event-callback.spec.tsx
+delay,75,/Users/stefanosathanasoulias/thesis-projects-container/projects/rxjs-hooks-master/src/__test__/use-event-callback.spec.tsx
+withLatestFrom,98,/Users/stefanosathanasoulias/thesis-projects-container/projects/rxjs-hooks-master/src/__test__/use-event-callback.spec.tsx
+map,99,/Users/stefanosathanasoulias/thesis-projects-container/projects/rxjs-hooks-master/src/__test__/use-event-callback.spec.tsx
+delay,102,/Users/stefanosathanasoulias/thesis-projects-container/projects/rxjs-hooks-master/src/__test__/use-event-callback.spec.tsx
+combineLatest,141,/Users/stefanosathanasoulias/thesis-projects-container/projects/rxjs-hooks-master/src/__test__/use-event-callback.spec.tsx
+map,142,/Users/stefanosathanasoulias/thesis-projects-container/projects/rxjs-hooks-master/src/__test__/use-event-callback.spec.tsx
+delay,145,/Users/stefanosathanasoulias/thesis-projects-container/projects/rxjs-hooks-master/src/__test__/use-event-callback.spec.tsx
+withLatestFrom,85,/Users/stefanosathanasoulias/thesis-projects-container/projects/rxjs-hooks-master/src/__test__/use-observable.spec.tsx
+map,86,/Users/stefanosathanasoulias/thesis-projects-container/projects/rxjs-hooks-master/src/__test__/use-observable.spec.tsx
+tap,92,/Users/stefanosathanasoulias/thesis-projects-container/projects/rxjs-hooks-master/src/__test__/use-observable.spec.tsx
+tap,125,/Users/stefanosathanasoulias/thesis-projects-container/projects/rxjs-hooks-master/src/__test__/use-observable.spec.tsx

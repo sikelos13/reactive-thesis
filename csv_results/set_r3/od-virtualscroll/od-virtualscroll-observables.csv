@@ -1,0 +1,25 @@
+Observable variable/alias used,Times Used,Line start,Line end,Filename
+ReplaySubject,1,17,17,/Users/stefanosathanasoulias/thesis-projects-container/projects/od-virtualscroll-master/src/service.ts
+Subject,1,21,21,/Users/stefanosathanasoulias/thesis-projects-container/projects/od-virtualscroll-master/src/service.ts
+Subject,1,25,25,/Users/stefanosathanasoulias/thesis-projects-container/projects/od-virtualscroll-master/src/service.ts
+Subject,1,29,29,/Users/stefanosathanasoulias/thesis-projects-container/projects/od-virtualscroll-master/src/service.ts
+Subject,1,33,33,/Users/stefanosathanasoulias/thesis-projects-container/projects/od-virtualscroll-master/src/service.ts
+Subject,1,37,37,/Users/stefanosathanasoulias/thesis-projects-container/projects/od-virtualscroll-master/src/service.ts
+Subject,1,41,41,/Users/stefanosathanasoulias/thesis-projects-container/projects/od-virtualscroll-master/src/service.ts
+Date,1,93,93,/Users/stefanosathanasoulias/thesis-projects-container/projects/od-virtualscroll-master/src/virtualScroll.component.ts
+Subject,1,105,105,/Users/stefanosathanasoulias/thesis-projects-container/projects/od-virtualscroll-master/src/virtualScroll.component.ts
+NoopCmd,1,137,137,/Users/stefanosathanasoulias/thesis-projects-container/projects/od-virtualscroll-master/src/virtualScroll.component.ts
+NoopCmd,1,138,138,/Users/stefanosathanasoulias/thesis-projects-container/projects/od-virtualscroll-master/src/virtualScroll.component.ts
+RemoveRowCmd,1,163,163,/Users/stefanosathanasoulias/thesis-projects-container/projects/od-virtualscroll-master/src/virtualScroll.component.ts
+RemoveItemCmd,1,166,166,/Users/stefanosathanasoulias/thesis-projects-container/projects/od-virtualscroll-master/src/virtualScroll.component.ts
+CreateRowCmd,1,179,179,/Users/stefanosathanasoulias/thesis-projects-container/projects/od-virtualscroll-master/src/virtualScroll.component.ts
+CreateItemCmd,1,182,182,/Users/stefanosathanasoulias/thesis-projects-container/projects/od-virtualscroll-master/src/virtualScroll.component.ts
+ShiftRowCmd,1,208,208,/Users/stefanosathanasoulias/thesis-projects-container/projects/od-virtualscroll-master/src/virtualScroll.component.ts
+RemoveItemCmd,1,214,214,/Users/stefanosathanasoulias/thesis-projects-container/projects/od-virtualscroll-master/src/virtualScroll.component.ts
+CreateItemCmd,1,216,216,/Users/stefanosathanasoulias/thesis-projects-container/projects/od-virtualscroll-master/src/virtualScroll.component.ts
+UpdateItemCmd,1,218,218,/Users/stefanosathanasoulias/thesis-projects-container/projects/od-virtualscroll-master/src/virtualScroll.component.ts
+CreateItemCmd,1,225,225,/Users/stefanosathanasoulias/thesis-projects-container/projects/od-virtualscroll-master/src/virtualScroll.component.ts
+RemoveItemCmd,1,229,229,/Users/stefanosathanasoulias/thesis-projects-container/projects/od-virtualscroll-master/src/virtualScroll.component.ts
+ScrollItem,1,296,296,/Users/stefanosathanasoulias/thesis-projects-container/projects/od-virtualscroll-master/src/virtualScroll.component.ts
+SetScrollTopCmd,1,340,340,/Users/stefanosathanasoulias/thesis-projects-container/projects/od-virtualscroll-master/src/virtualScroll.component.ts
+SetScrollTopCmd,1,348,348,/Users/stefanosathanasoulias/thesis-projects-container/projects/od-virtualscroll-master/src/virtualScroll.component.ts

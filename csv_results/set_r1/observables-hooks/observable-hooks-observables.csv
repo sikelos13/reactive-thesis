@@ -1,0 +1,5 @@
+Observable variable/alias used,Times Used,Line start,Line end,Filename
+Subject,1,91,91,/Users/stefanosathanasoulias/thesis-projects-container/projects/observable-hooks-master/packages/observable-hooks/src/helpers.ts
+Subject,1,16,16,/Users/stefanosathanasoulias/thesis-projects-container/projects/observable-hooks-master/packages/observable-hooks/src/observable-resource.ts
+BehaviorSubject,1,57,57,/Users/stefanosathanasoulias/thesis-projects-container/projects/observable-hooks-master/packages/observable-hooks/src/use-layout-observable.ts
+BehaviorSubject,1,55,55,/Users/stefanosathanasoulias/thesis-projects-container/projects/observable-hooks-master/packages/observable-hooks/src/use-observable.ts

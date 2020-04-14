@@ -1,0 +1,19 @@
+Observable variable/alias used,Times Used,Line start,Line end,Filename
+Map,1,53,53,/Users/stefanosathanasoulias/thesis-projects-container/projects/ext-saladict-dev/src/_helpers/__mocks__/browser-api.ts
+Map,1,60,60,/Users/stefanosathanasoulias/thesis-projects-container/projects/ext-saladict-dev/src/_helpers/__mocks__/browser-api.ts
+Map,1,66,66,/Users/stefanosathanasoulias/thesis-projects-container/projects/ext-saladict-dev/src/_helpers/__mocks__/browser-api.ts
+Error,1,201,201,/Users/stefanosathanasoulias/thesis-projects-container/projects/ext-saladict-dev/src/_helpers/__mocks__/browser-api.ts
+Map,1,206,206,/Users/stefanosathanasoulias/thesis-projects-container/projects/ext-saladict-dev/src/_helpers/__mocks__/browser-api.ts
+Set,1,6,6,/Users/stefanosathanasoulias/thesis-projects-container/projects/ext-saladict-dev/src/_helpers/__mocks__/config-manager.ts
+WeakMap,1,54,54,/Users/stefanosathanasoulias/thesis-projects-container/projects/ext-saladict-dev/src/_helpers/browser-api.ts
+WeakMap,1,64,64,/Users/stefanosathanasoulias/thesis-projects-container/projects/ext-saladict-dev/src/_helpers/browser-api.ts
+WeakMap,1,73,73,/Users/stefanosathanasoulias/thesis-projects-container/projects/ext-saladict-dev/src/_helpers/browser-api.ts
+Error,1,218,218,/Users/stefanosathanasoulias/thesis-projects-container/projects/ext-saladict-dev/src/_helpers/browser-api.ts
+Map,1,223,223,/Users/stefanosathanasoulias/thesis-projects-container/projects/ext-saladict-dev/src/_helpers/browser-api.ts
+I18nManager,1,11,11,/Users/stefanosathanasoulias/thesis-projects-container/projects/ext-saladict-dev/src/background/i18n-manager.ts
+Error,1,63,63,/Users/stefanosathanasoulias/thesis-projects-container/projects/ext-saladict-dev/src/components/dictionaries/helpers.ts
+Error,1,67,67,/Users/stefanosathanasoulias/thesis-projects-container/projects/ext-saladict-dev/src/components/dictionaries/helpers.ts
+Observable,1,45,45,/Users/stefanosathanasoulias/thesis-projects-container/projects/ext-saladict-dev/src/content/redux/create.ts
+Observable,1,45,45,/Users/stefanosathanasoulias/thesis-projects-container/projects/ext-saladict-dev/src/content/redux/create.ts
+RegExp,1,68,68,/Users/stefanosathanasoulias/thesis-projects-container/projects/ext-saladict-dev/src/selection/helper.ts
+RegExp,1,69,69,/Users/stefanosathanasoulias/thesis-projects-container/projects/ext-saladict-dev/src/selection/helper.ts

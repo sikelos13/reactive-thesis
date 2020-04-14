@@ -1,0 +1,25 @@
+Alias or name used,Line start,Line end,Filename,Nested Operators,Pipe is nested to,Initializing Pipeline
+Pipe,91,91,virtualScroll.component.ts,"[""startWith"",""publish""]",,Random function
+Pipe,93,93,virtualScroll.component.ts,"[""map""]",,Random function
+Pipe,97,97,virtualScroll.component.ts,"[""startWith"",""publish""]",,Random function
+Pipe,103,103,virtualScroll.component.ts,"[""debounceTime"",""map"",""startWith"",""map""]",,Random function
+Pipe,109,109,virtualScroll.component.ts,"[""debounceTime""]",Nested in pipe of lines 103 to 103,Random function
+Pipe,117,117,virtualScroll.component.ts,"[""map"",""startWith""]",,Random function
+Pipe,121,121,virtualScroll.component.ts,"[""map"",""publish""]",,Random function
+Pipe,132,132,virtualScroll.component.ts,"[""map"",""distinctUntilChanged"",""publish""]",,Random function
+Pipe,134,134,virtualScroll.component.ts,"[""pairwise""]",,Random function
+Pipe,240,240,virtualScroll.component.ts,"[""concatMap"",""publish""]",,Random function
+Pipe,242,249,virtualScroll.component.ts,"[""map""]",,Random function
+Pipe,253,262,virtualScroll.component.ts,"[""filter"",""map""]",,Random function
+Pipe,266,275,virtualScroll.component.ts,"[""filter"",""map""]",,Random function
+Pipe,279,289,virtualScroll.component.ts,"[""filter"",""map""]",,Random function
+Pipe,294,303,virtualScroll.component.ts,"[""filter"",""withLatestFrom"",""map""]",,Random function
+Pipe,308,317,virtualScroll.component.ts,"[""filter"",""withLatestFrom"",""map""]",,Random function
+Pipe,321,329,virtualScroll.component.ts,"[""filter"",""map""]",,Random function
+Pipe,331,331,virtualScroll.component.ts,"[""publish""]",,Random function
+Pipe,333,333,virtualScroll.component.ts,"[""filter""]",,Random function
+Pipe,338,341,virtualScroll.component.ts,"[""filter"",""withLatestFrom"",""map""]",,Random function
+Pipe,346,349,virtualScroll.component.ts,"[""filter"",""withLatestFrom"",""map""]",,Random function
+Pipe,352,357,virtualScroll.component.ts,"[""map""]",,Random function
+Pipe,366,366,virtualScroll.component.ts,"[""scan""]",,Random function
+Pipe,369,369,virtualScroll.component.ts,"[""filter""]",Nested in pipe of lines 366 to 366,Random function

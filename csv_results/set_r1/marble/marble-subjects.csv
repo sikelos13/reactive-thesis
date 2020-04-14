@@ -1,0 +1,24 @@
+Subject variable/alias used,Line start,Line end,Filename
+Subject,74,74,/Users/stefanosathanasoulias/thesis-projects-container/projects/marble-master/packages/core/src/+internal/testing/http.helper.ts
+Subject,9,9,/Users/stefanosathanasoulias/thesis-projects-container/projects/marble-master/packages/core/src/http/server/http.server.event.subscriber.ts
+Subject,31,31,/Users/stefanosathanasoulias/thesis-projects-container/projects/marble-master/packages/core/src/http/server/http.server.ts
+Subject,77,77,/Users/stefanosathanasoulias/thesis-projects-container/projects/marble-master/packages/messaging/src/server/messaging.server.listener.ts
+Subject,78,78,/Users/stefanosathanasoulias/thesis-projects-container/projects/marble-master/packages/messaging/src/server/messaging.server.listener.ts
+Subject,36,36,/Users/stefanosathanasoulias/thesis-projects-container/projects/marble-master/packages/messaging/src/server/messaging.server.ts
+Subject,48,48,/Users/stefanosathanasoulias/thesis-projects-container/projects/marble-master/packages/messaging/src/server/specs/messaging.server.amqp.spec.ts
+Subject,77,77,/Users/stefanosathanasoulias/thesis-projects-container/projects/marble-master/packages/messaging/src/server/specs/messaging.server.amqp.spec.ts
+Subject,111,111,/Users/stefanosathanasoulias/thesis-projects-container/projects/marble-master/packages/messaging/src/server/specs/messaging.server.amqp.spec.ts
+Subject,10,10,/Users/stefanosathanasoulias/thesis-projects-container/projects/marble-master/packages/messaging/src/transport/strategies/amqp.strategy.ts
+Subject,59,59,/Users/stefanosathanasoulias/thesis-projects-container/projects/marble-master/packages/messaging/src/transport/strategies/amqp.strategy.ts
+Subject,60,60,/Users/stefanosathanasoulias/thesis-projects-container/projects/marble-master/packages/messaging/src/transport/strategies/amqp.strategy.ts
+Subject,156,156,/Users/stefanosathanasoulias/thesis-projects-container/projects/marble-master/packages/messaging/src/transport/strategies/amqp.strategy.ts
+Subject,9,9,/Users/stefanosathanasoulias/thesis-projects-container/projects/marble-master/packages/messaging/src/transport/strategies/local.strategy.ts
+Subject,10,10,/Users/stefanosathanasoulias/thesis-projects-container/projects/marble-master/packages/messaging/src/transport/strategies/local.strategy.ts
+Subject,11,11,/Users/stefanosathanasoulias/thesis-projects-container/projects/marble-master/packages/messaging/src/transport/strategies/local.strategy.ts
+Subject,12,12,/Users/stefanosathanasoulias/thesis-projects-container/projects/marble-master/packages/messaging/src/transport/strategies/local.strategy.ts
+Subject,11,11,/Users/stefanosathanasoulias/thesis-projects-container/projects/marble-master/packages/messaging/src/transport/strategies/redis.strategy.ts
+Subject,12,12,/Users/stefanosathanasoulias/thesis-projects-container/projects/marble-master/packages/messaging/src/transport/strategies/redis.strategy.ts
+Subject,66,66,/Users/stefanosathanasoulias/thesis-projects-container/projects/marble-master/packages/messaging/src/transport/strategies/redis.strategy.ts
+Subject,11,11,/Users/stefanosathanasoulias/thesis-projects-container/projects/marble-master/packages/websockets/src/server/websocket.server.event.subscriber.ts
+Subject,52,52,/Users/stefanosathanasoulias/thesis-projects-container/projects/marble-master/packages/websockets/src/server/websocket.server.listener.ts
+Subject,53,53,/Users/stefanosathanasoulias/thesis-projects-container/projects/marble-master/packages/websockets/src/server/websocket.server.listener.ts

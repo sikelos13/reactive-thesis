@@ -1,0 +1,3 @@
+Alias or name used,Line start,Line end,Filename,Nested Operators,Pipe is nested to,Initializing Pipeline
+Pipe as argument,68,68,sensors.js,[],Nested in object or function,Random function
+Pipe as argument,73,73,sensors.js,"[""publish"",""refCount""]",Nested in object or function,Random function

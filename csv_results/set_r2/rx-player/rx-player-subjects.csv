@@ -1,0 +1,86 @@
+Subject variable/alias used,Line start,Line end,Filename
+Subject,246,246,/Users/stefanosathanasoulias/thesis-projects-container/projects/rx-player-master/src/compat/eme/custom_media_keys.ts
+Subject,467,467,/Users/stefanosathanasoulias/thesis-projects-container/projects/rx-player-master/src/compat/eme/custom_media_keys.ts
+Variable: _closeSession$,238,238,/Users/stefanosathanasoulias/thesis-projects-container/projects/rx-player-master/src/compat/eme/custom_media_keys.ts
+Variable: _closeSession$,246,246,/Users/stefanosathanasoulias/thesis-projects-container/projects/rx-player-master/src/compat/eme/custom_media_keys.ts
+Variable: _closeSession$,252,252,/Users/stefanosathanasoulias/thesis-projects-container/projects/rx-player-master/src/compat/eme/custom_media_keys.ts
+Variable: _closeSession$,260,260,/Users/stefanosathanasoulias/thesis-projects-container/projects/rx-player-master/src/compat/eme/custom_media_keys.ts
+Variable: _closeSession$,294,294,/Users/stefanosathanasoulias/thesis-projects-container/projects/rx-player-master/src/compat/eme/custom_media_keys.ts
+Variable: _closeSession$,295,295,/Users/stefanosathanasoulias/thesis-projects-container/projects/rx-player-master/src/compat/eme/custom_media_keys.ts
+Variable: _closeSession$,459,459,/Users/stefanosathanasoulias/thesis-projects-container/projects/rx-player-master/src/compat/eme/custom_media_keys.ts
+Variable: _closeSession$,467,467,/Users/stefanosathanasoulias/thesis-projects-container/projects/rx-player-master/src/compat/eme/custom_media_keys.ts
+Variable: _closeSession$,469,469,/Users/stefanosathanasoulias/thesis-projects-container/projects/rx-player-master/src/compat/eme/custom_media_keys.ts
+Variable: _closeSession$,486,486,/Users/stefanosathanasoulias/thesis-projects-container/projects/rx-player-master/src/compat/eme/custom_media_keys.ts
+Variable: _closeSession$,499,499,/Users/stefanosathanasoulias/thesis-projects-container/projects/rx-player-master/src/compat/eme/custom_media_keys.ts
+Variable: _closeSession$,500,500,/Users/stefanosathanasoulias/thesis-projects-container/projects/rx-player-master/src/compat/eme/custom_media_keys.ts
+Subject,529,529,/Users/stefanosathanasoulias/thesis-projects-container/projects/rx-player-master/src/core/api/public_api.ts
+Subject,577,577,/Users/stefanosathanasoulias/thesis-projects-container/projects/rx-player-master/src/core/api/public_api.ts
+Variable: _priv_destroy$,212,212,/Users/stefanosathanasoulias/thesis-projects-container/projects/rx-player-master/src/core/api/public_api.ts
+Variable: _priv_destroy$,529,529,/Users/stefanosathanasoulias/thesis-projects-container/projects/rx-player-master/src/core/api/public_api.ts
+Variable: _priv_destroy$,533,533,/Users/stefanosathanasoulias/thesis-projects-container/projects/rx-player-master/src/core/api/public_api.ts
+Variable: _priv_destroy$,538,538,/Users/stefanosathanasoulias/thesis-projects-container/projects/rx-player-master/src/core/api/public_api.ts
+Variable: _priv_destroy$,546,546,/Users/stefanosathanasoulias/thesis-projects-container/projects/rx-player-master/src/core/api/public_api.ts
+Variable: _priv_destroy$,639,639,/Users/stefanosathanasoulias/thesis-projects-container/projects/rx-player-master/src/core/api/public_api.ts
+Variable: _priv_destroy$,640,640,/Users/stefanosathanasoulias/thesis-projects-container/projects/rx-player-master/src/core/api/public_api.ts
+Variable: _priv_stopCurrentContent$,219,219,/Users/stefanosathanasoulias/thesis-projects-container/projects/rx-player-master/src/core/api/public_api.ts
+Variable: _priv_stopCurrentContent$,577,577,/Users/stefanosathanasoulias/thesis-projects-container/projects/rx-player-master/src/core/api/public_api.ts
+Variable: _priv_stopCurrentContent$,619,619,/Users/stefanosathanasoulias/thesis-projects-container/projects/rx-player-master/src/core/api/public_api.ts
+Variable: _priv_stopCurrentContent$,643,643,/Users/stefanosathanasoulias/thesis-projects-container/projects/rx-player-master/src/core/api/public_api.ts
+Variable: _priv_stopCurrentContent$,715,715,/Users/stefanosathanasoulias/thesis-projects-container/projects/rx-player-master/src/core/api/public_api.ts
+Variable: _priv_stopCurrentContent$,744,744,/Users/stefanosathanasoulias/thesis-projects-container/projects/rx-player-master/src/core/api/public_api.ts
+Variable: _priv_stopCurrentContent$,752,752,/Users/stefanosathanasoulias/thesis-projects-container/projects/rx-player-master/src/core/api/public_api.ts
+Variable: _priv_stopCurrentContent$,757,757,/Users/stefanosathanasoulias/thesis-projects-container/projects/rx-player-master/src/core/api/public_api.ts
+Variable: _priv_stopCurrentContent$,838,838,/Users/stefanosathanasoulias/thesis-projects-container/projects/rx-player-master/src/core/api/public_api.ts
+Variable: _priv_stopCurrentContent$,873,873,/Users/stefanosathanasoulias/thesis-projects-container/projects/rx-player-master/src/core/api/public_api.ts
+Variable: _priv_stopCurrentContent$,882,882,/Users/stefanosathanasoulias/thesis-projects-container/projects/rx-player-master/src/core/api/public_api.ts
+Variable: _priv_stopCurrentContent$,886,886,/Users/stefanosathanasoulias/thesis-projects-container/projects/rx-player-master/src/core/api/public_api.ts
+Variable: _priv_stopCurrentContent$,890,890,/Users/stefanosathanasoulias/thesis-projects-container/projects/rx-player-master/src/core/api/public_api.ts
+Variable: _priv_stopCurrentContent$,904,904,/Users/stefanosathanasoulias/thesis-projects-container/projects/rx-player-master/src/core/api/public_api.ts
+Variable: _priv_stopCurrentContent$,1918,1918,/Users/stefanosathanasoulias/thesis-projects-container/projects/rx-player-master/src/core/api/public_api.ts
+Variable: _priv_stopCurrentContent$,1939,1939,/Users/stefanosathanasoulias/thesis-projects-container/projects/rx-player-master/src/core/api/public_api.ts
+Variable: _priv_stopCurrentContent$,1983,1983,/Users/stefanosathanasoulias/thesis-projects-container/projects/rx-player-master/src/core/api/public_api.ts
+Subject,136,136,/Users/stefanosathanasoulias/thesis-projects-container/projects/rx-player-master/src/core/buffers/adaptation/adaptation_buffer.ts
+Subject,139,139,/Users/stefanosathanasoulias/thesis-projects-container/projects/rx-player-master/src/core/buffers/adaptation/adaptation_buffer.ts
+Subject,142,142,/Users/stefanosathanasoulias/thesis-projects-container/projects/rx-player-master/src/core/buffers/adaptation/adaptation_buffer.ts
+Subject,144,144,/Users/stefanosathanasoulias/thesis-projects-container/projects/rx-player-master/src/core/buffers/adaptation/adaptation_buffer.ts
+Subject,204,204,/Users/stefanosathanasoulias/thesis-projects-container/projects/rx-player-master/src/core/buffers/buffer_orchestrator.ts
+Subject,312,312,/Users/stefanosathanasoulias/thesis-projects-container/projects/rx-player-master/src/core/buffers/buffer_orchestrator.ts
+Subject,316,316,/Users/stefanosathanasoulias/thesis-projects-container/projects/rx-player-master/src/core/buffers/buffer_orchestrator.ts
+Subject,198,198,/Users/stefanosathanasoulias/thesis-projects-container/projects/rx-player-master/src/core/buffers/representation/representation_buffer.ts
+Subject,100,100,/Users/stefanosathanasoulias/thesis-projects-container/projects/rx-player-master/src/core/eme/session_events_listener.ts
+Subject,145,145,/Users/stefanosathanasoulias/thesis-projects-container/projects/rx-player-master/src/core/init/initialize_media_source.ts
+Subject,227,227,/Users/stefanosathanasoulias/thesis-projects-container/projects/rx-player-master/src/core/init/initialize_media_source.ts
+Subject,285,285,/Users/stefanosathanasoulias/thesis-projects-container/projects/rx-player-master/src/core/init/initialize_media_source.ts
+Subject,160,160,/Users/stefanosathanasoulias/thesis-projects-container/projects/rx-player-master/src/core/init/load_on_media_source.ts
+Subject,145,145,/Users/stefanosathanasoulias/thesis-projects-container/projects/rx-player-master/src/core/pipelines/segment/prioritizer.ts
+Subject,220,220,/Users/stefanosathanasoulias/thesis-projects-container/projects/rx-player-master/src/core/source_buffers/queued_source_buffer.ts
+Subject,411,411,/Users/stefanosathanasoulias/thesis-projects-container/projects/rx-player-master/src/core/source_buffers/queued_source_buffer.ts
+Variable: _destroy$,183,183,/Users/stefanosathanasoulias/thesis-projects-container/projects/rx-player-master/src/core/source_buffers/queued_source_buffer.ts
+Variable: _destroy$,220,220,/Users/stefanosathanasoulias/thesis-projects-container/projects/rx-player-master/src/core/source_buffers/queued_source_buffer.ts
+Variable: _destroy$,237,237,/Users/stefanosathanasoulias/thesis-projects-container/projects/rx-player-master/src/core/source_buffers/queued_source_buffer.ts
+Variable: _destroy$,242,242,/Users/stefanosathanasoulias/thesis-projects-container/projects/rx-player-master/src/core/source_buffers/queued_source_buffer.ts
+Variable: _destroy$,246,246,/Users/stefanosathanasoulias/thesis-projects-container/projects/rx-player-master/src/core/source_buffers/queued_source_buffer.ts
+Variable: _destroy$,355,355,/Users/stefanosathanasoulias/thesis-projects-container/projects/rx-player-master/src/core/source_buffers/queued_source_buffer.ts
+Variable: _destroy$,356,356,/Users/stefanosathanasoulias/thesis-projects-container/projects/rx-player-master/src/core/source_buffers/queued_source_buffer.ts
+Subject,114,114,/Users/stefanosathanasoulias/thesis-projects-container/projects/rx-player-master/src/custom_source_buffers/text/html/html_text_source_buffer.ts
+Variable: _destroy$,96,96,/Users/stefanosathanasoulias/thesis-projects-container/projects/rx-player-master/src/custom_source_buffers/text/html/html_text_source_buffer.ts
+Variable: _destroy$,114,114,/Users/stefanosathanasoulias/thesis-projects-container/projects/rx-player-master/src/custom_source_buffers/text/html/html_text_source_buffer.ts
+Variable: _destroy$,119,119,/Users/stefanosathanasoulias/thesis-projects-container/projects/rx-player-master/src/custom_source_buffers/text/html/html_text_source_buffer.ts
+Variable: _destroy$,249,249,/Users/stefanosathanasoulias/thesis-projects-container/projects/rx-player-master/src/custom_source_buffers/text/html/html_text_source_buffer.ts
+Variable: _destroy$,250,250,/Users/stefanosathanasoulias/thesis-projects-container/projects/rx-player-master/src/custom_source_buffers/text/html/html_text_source_buffer.ts
+Subject,79,79,/Users/stefanosathanasoulias/thesis-projects-container/projects/rx-player-master/src/utils/__tests__/cast_to_observable.test.ts
+Subject,80,80,/Users/stefanosathanasoulias/thesis-projects-container/projects/rx-player-master/src/utils/__tests__/cast_to_observable.test.ts
+Subject,120,120,/Users/stefanosathanasoulias/thesis-projects-container/projects/rx-player-master/src/utils/__tests__/concat_map_latest.test.ts
+Subject,54,54,/Users/stefanosathanasoulias/thesis-projects-container/projects/rx-player-master/src/utils/__tests__/rx-throttle.test.ts
+Subject,55,55,/Users/stefanosathanasoulias/thesis-projects-container/projects/rx-player-master/src/utils/__tests__/rx-throttle.test.ts
+Subject,91,91,/Users/stefanosathanasoulias/thesis-projects-container/projects/rx-player-master/src/utils/__tests__/rx-throttle.test.ts
+Subject,92,92,/Users/stefanosathanasoulias/thesis-projects-container/projects/rx-player-master/src/utils/__tests__/rx-throttle.test.ts
+Subject,93,93,/Users/stefanosathanasoulias/thesis-projects-container/projects/rx-player-master/src/utils/__tests__/rx-throttle.test.ts
+Subject,130,130,/Users/stefanosathanasoulias/thesis-projects-container/projects/rx-player-master/src/utils/__tests__/rx-throttle.test.ts
+Subject,131,131,/Users/stefanosathanasoulias/thesis-projects-container/projects/rx-player-master/src/utils/__tests__/rx-throttle.test.ts
+Subject,132,132,/Users/stefanosathanasoulias/thesis-projects-container/projects/rx-player-master/src/utils/__tests__/rx-throttle.test.ts
+Subject,176,176,/Users/stefanosathanasoulias/thesis-projects-container/projects/rx-player-master/src/utils/__tests__/rx-throttle.test.ts
+Subject,177,177,/Users/stefanosathanasoulias/thesis-projects-container/projects/rx-player-master/src/utils/__tests__/rx-throttle.test.ts
+Subject,178,178,/Users/stefanosathanasoulias/thesis-projects-container/projects/rx-player-master/src/utils/__tests__/rx-throttle.test.ts
+Subject,216,216,/Users/stefanosathanasoulias/thesis-projects-container/projects/rx-player-master/src/utils/__tests__/rx-throttle.test.ts
+Subject,217,217,/Users/stefanosathanasoulias/thesis-projects-container/projects/rx-player-master/src/utils/__tests__/rx-throttle.test.ts

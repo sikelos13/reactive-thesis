@@ -1,0 +1,16 @@
+Observable variable/alias used,Times Used,Line start,Line end,Filename
+ReplaySubject,1,36,36,/Users/stefanosathanasoulias/thesis-projects-container/projects/angular-async-local-storage-master/projects/ngx-pwa/local-storage/src/lib/databases/indexeddb-database.ts
+IDBBrokenError,1,334,334,/Users/stefanosathanasoulias/thesis-projects-container/projects/angular-async-local-storage-master/projects/ngx-pwa/local-storage/src/lib/databases/indexeddb-database.ts
+IDBBrokenError,1,360,360,/Users/stefanosathanasoulias/thesis-projects-container/projects/angular-async-local-storage-master/projects/ngx-pwa/local-storage/src/lib/databases/indexeddb-database.ts
+IndexedDBDatabase,1,39,39,/Users/stefanosathanasoulias/thesis-projects-container/projects/angular-async-local-storage-master/projects/ngx-pwa/local-storage/src/lib/databases/local-database.ts
+LocalStorageDatabase,1,56,56,/Users/stefanosathanasoulias/thesis-projects-container/projects/angular-async-local-storage-master/projects/ngx-pwa/local-storage/src/lib/databases/local-database.ts
+MemoryDatabase,1,67,67,/Users/stefanosathanasoulias/thesis-projects-container/projects/angular-async-local-storage-master/projects/ngx-pwa/local-storage/src/lib/databases/local-database.ts
+SerializationError,1,85,85,/Users/stefanosathanasoulias/thesis-projects-container/projects/angular-async-local-storage-master/projects/ngx-pwa/local-storage/src/lib/databases/localstorage-database.ts
+Observable,1,142,142,/Users/stefanosathanasoulias/thesis-projects-container/projects/angular-async-local-storage-master/projects/ngx-pwa/local-storage/src/lib/databases/localstorage-database.ts
+Observable,1,142,142,/Users/stefanosathanasoulias/thesis-projects-container/projects/angular-async-local-storage-master/projects/ngx-pwa/local-storage/src/lib/databases/localstorage-database.ts
+Map,1,14,14,/Users/stefanosathanasoulias/thesis-projects-container/projects/angular-async-local-storage-master/projects/ngx-pwa/local-storage/src/lib/databases/memory-database.ts
+Map,1,18,18,/Users/stefanosathanasoulias/thesis-projects-container/projects/angular-async-local-storage-master/projects/ngx-pwa/local-storage/src/lib/storages/storage-map.service.ts
+JSONValidator,1,28,28,/Users/stefanosathanasoulias/thesis-projects-container/projects/angular-async-local-storage-master/projects/ngx-pwa/local-storage/src/lib/storages/storage-map.service.ts
+ValidationError,1,185,185,/Users/stefanosathanasoulias/thesis-projects-container/projects/angular-async-local-storage-master/projects/ngx-pwa/local-storage/src/lib/storages/storage-map.service.ts
+ValidationError,1,222,222,/Users/stefanosathanasoulias/thesis-projects-container/projects/angular-async-local-storage-master/projects/ngx-pwa/local-storage/src/lib/storages/storage-map.service.ts
+ReplaySubject,1,337,337,/Users/stefanosathanasoulias/thesis-projects-container/projects/angular-async-local-storage-master/projects/ngx-pwa/local-storage/src/lib/storages/storage-map.service.ts
