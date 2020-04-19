@@ -1,0 +1,18 @@
+Alias or name used,Line start,Line end,Filename,Nested Operators,Pipe is nested to,Initializing Pipeline
+Pipe as argument,112,112,VirtualList.tsx,"[""pairwise"",""tap""]",Nested in object or function,Random function
+Pipe as argument,132,132,VirtualList.tsx,"[""withLatestFrom"",""map"",""skipWhile"",""debounceTime""]",Nested in object or function,Random function
+Pipe,153,153,VirtualList.tsx,"[""map"",""distinctUntilChanged"",""startWith""]",,Random function
+Pipe,171,171,VirtualList.tsx,"[""tap""]",Nested in pipe of lines 153 to 153,combineLatest
+Pipe,179,179,VirtualList.tsx,"[""takeWhile""]",Nested in pipe of lines 153 to 153,combineLatest
+Pipe,205,205,VirtualList.tsx,"[""pairwise"",""map"",""startWith""]",,Random function
+Pipe,210,212,VirtualList.tsx,"[""map""]",,combineLatest
+Pipe,225,225,VirtualList.tsx,"[""map"",""map"",""tap"",""startWith""]",,combineLatest
+Pipe,229,233,VirtualList.tsx,"[""map""]",,combineLatest
+Pipe,242,242,VirtualList.tsx,"[""tap"",""debounceTime""]",Nested in pipe of lines 229 to 233,Random function
+Pipe,251,251,VirtualList.tsx,"[""distinctUntilChanged"",""tap""]",Nested in pipe of lines 229 to 233,Random function
+Pipe,269,269,VirtualList.tsx,"[""map""]",,combineLatest
+Pipe,276,276,VirtualList.tsx,"[""map"",""filter"",""tap""]",Nested in pipe of lines 269 to 269,combineLatest
+Pipe,308,309,VirtualList.tsx,"[""map"",""tap""]",,combineLatest
+Pipe,313,313,VirtualList.tsx,"[""map""]",Nested in pipe of lines 308 to 309,combineLatest
+Pipe,329,332,VirtualList.tsx,"[""map"",""filter"",""tap"",""map""]",,combineLatest
+Pipe,342,371,VirtualList.tsx,"[""withLatestFrom"",""map""]",,combineLatest

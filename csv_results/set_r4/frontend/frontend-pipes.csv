@@ -1,0 +1,45 @@
+Alias or name used,Line start,Line end,Filename,Nested Operators,Pipe is nested to,Initializing Pipeline
+Pipe as argument,undefined,undefined,prelude.ts,[],Nested in object or function,
+Pipe as argument,undefined,undefined,prelude.ts,[],Nested in object or function,
+Pipe as argument,undefined,undefined,CanHelp.ts,[],Nested in object or function,
+Pipe as argument,undefined,undefined,CanHelp.ts,[],Nested in object or function,
+Pipe as argument,undefined,undefined,CanHelp.ts,[],Nested in object or function,
+Pipe as argument,undefined,undefined,state.ts,[],Nested in object or function,
+Pipe as argument,undefined,undefined,state.ts,[],Nested in object or function,
+Pipe,62,62,state.ts,"[""withLatestFrom"",""switchMap"",""map""]",,Random function
+Pipe as argument,undefined,undefined,state.ts,[],Nested in object or function,
+Pipe,65,65,state.ts,[],,Random function
+Pipe,68,68,state.ts,"[""fromActions"",""pluck"",""map""]",Nested in pipe of lines 65 to 65,Random function
+Pipe,69,69,state.ts,"[""fromActions"",""pluck"",""map""]",Nested in pipe of lines 65 to 65,Random function
+Pipe,70,70,state.ts,"[""mapTo""]",Nested in pipe of lines 65 to 65,Random function
+Pipe,78,78,state.ts,"[""map"",""ignoreElements""]",,Random function
+Pipe,81,81,state.ts,"[""map""]",,Random function
+Pipe as argument,undefined,undefined,Necessitious.ts,[],Nested in object or function,
+Pipe as argument,undefined,undefined,Necessitious.ts,[],Nested in object or function,
+Pipe,undefined,undefined,Necessitious.ts,[],,
+Pipe,undefined,undefined,Necessitious.ts,[],,
+Pipe as argument,undefined,undefined,Necessitious.ts,[],Nested in object or function,
+Pipe as argument,undefined,undefined,Necessitious.ts,[],Nested in object or function,
+Pipe as argument,undefined,undefined,Necessitious.ts,[],Nested in object or function,
+Pipe as argument,undefined,undefined,Necessitious.ts,[],Nested in object or function,
+Pipe as argument,undefined,undefined,Necessitious.ts,[],Nested in object or function,
+Pipe as argument,undefined,undefined,Necessitious.ts,[],Nested in object or function,
+Pipe as argument,undefined,undefined,Necessitious.ts,[],Nested in object or function,
+Pipe as argument,undefined,undefined,Necessitious.ts,[],Nested in object or function,
+Pipe as argument,undefined,undefined,Necessitious.ts,[],Nested in object or function,
+Pipe as argument,undefined,undefined,Necessitious.ts,[],Nested in object or function,
+Pipe as argument,undefined,undefined,Necessitious.ts,[],Nested in object or function,
+Pipe as argument,undefined,undefined,Necessitious.ts,[],Nested in object or function,
+Pipe as argument,undefined,undefined,state.ts,[],Nested in object or function,
+Pipe as argument,undefined,undefined,state.ts,[],Nested in object or function,
+Pipe,64,64,state.ts,"[""withLatestFrom"",""switchMap"",""map""]",,Random function
+Pipe as argument,undefined,undefined,state.ts,[],Nested in object or function,
+Pipe,67,67,state.ts,[],,Random function
+Pipe,70,70,state.ts,"[""fromActions"",""pluck"",""map""]",Nested in pipe of lines 67 to 67,Random function
+Pipe,71,71,state.ts,"[""fromActions"",""pluck"",""map""]",Nested in pipe of lines 67 to 67,Random function
+Pipe,72,72,state.ts,"[""mapTo""]",Nested in pipe of lines 67 to 67,Random function
+Pipe,80,80,state.ts,"[""map"",""ignoreElements""]",,Random function
+Pipe,83,83,state.ts,"[""map""]",,Random function
+Pipe as argument,undefined,undefined,Supply.ts,[],Nested in object or function,
+Pipe as argument,undefined,undefined,Supply.ts,[],Nested in object or function,
+Pipe,undefined,undefined,Supply.ts,[],,

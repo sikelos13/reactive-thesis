@@ -1,0 +1,18 @@
+Alias or name used,Line,Filename
+withLatestFrom,58,/Users/stefanosathanasoulias/thesis-projects-container/projects/set_r4/frontend-master/src/modules/CanHelp/state.ts
+switchMap,59,/Users/stefanosathanasoulias/thesis-projects-container/projects/set_r4/frontend-master/src/modules/CanHelp/state.ts
+map,62,/Users/stefanosathanasoulias/thesis-projects-container/projects/set_r4/frontend-master/src/modules/CanHelp/state.ts
+pluck,68,/Users/stefanosathanasoulias/thesis-projects-container/projects/set_r4/frontend-master/src/modules/CanHelp/state.ts
+pluck,69,/Users/stefanosathanasoulias/thesis-projects-container/projects/set_r4/frontend-master/src/modules/CanHelp/state.ts
+mapTo,70,/Users/stefanosathanasoulias/thesis-projects-container/projects/set_r4/frontend-master/src/modules/CanHelp/state.ts
+map,72,/Users/stefanosathanasoulias/thesis-projects-container/projects/set_r4/frontend-master/src/modules/CanHelp/state.ts
+ignoreElements,78,/Users/stefanosathanasoulias/thesis-projects-container/projects/set_r4/frontend-master/src/modules/CanHelp/state.ts
+map,81,/Users/stefanosathanasoulias/thesis-projects-container/projects/set_r4/frontend-master/src/modules/CanHelp/state.ts
+map,64,/Users/stefanosathanasoulias/thesis-projects-container/projects/set_r4/frontend-master/src/modules/Necessitous/state.ts
+pluck,71,/Users/stefanosathanasoulias/thesis-projects-container/projects/set_r4/frontend-master/src/modules/Necessitous/state.ts
+map,74,/Users/stefanosathanasoulias/thesis-projects-container/projects/set_r4/frontend-master/src/modules/Necessitous/state.ts
+ignoreElements,80,/Users/stefanosathanasoulias/thesis-projects-container/projects/set_r4/frontend-master/src/modules/Necessitous/state.ts
+map,83,/Users/stefanosathanasoulias/thesis-projects-container/projects/set_r4/frontend-master/src/modules/Necessitous/state.ts
+pluck,149,/Users/stefanosathanasoulias/thesis-projects-container/projects/set_r4/frontend-master/src/modules/Supply/state.ts
+map,150,/Users/stefanosathanasoulias/thesis-projects-container/projects/set_r4/frontend-master/src/modules/Supply/state.ts
+map,151,/Users/stefanosathanasoulias/thesis-projects-container/projects/set_r4/frontend-master/src/modules/Supply/state.ts
