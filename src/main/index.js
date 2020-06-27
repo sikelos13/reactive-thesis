@@ -25,12 +25,9 @@ let aggregationToCsv = [];
 let arrayToJson = [];
 
 program
-    // .option('-f, --findOperator <name>', 'count rxjs operator')
     .option('-o, --operatorsInUse <source> <action>', 'find all operators of rxjs library that are used in the file')
     .option('-s, --subjectInUse <source> <action>', 'find the usage of subject property of rxjs library')
     .option('-v, --observablesInUse <source> <action>', 'find the usage of observable constructors  of rxjs library')
-    // .option('-e, --exportToCsv', 'export the results from previous calculations')
-    // .option('-a, --aggregateResults <showResultsInConsole>', 'aggregate the results from previous calculations and (optional) show them in terminal')
     .option('-p, --pipelinesUsage <source> <action>', 'find the pipelines that have been used in your codebase');
 program.parse(process.argv);
 
@@ -74,22 +71,7 @@ if (program.operatorsInUse) {
     let source = program.observablesInUse;
     main(source, "", "observablesInUse",action,aggregateAnswer);
 } 
-// else if (program.exportToCsv) {
-//     if (program.exportToCsv.length < 2) {
-//         program.help();
-//         return;
-//     }
-//     let source = program.exportToCsv
-//     main(source, "", "exportToCsv", "");
-// } 
-// else if (program.aggregateResults) {
-//     if (program.aggregateResults.length < 2) {
-//         program.help();
-//         return;
-//     }
-//     let source = ""
-//     main(source, "", "aggregateResults", program.aggregateResults);
-// }
+
 
 function main(path, operatorName, option, action,aggregateAnswer) {
     arrayToJson = [];

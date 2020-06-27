@@ -1,4 +1,5 @@
-Alias or name used,Line start,Line end,Filename,Nested Operators,Pipe is nested to,Initializing Pipeline
-Pipe as argument,7,7,createStatus.js,"[""map""]",Nested in object or function,
-Pipe as argument,13,13,createStore.js,"[""map""]",Nested in object or function,Random function
-Pipe as argument,21,21,createStore.js,"[""startWith"",""scan""]",Nested in object or function,Random function
+Alias or name used,Line,Filename
+map,7,/Users/stefanosathanasoulias/thesis-projects-container/projects/set_r1/rxstate-master/src/createStatus.js
+map,13,/Users/stefanosathanasoulias/thesis-projects-container/projects/set_r1/rxstate-master/src/createStore.js
+startWith,22,/Users/stefanosathanasoulias/thesis-projects-container/projects/set_r1/rxstate-master/src/createStore.js
+scan,24,/Users/stefanosathanasoulias/thesis-projects-container/projects/set_r1/rxstate-master/src/createStore.js
